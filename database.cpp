@@ -29,23 +29,14 @@ void Database::readvalues(){
 
     const int rows = query.size();
     const int column = query.record().count();
-<<<<<<< HEAD
 
     QList<User> users;
 
-
-=======
-    QList<User> users;
->>>>>>> 1269334 (home ui updated)
     if(query.record().indexOf("cnic") == -1){
         qDebug() << "Db is empty";
     }else{
         int i = 0;
         while(query.next()){
-<<<<<<< HEAD
-
-=======
->>>>>>> 1269334 (home ui updated)
             users.append(User(
                 query.value("Cnic").toInt(),
                 QString().fromStdString(query.value("name").toString().toStdString()),

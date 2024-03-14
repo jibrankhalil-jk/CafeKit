@@ -136,12 +136,8 @@ background-repeat: no-repeat;
      <rect>
       <x>510</x>
       <y>0</y>
-      <width>521</width>
-<<<<<<< HEAD
-      <height>561</height>
-=======
-      <height>581</height>
->>>>>>> 1269334 (home ui updated)
+      <width>521</width> 
+      <height>581</height> 
      </rect>
     </property>
     <property name="minimumSize">
