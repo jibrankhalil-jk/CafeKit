@@ -13,15 +13,27 @@ QT += sql
 
 SOURCES += \
     database.cpp \
+<<<<<<< HEAD
+=======
+    home.cpp \
+>>>>>>> 1269334 (home ui updated)
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     database.h \
+<<<<<<< HEAD
+=======
+    home.h \
+>>>>>>> 1269334 (home ui updated)
     mainwindow.h \
     usermodel.h
 
 FORMS += \
+<<<<<<< HEAD
+=======
+    home.ui \
+>>>>>>> 1269334 (home ui updated)
     mainwindow.ui
 
 RESOURCES += \

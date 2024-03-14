@@ -17,6 +17,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+<<<<<<< HEAD
+=======
+private slots:
+    void on_pushButton_clicked();
+
+>>>>>>> 1269334 (home ui updated)
 private:
     Ui::MainWindow *ui;
 };
