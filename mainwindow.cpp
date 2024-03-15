@@ -27,10 +27,8 @@ void MainWindow::on_pushButton_clicked()
     //     QMessageBox::critical(this, "Error", "Wrong Password or id try again.");
     // }
 
-
     MainWindow::close();
     Home* home = new Home();
     home->show();
-
 
 }

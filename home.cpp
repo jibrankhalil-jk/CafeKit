@@ -18,6 +18,7 @@ void Home::selectedPushButton(QPushButton *button)
 {
     const QString active= "QPushButton{text-align:left;padding-left:20px;border:2px solid dodgerblue; border-top-left-radius: 20px;border-bottom-left-radius: 20px;   color:white;	   background:#333333; } #QPushButton:hover{       text-align:left;       padding-left:26px;	   border:none;	  color:white;	  background:#333333; }";
     const QString deactive= "QPushButton{text-align:left;padding-left:20px; color:white;	border:none;	   background:#333333; } QPushButton:hover{       text-align:left;       padding-left:26px;	   border:none;	  color:white;	  background:#333333; }";
+
     if(button ==  ui->HomeButton){
         ui->HomeButton->setStyleSheet(active);
         ui->views->setCurrentIndex(0);

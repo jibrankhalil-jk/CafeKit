@@ -47,9 +47,9 @@
    <widget class="QStackedWidget" name="views">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>230</x>
       <y>0</y>
-      <width>791</width>
+      <width>781</width>
       <height>731</height>
      </rect>
     </property>
@@ -81,15 +81,52 @@
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>120</y>
+        <x>100</x>
+        <y>270</y>
         <width>67</width>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(255, 255, 255)</string>
+      </property>
       <property name="text">
        <string>home</string>
       </property>
+     </widget>
+     <widget class="QWidget" name="userstoday" native="true">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>191</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#userstoday{
+   background-color: #D9D9D9;
+	border-radius: 12px;
+	color:white;	
+}</string>
+      </property>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #D9D9D9;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>User's Today</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="orderspage">
@@ -118,7 +155,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>221</width>
+      <width>231</width>
       <height>741</height>
      </rect>
     </property>
