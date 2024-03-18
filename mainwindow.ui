@@ -166,7 +166,7 @@ border-radius: 10px;
       <rect>
        <x>50</x>
        <y>60</y>
-       <width>211</width>
+       <width>261</width>
        <height>51</height>
       </rect>
      </property>
@@ -260,7 +260,7 @@ border-radius: 10px;
      <x>0</x>
      <y>0</y>
      <width>1028</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
