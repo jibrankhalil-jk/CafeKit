@@ -7,11 +7,6 @@ Home::Home(QWidget *parent)
     , ui(new Ui::Home)
 {
     ui->setupUi(this);
-    ui->setupUi(this);
-    QPixmap pix("C:/Users/gt/OneDrive/Pictures/Screenshots/2024-03-16 (1).png");
-    int w=ui->labelpic->width();
-    int h=ui->labelpic->height();
-    ui->labelpic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
 }
 
 Home::~Home()

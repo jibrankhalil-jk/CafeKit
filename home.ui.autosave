@@ -50,7 +50,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>220</x>
       <y>0</y>
       <width>998</width>
       <height>700</height>
@@ -380,24 +380,20 @@ color: rgb(0, 0, 0);
       <widget class="QLabel" name="labelpic">
        <property name="geometry">
         <rect>
-         <x>30</x>
+         <x>50</x>
          <y>20</y>
-         <width>61</width>
-         <height>61</height>
+         <width>71</width>
+         <height>71</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">#labelpic{
-  background-color: #F2E3D8;
-border-radius: 15px;
-color: rgb(0, 0, 0);
-}</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="Resources/resources.qrc">:/Images/userlogo.png</pixmap>
+        <pixmap resource="Resources/resources.qrc">:/Images/user.svg</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>

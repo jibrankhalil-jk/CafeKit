@@ -2,5 +2,6 @@
     <qresource prefix="/Images">
         <file>logo.svg</file>
          <file>bg.svg</file>
+          <file>user.svg</file>
     </qresource>
 </RCC>
