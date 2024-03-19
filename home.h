@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QPushButton>
+#include"database.h"
 
 namespace Ui {
 class Home;
@@ -15,6 +16,10 @@ class Home : public QMainWindow
 public:
     explicit Home(QWidget *parent = nullptr);
     ~Home();
+    Database db = Database();
+
+private:
+    void loadHomeData();
 
 private slots:
     void selectedPushButton(QPushButton *button);

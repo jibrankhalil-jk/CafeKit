@@ -1,18 +1,27 @@
 #include "home.h"
 #include "ui_home.h"
+#include"database.h"
 
 Home::Home(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::Home)
+    : QMainWindow(parent),
+      ui(new Ui::Home)
 {
     ui->setupUi(this);
+
+    qDebug() << " db status : "<<db.isConnected()<<"\n" ; // checking if db is connnected
+
+    // to change the column width of table 1
+    ui->table1->setColumnWidth(0,20); //  changing the width of id
+
+    loadHomeData();// a seprate function to handel the loading of home screen view data
+
 }
+
 
 Home::~Home()
 {
     delete ui;
 }
-
 
 void Home::selectedPushButton(QPushButton *button)
 {
@@ -69,47 +78,44 @@ void Home::selectedPushButton(QPushButton *button)
 
 }
 
-
-
-
-void Home::on_HomeButton_clicked()
-{
+void Home::on_HomeButton_clicked(){
     selectedPushButton(ui->HomeButton);
 }
-
 
 void Home::on_OrdersButton_clicked()
 {
     selectedPushButton(ui->OrdersButton);
 }
 
-
 void Home::on_FoodButton_clicked()
 {
     selectedPushButton(ui->FoodButton);
 }
 
-
 void Home::on_UserButton_clicked()
 {
     selectedPushButton(ui->UserButton);
-}
+    // db.getusers(this->ui->userstableView);
 
+}
 
 void Home::on_LoanButton_clicked()
 {
     selectedPushButton(ui->LoanButton);
 }
 
-
 void Home::on_SettingsButton_clicked()
 {
     selectedPushButton(ui->SettingsButton);
 }
-
 
 void Home::on_HelpButton_clicked()
 {
     selectedPushButton(ui->HelpButton);
 }
 
+
+void Home::loadHomeData(){
+
+
+}
