@@ -12,8 +12,10 @@ Home::Home(QWidget *parent)
 
     // to change the column width of table 1
     ui->table1->setColumnWidth(0,20); //  changing the width of id
-
     loadHomeData();// a seprate function to handel the loading of home screen view data
+    db.getUsers(ui->usersViewTable);
+
+
 
 }
 
@@ -25,7 +27,7 @@ Home::~Home()
 
 void Home::selectedPushButton(QPushButton *button)
 {
-    const QString active= "QPushButton{text-align:left;padding-left:20px;border:2px solid dodgerblue; border-top-left-radius: 20px;border-bottom-left-radius: 20px;   color:white;	   background:#333333; } #QPushButton:hover{       text-align:left;       padding-left:26px;	   border:none;	  color:white;	  background:#333333; }";
+    const QString active= "QPushButton{text-align:left;padding-left:20px;	border-bottom: 2px solid dodgerblue; border-top: 2px solid dodgerblue;border-left: 2px solid dodgerblue; border-top-left-radius: 20px;border-bottom-left-radius: 20px;   color:white;	   background:#333333; } #QPushButton:hover{       text-align:left;       padding-left:26px;	   border:none;	  color:white;	  background:#333333; }";
     const QString deactive= "QPushButton{text-align:left;padding-left:20px; color:white;	border:none;	   background:#333333; } QPushButton:hover{       text-align:left;       padding-left:26px;	   border:none;	  color:white;	  background:#333333; }";
 
     if(button ==  ui->HomeButton){
@@ -90,6 +92,11 @@ void Home::on_OrdersButton_clicked()
 void Home::on_FoodButton_clicked()
 {
     selectedPushButton(ui->FoodButton);
+
+    // fetching user view data
+    db.getUsers(ui->usersViewTable);
+
+
 }
 
 void Home::on_UserButton_clicked()
@@ -114,8 +121,6 @@ void Home::on_HelpButton_clicked()
     selectedPushButton(ui->HelpButton);
 }
 
-
 void Home::loadHomeData(){
-
-
+    db.getorders(ui->table1);
 }

@@ -50,10 +50,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>227</x>
       <y>0</y>
-      <width>998</width>
-      <height>700</height>
+      <width>991</width>
+      <height>721</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -409,7 +409,7 @@ color: rgb(0, 0, 0);
        <rect>
         <x>50</x>
         <y>180</y>
-        <width>391</width>
+        <width>401</width>
         <height>351</height>
        </rect>
       </property>
@@ -430,17 +430,29 @@ color: rgb(0, 0, 0);
       <property name="lineWidth">
        <number>2</number>
       </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
       <property name="autoScrollMargin">
        <number>15</number>
       </property>
       <property name="editTriggers">
        <set>QAbstractItemView::NoEditTriggers</set>
       </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
       <property name="rowCount">
        <number>10</number>
       </property>
       <attribute name="horizontalHeaderVisible">
        <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>10</number>
       </attribute>
       <attribute name="horizontalHeaderHighlightSections">
        <bool>true</bool>
@@ -453,6 +465,9 @@ color: rgb(0, 0, 0);
       </attribute>
       <attribute name="verticalHeaderCascadingSectionResizes">
        <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>2</number>
       </attribute>
       <attribute name="verticalHeaderHighlightSections">
        <bool>true</bool>
@@ -527,6 +542,11 @@ color: rgb(0, 0, 0);
         <string>Item</string>
        </property>
       </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
      </widget>
      <widget class="QTableWidget" name="table2">
       <property name="geometry">
@@ -663,26 +683,153 @@ color: rgb(0, 0, 0);
      </widget>
     </widget>
     <widget class="QWidget" name="orderspage">
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>320</y>
-        <width>67</width>
-        <height>17</height>
+        <x>550</x>
+        <y>510</y>
+        <width>131</width>
+        <height>121</height>
        </rect>
       </property>
       <property name="text">
-       <string>orders</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../../../../home/jibran-khalil/Documents/Downloads/Plus.png</pixmap>
       </property>
      </widget>
-     <widget class="QTableWidget" name="tablewidget1_2">
+     <widget class="QTableWidget" name="orderstable2">
       <property name="geometry">
        <rect>
-        <x>-30</x>
-        <y>40</y>
-        <width>431</width>
-        <height>551</height>
+        <x>370</x>
+        <y>20</y>
+        <width>401</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#orderstable2{
+  background-color: #C6F3E0;
+border-radius: 15px;
+color: rgb(0, 0, 0);
+}</string>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>99</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>27</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>#</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Roll No</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Payment</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QTableWidget" name="ordertable1">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>321</width>
+        <height>631</height>
        </rect>
       </property>
       <property name="mouseTracking">
@@ -690,6 +837,9 @@ color: rgb(0, 0, 0);
       </property>
       <property name="tabletTracking">
        <bool>true</bool>
+      </property>
+      <property name="toolTipDuration">
+       <number>-65</number>
       </property>
       <property name="styleSheet">
        <string notr="true">#ordertable1{
@@ -701,9 +851,59 @@ color: rgb(0, 0, 0);
       <property name="lineWidth">
        <number>2</number>
       </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>41</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>73</number>
+      </attribute>
       <attribute name="horizontalHeaderStretchLastSection">
        <bool>true</bool>
       </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>23</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>26</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
       <row>
        <property name="text">
         <string/>
@@ -805,25 +1005,236 @@ color: rgb(0, 0, 0);
        </property>
       </column>
      </widget>
-     <widget class="QTableWidget" name="orderstable2">
+    </widget>
+    <widget class="QWidget" name="foodpage">
+     <widget class="QLabel" name="label_16">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>40</y>
-        <width>521</width>
-        <height>551</height>
+        <x>620</x>
+        <y>530</y>
+        <width>131</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../../../../home/jibran-khalil/Documents/Downloads/Plus.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="foodtable1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>351</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#foodtable1{
+  background-color: #F2E3D8;
+border-radius: 19px;
+color: rgb(0, 0, 0);
+}</string>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>65</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>82</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>24</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>#</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Roll No</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Item</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QTableWidget" name="foodstable2">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>20</y>
+        <width>381</width>
+        <height>491</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#orderstable2{
+       <string notr="true">#foodstable2{
   background-color: #C6F3E0;
 border-radius: 15px;
 color: rgb(0, 0, 0);
 }</string>
       </property>
+      <property name="showDropIndicator" stdset="0">
+       <bool>true</bool>
+      </property>
       <property name="gridStyle">
        <enum>Qt::SolidLine</enum>
       </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>94</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>31</number>
+      </attribute>
       <row>
        <property name="text">
         <string/>
@@ -921,9 +1332,531 @@ color: rgb(0, 0, 0);
       </column>
      </widget>
     </widget>
-    <widget class="QWidget" name="foodpage"/>
-    <widget class="QWidget" name="userpage"/>
-    <widget class="QWidget" name="loanpage"/>
+    <widget class="QWidget" name="userpage">
+     <widget class="QTableWidget" name="usersViewTable">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>591</width>
+        <height>631</height>
+       </rect>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #C6F3E0;
+border-radius: 15px;
+color: rgb(0, 0, 0);
+</string>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="autoScrollMargin">
+       <number>15</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>19</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>10</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>2</number>
+      </attribute>
+      <attribute name="verticalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>#</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Roll No</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Remarks</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="addnewbutton">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>50</y>
+        <width>101</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#addnewbutton{
+background-color: rgb(46, 194, 126);
+border-radius: 50%;
+}
+#addnewbutton::hover{
+background-color: rgb(143, 240, 164)
+}</string>
+      </property>
+      <property name="text">
+       <string>Add New</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="removeuserbuttn">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>180</y>
+        <width>101</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#removeuserbuttn{
+background-color: rgb(224, 27, 36);
+border-radius: 50%;
+}
+#removeuserbuttn::hover{
+background-color: rgb(246, 97, 81);
+}</string>
+      </property>
+      <property name="text">
+       <string>Remove User</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="updateuserbtn">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>310</y>
+        <width>101</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#updateuserbtn{
+background-color: rgb(192, 97, 203);
+border-radius: 50%;
+}
+#updateuserbtn::hover{
+background-color: rgb(220, 138, 221);
+}</string>
+      </property>
+      <property name="text">
+       <string>Update User</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="loanpage">
+     <widget class="QTableWidget" name="loantable2">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>20</y>
+        <width>371</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#loantable2{
+  background-color: #C6F3E0;
+border-radius: 15px;
+color: rgb(0, 0, 0);
+}</string>
+      </property>
+      <property name="showDropIndicator" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>91</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>#</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Roll No</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Free debtors</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>550</y>
+        <width>131</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="loantable1">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>351</width>
+        <height>661</height>
+       </rect>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>true</bool>
+      </property>
+      <property name="toolTipDuration">
+       <number>-65</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#loantable1{
+  background-color: #F2E3D8;
+border-radius: 19px;
+color: rgb(0, 0, 0);
+}</string>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>79</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string/>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>#</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Roll No</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Loan recipients</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
     <widget class="QWidget" name="settingpage"/>
     <widget class="QWidget" name="helppage"/>
    </widget>
@@ -956,7 +1889,7 @@ color: rgb(0, 0, 0);
       <rect>
        <x>10</x>
        <y>180</y>
-       <width>231</width>
+       <width>221</width>
        <height>44</height>
       </rect>
      </property>
@@ -965,7 +1898,10 @@ color: rgb(0, 0, 0);
 {
 	text-align:left;
 	padding-left:20px;
-	border:2px solid dodgerblue;
+	border-bottom: 2px solid dodgerblue;
+	border-top: 2px solid dodgerblue;
+	border-left: 2px solid dodgerblue;
+	
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	color:white;	
@@ -982,7 +1918,7 @@ color: rgb(0, 0, 0);
       <rect>
        <x>10</x>
        <y>230</y>
-       <width>231</width>
+       <width>221</width>
        <height>44</height>
       </rect>
      </property>
@@ -1006,7 +1942,7 @@ color: rgb(0, 0, 0);
       <rect>
        <x>10</x>
        <y>280</y>
-       <width>231</width>
+       <width>221</width>
        <height>44</height>
       </rect>
      </property>
@@ -1029,7 +1965,7 @@ border:none;
       <rect>
        <x>10</x>
        <y>330</y>
-       <width>301</width>
+       <width>221</width>
        <height>41</height>
       </rect>
      </property>
@@ -1052,7 +1988,7 @@ border:none;
       <rect>
        <x>10</x>
        <y>380</y>
-       <width>231</width>
+       <width>221</width>
        <height>44</height>
       </rect>
      </property>
@@ -1075,7 +2011,7 @@ border:none;
       <rect>
        <x>10</x>
        <y>430</y>
-       <width>231</width>
+       <width>221</width>
        <height>44</height>
       </rect>
      </property>
@@ -1098,7 +2034,7 @@ border:none;
       <rect>
        <x>10</x>
        <y>480</y>
-       <width>231</width>
+       <width>221</width>
        <height>44</height>
       </rect>
      </property>

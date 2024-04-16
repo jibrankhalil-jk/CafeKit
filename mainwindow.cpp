@@ -9,8 +9,12 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     {
     ui->setupUi(this);
-      // connecting to Database
-         db.init();
+        // connecting to Database
+        db.init();
+
+        if (!db.isConnected()){
+             QMessageBox::critical(this, "Error", "Failed to connect to database try again.");
+        }
     }
 
 MainWindow::~MainWindow()

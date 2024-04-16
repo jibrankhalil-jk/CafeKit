@@ -18,17 +18,39 @@ private:
 
 public:
     static bool isConnected(){return dbConnected;}
-    void readvalues();
+    void readvalues(QString sqlquery);
     void writevalues();
     void getusers(QTableWidget* tableView);
 
 
     void getTotalUsersToday();
     void getTotalSalesToday();
-    void getTotalOrdersToday();
-    void getHomeOdersDetails();
-    void getLastUser();
+    void getTodaysOrders();
+    void getTodaysPaymets();
+    void getOrderDetails();
+    void getUser();
+    void getFoods();
+    void getCategories();
+    void getUsers(QTableWidget *table);
 
+
+    //
+
+    void removeOrder();
+    void acceptOrder();
+    void addNewOrder();
+    void addNewFood();
+    void addnewCategorie();
+    void addnewUser();
+
+    //
+    void updateOrder();
+    void updateFoodDetails();
+    void updateCAtegorieDetails();
+    void updateUser();
+
+
+    void getorders(QTableWidget *table);
 };
 
 
