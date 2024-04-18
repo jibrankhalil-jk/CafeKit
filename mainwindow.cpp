@@ -9,19 +9,24 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     {
     ui->setupUi(this);
-        // connecting to Database
-        db.init();
 
+        //initially connecting to Database
+
+        db.init();
         if (!db.isConnected()){
+            // if failed to connect then show the warning dialoge
              QMessageBox::critical(this, "Error", "Failed to connect to database try again.");
         }
+
     }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-void MainWindow::on_pushButton_clicked()
+
+
+void MainWindow::on_loginButton_clicked()
 {
     // QString id = "admin";
     // QString password = "admin";
@@ -36,5 +41,5 @@ void MainWindow::on_pushButton_clicked()
     MainWindow::close();
     Home* home = new Home();
     home->show();
-
 }
+

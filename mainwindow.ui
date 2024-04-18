@@ -32,6 +32,9 @@
   <property name="inputMethodHints">
    <set>Qt::ImhHiddenText|Qt::ImhSensitiveData</set>
   </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGraphicsView" name="graphicsView_2">
     <property name="geometry">
@@ -64,7 +67,7 @@
     <property name="styleSheet">
      <string notr="true">background-color: #333333;</string>
     </property>
-    <widget class="QLineEdit" name="id">
+    <widget class="QLineEdit" name="idTextField">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -74,14 +77,14 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">#id{
+      <string notr="true">#idTextField{
 background-color: rgb(255, 255, 255);
 border-radius: 8px; 
 padding-left: 20px;
 color:rgb(0, 0, 0);
 }
 
-#id:checked {
+#idTextField:checked {
 background-color: rgb(232, 233, 235);
 }
 </string>
@@ -93,7 +96,7 @@ background-color: rgb(232, 233, 235);
       <string/>
      </property>
     </widget>
-    <widget class="QLineEdit" name="password">
+    <widget class="QLineEdit" name="passwordTextField">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -103,14 +106,14 @@ background-color: rgb(232, 233, 235);
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">#password{
+      <string notr="true">#passwordTextField{
 background-color: rgb(246, 245, 244);
 border-radius: 8px; 
 padding-left: 20px;
 color:rgb(0, 0, 0);
 }
 
-#password:checked {
+#passwordTextField:checked {
 background-color: rgb(232, 233, 235);
 }
 </string>
@@ -128,7 +131,7 @@ background-color: rgb(232, 233, 235);
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="loginButton">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -156,13 +159,13 @@ background-color: rgb(232, 233, 235);
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#pushButton{
+      <string notr="true">#loginButton{
 border-radius: 10px; 
 color: rgb(66, 179, 126);
 border: 1px solid rgb(66, 179, 126);
 }
 
-#pushButton:Hover{
+#loginButton:Hover{
 background-color: rgb(66, 179, 126);
 border-radius: 10px; 
 	color: rgb(255, 255, 255);
