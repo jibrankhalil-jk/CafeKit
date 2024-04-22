@@ -20,6 +20,7 @@ public:
 
 private:
     void loadHomeData();
+    void getUsersViewData();
 
 private slots:
     void selectedPushButton(QPushButton *button);
@@ -37,6 +38,18 @@ private slots:
     void on_SettingsButton_clicked();
 
     void on_HelpButton_clicked();
+
+    void on_addNewUserButton_clicked();
+
+    void on_userCancelButton_clicked();
+
+    void on_ProfilePictureButton_clicked();
+
+    void on_addNewFoodButton_clicked();
+
+    void on_foodAddNewCancelButton_clicked();
+
+    void on_removeUserButton_clicked();
 
 private:
     Ui::Home *ui;

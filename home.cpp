@@ -2,6 +2,12 @@
 #include "ui_home.h"
 #include"database.h"
 
+#include <QApplication>
+#include <QFileDialog>
+#include <QLabel>
+#include <QPixmap>
+#include <QMessageBox>
+
 Home::Home(QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::Home)
@@ -10,13 +16,8 @@ Home::Home(QWidget *parent)
 
     qDebug() << " db status : "<<db.isConnected()<<"\n" ; // checking if db is connnected
 
-    // to change the column width of table 1
-    ui->table1->setColumnWidth(0,20); //  changing the width of id
     loadHomeData();// a seprate function to handel the loading of home screen view data
-    db.getUsers(ui->usersViewTable);
-
-
-
+    getUsersViewData();
 }
 
 
@@ -94,7 +95,7 @@ void Home::on_FoodButton_clicked()
     selectedPushButton(ui->FoodButton);
 
     // fetching user view data
-    db.getUsers(ui->usersViewTable);
+   // db.getUsers(ui->usersViewUsersTable);
 
 
 }
@@ -123,4 +124,92 @@ void Home::on_HelpButton_clicked()
 
 void Home::loadHomeData(){
     db.getorders(ui->table1);
+
+    ui->homeTotalUsers->setText(db.getTotalUsers());
+
+    ui->homeTotalOrders->setText(db.getTotalOrdersTodays());
+
+    ui->homeTotalSales->setText(db.getTotalSalesToday());
+
+    QMap<QString,QString> user = db.getTodaysLastOderandUser();
+    ui->homeLasUserName->setText(user["user_name"]);
+    ui->homeLasUserRollno->setText(user["roll_no"]);
+    ui->homeLasUserOrderDateTime->setText("sdfs");
+    ui->homeLasUserPayement->setText("Rs." + user["total_charges"]);
+
+   // qDebug() << QDateTime::fromString(user["date_time"]).time().toString();
+
 }
+void Home::getUsersViewData(){
+
+    db.getUsers(ui->usersViewUsersTable);
+
+
+}
+
+
+// User View
+void Home::on_addNewUserButton_clicked()
+{
+    // changing view to user ,to add new user
+    ui->views->setCurrentIndex(7);
+}
+
+
+void Home::on_userCancelButton_clicked()
+{
+     ui->views->setCurrentIndex(3);
+}
+
+
+void Home::on_ProfilePictureButton_clicked()
+{
+    QString imagePath = QFileDialog::getOpenFileName(nullptr, "Select Profile Picture", QDir::homePath(), "Images (*.png *.jpg *.jpeg)");
+
+    if (!imagePath.isEmpty()) {
+
+        QPixmap image(imagePath);
+
+        ui->userprofilepctureview->setPixmap(image);
+        ui->userprofilepctureview->setScaledContents(true);
+        ui->userprofilepctureview->setStyleSheet("border-radius: 77px;");
+
+    }
+}
+
+
+void Home::on_addNewFoodButton_clicked()
+{
+    ui->views->setCurrentIndex(8);
+}
+
+
+void Home::on_foodAddNewCancelButton_clicked()
+{
+    ui->views->setCurrentIndex(2);
+}
+
+
+void Home::on_removeUserButton_clicked()
+{
+
+   int itemRow = ui->usersViewUsersTable->currentIndex().row();
+
+    QString userName = ui->usersViewUsersTable->model()->itemData(ui->usersViewUsersTable->model()->index(itemRow,0)).value(0).toString();
+
+    if (itemRow >= 0){
+
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Delete Item");
+        msgBox.setText("Are you sure you want to delete " + userName + " ? ");
+        msgBox.setInformativeText("This action cannot be undone.");
+        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        msgBox.setDefaultButton(QMessageBox::Yes);
+
+       if (msgBox.exec() == QMessageBox::Yes) {
+           // Delete the item here
+       }
+    }
+
+}
+

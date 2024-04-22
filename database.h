@@ -17,22 +17,27 @@ private:
    static bool dbConnected;
 
 public:
+
+   void getHomeOrdersTableData(QTableView *table);
     static bool isConnected(){return dbConnected;}
     void readvalues(QString sqlquery);
     void writevalues();
     void getusers(QTableWidget* tableView);
 
 
-    void getTotalUsersToday();
-    void getTotalSalesToday();
-    void getTodaysOrders();
+    QString getTotalUsers();
+    QString getTotalSalesToday();
+    QString getTotalOrdersTodays();
+
+    QMap<QString, QString> getTodaysLastOderandUser();
+
+
     void getTodaysPaymets();
     void getOrderDetails();
     void getUser();
     void getFoods();
     void getCategories();
-    void getUsers(QTableWidget *table);
-
+    void getUsers(QTableView *table);
 
     //
 
