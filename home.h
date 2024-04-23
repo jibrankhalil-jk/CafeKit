@@ -21,7 +21,7 @@ public:
 private:
     void loadHomeData();
     void getUsersViewData();
-
+    void getFoodViewData();
 private slots:
     void selectedPushButton(QPushButton *button);
 
@@ -50,6 +50,12 @@ private slots:
     void on_foodAddNewCancelButton_clicked();
 
     void on_removeUserButton_clicked();
+
+    void on_views_currentChanged(int arg1);
+
+    void on_foodAddNewSubmitButton_clicked();
+
+    void on_removeFoodButton_clicked();
 
 private:
     Ui::Home *ui;

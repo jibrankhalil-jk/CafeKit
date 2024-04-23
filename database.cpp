@@ -6,7 +6,6 @@
 #include<QTableWidget>
 #include<QTableWidgetItem>
 
-
 QSqlDatabase Database::db = QSqlDatabase::addDatabase("QMYSQL", "CafeKit_db_connection");
 bool Database::dbConnected = false;
 
@@ -277,8 +276,91 @@ void Database::getUsers(QTableView *table){
 
     table->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     table->horizontalHeader()->setStretchLastSection(true);
-    //table->setAlternatingRowColors(true);
-
 
 }
 
+//
+
+void Database::getFoods(QTableView *table){
+
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QSqlQuery query = QSqlQuery(db);
+
+    query.prepare("SELECT food_items.food_name, food_items.fid, food_items.quantity, food_items.size,  food_category.name ,  food_items.price FROM `food_items` LEFT JOIN food_category ON food_category.id = food_items.category;");
+    query.exec();
+    model->setQuery(std::move(query));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Name"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Id"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Quantity"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Size"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Category"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Price"));
+    table->setModel(model);
+
+    table->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    table->horizontalHeader()->setStretchLastSection(true);
+
+
+};
+
+void Database::getCategories(QTableView *table){
+
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QSqlQuery query = QSqlQuery(db);
+
+    query.prepare("SELECT food_category.name  , food_category.id FROM `food_category`;");
+    query.exec();
+    model->setQuery(std::move(query));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Name"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Id"));
+    table->setModel(model);
+
+    table->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    table->horizontalHeader()->setStretchLastSection(true);
+
+};
+
+
+void Database::addNewFood(QString name,QString qnt,QString size,QString price,QTableView *table){
+
+    QSqlQuery query =  QSqlQuery(db);
+    if(db.isOpen())
+    {
+        query.prepare("INSERT INTO `food_items` (`fid`, `food_name`, `quantity`, `size`, `category`, `price`) VALUES (NULL, '"+ name +"', '"+ qnt +"', '"+ size +"', '1', '"+ price +"');");
+        if(query.exec())
+        {
+            getFoods(table);
+
+            //QMessageBox::information(this, "Success", "Data inserted successfully",QMessageBox::Ok);
+
+        }
+        else
+        {
+            qDebug() << "Error : "<<query.lastError().text() << query.isValid();
+        }
+    }
+}
+
+
+
+
+bool Database::removeFoodItem(QString id,QTableView *table){
+    QSqlQuery query =  QSqlQuery(db);
+    if(db.isOpen())
+    {
+        query.prepare("DELETE FROM `food_items` WHERE `food_items`.`fid` = "+id+";");
+        if(query.exec())
+        {
+            getFoods(table);
+            return true;
+            //QMessageBox::information(this, "Success", "Data inserted successfully",QMessageBox::Ok);
+
+        }
+        else
+        {
+            qDebug() << "Error : "<<query.lastError().text() << query.isValid();
+        }
+    }
+    return false;
+
+}

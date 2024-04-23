@@ -14,10 +14,12 @@ Home::Home(QWidget *parent)
 {
     ui->setupUi(this);
 
-    qDebug() << " db status : "<<db.isConnected()<<"\n" ; // checking if db is connnected
+    //qDebug() << " db status : "<<db.isConnected()<<"\n" ; // checking if db is connnected
 
-    loadHomeData();// a seprate function to handel the loading of home screen view data
+    loadHomeData();
     getUsersViewData();
+    getFoodViewData();
+
 }
 
 
@@ -95,7 +97,7 @@ void Home::on_FoodButton_clicked()
     selectedPushButton(ui->FoodButton);
 
     // fetching user view data
-   // db.getUsers(ui->usersViewUsersTable);
+    //getFoodViewData();
 
 
 }
@@ -145,6 +147,10 @@ void Home::getUsersViewData(){
     db.getUsers(ui->usersViewUsersTable);
 
 
+}
+void Home::getFoodViewData(){
+    db.getCategories(ui->foodViewCategoryTable);
+    db.getFoods(ui->foodViewFoodItemTable);
 }
 
 
@@ -211,5 +217,54 @@ void Home::on_removeUserButton_clicked()
        }
     }
 
+}
+
+
+void Home::on_views_currentChanged(int arg1)
+{
+
+}
+
+
+void Home::on_foodAddNewSubmitButton_clicked()
+{
+     db.addNewFood(ui->newFoodItemName->text(),
+    ui->newFoodItemQuantity->text(),
+    ui->newFoodItemSize->text(),
+    ui->newFoodItemPrice->text(),
+    ui->foodViewFoodItemTable
+    );
+
+    ui->views->setCurrentIndex(2);
+
+
+    ui->newFoodItemName->clear();
+    ui->newFoodItemQuantity->clear();
+    ui->newFoodItemSize->clear();
+    ui->newFoodItemPrice->clear();
+
+}
+
+
+void Home::on_removeFoodButton_clicked()
+{
+    int itemRow = ui->foodViewFoodItemTable->currentIndex().row();
+
+    QString userName = ui->foodViewFoodItemTable->model()->itemData(ui->foodViewFoodItemTable->model()->index(itemRow,0)).value(0).toString();
+
+    if (itemRow >= 0){
+
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Delete Item");
+        msgBox.setText("Are you sure you want to delete " + userName + " ? ");
+        msgBox.setInformativeText("This action cannot be undone.");
+        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        msgBox.setDefaultButton(QMessageBox::Yes);
+
+        if (msgBox.exec() == QMessageBox::Yes) {
+            // Delete the item here
+            db.removeFoodItem(ui->foodViewFoodItemTable->model()->itemData(ui->foodViewFoodItemTable->model()->index(itemRow,1)).value(0).toString(),ui->foodViewFoodItemTable);
+        }
+    }
 }
 
