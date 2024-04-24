@@ -87,7 +87,7 @@ background-color: #333333;
      <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="ahomepage">
      <widget class="QWidget" name="userstoday" native="true">
