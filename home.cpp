@@ -74,11 +74,11 @@ void Home::selectedPushButton(QPushButton *button)
         ui->SettingsButton->setStyleSheet(deactive);
     }
 
-    if(button ==  ui->HelpButton){
-        ui->HelpButton->setStyleSheet(active);
+    if(button ==  ui->aboutbutton){
+        ui->aboutbutton->setStyleSheet(active);
         ui->views->setCurrentIndex(6);
     }else{
-        ui->HelpButton->setStyleSheet(deactive);
+        ui->aboutbutton->setStyleSheet(deactive);
     }
 
 }
@@ -119,10 +119,7 @@ void Home::on_SettingsButton_clicked()
     selectedPushButton(ui->SettingsButton);
 }
 
-void Home::on_HelpButton_clicked()
-{
-    selectedPushButton(ui->HelpButton);
-}
+
 
 void Home::loadHomeData(){
     db.getorders(ui->table1);
@@ -222,7 +219,7 @@ void Home::on_removeUserButton_clicked()
 
 void Home::on_views_currentChanged(int arg1)
 {
-
+    qDebug() << arg1;
 }
 
 
@@ -266,5 +263,12 @@ void Home::on_removeFoodButton_clicked()
             db.removeFoodItem(ui->foodViewFoodItemTable->model()->itemData(ui->foodViewFoodItemTable->model()->index(itemRow,1)).value(0).toString(),ui->foodViewFoodItemTable);
         }
     }
+}
+
+
+
+void Home::on_aboutbutton_clicked()
+{
+    selectedPushButton(ui->aboutbutton);
 }
 

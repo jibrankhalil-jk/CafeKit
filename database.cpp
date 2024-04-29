@@ -10,18 +10,11 @@ QSqlDatabase Database::db = QSqlDatabase::addDatabase("QMYSQL", "CafeKit_db_conn
 bool Database::dbConnected = false;
 
 void Database::init() {
-    // QString SERVICEURL = "mysql://avnadmin:AVNS_MH_eJNcJIlxfrdJvNc3@cafekit-cafekit.a.aivencloud.com:14708/defaultdb?ssl-mode=REQUIRED";
-    QString HOST = "cafekit-cafekit.a.aivencloud.com";
-    QString DBNAME= "cafekit";
-    QString USER= "avnadmin";
-    QString PASSWORD= "AVNS_MH_eJNcJIlxfrdJvNc3";
-   // int PORT = 14708;
 
     db.setHostName("127.0.0.1");
-    // db.setHostName(HOST);
-    db.setDatabaseName(DBNAME);
-    db.setUserName(USER);
-    db.setPassword(PASSWORD);
+    db.setDatabaseName("cafekit");
+    db.setUserName("avnadmin");
+    db.setPassword("AVNS_MH_eJNcJIlxfrdJvNc3");
 
     db.open();
 

@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Home_t {
     uint offsetsAndSizes[44];
-    char stringdata0[474];
+    char stringdata0[475];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Home_t::offsetsAndSizes) + ofs), len 
@@ -40,24 +40,24 @@ static const qt_meta_stringdata_Home_t qt_meta_stringdata_Home = {
         QT_MOC_LITERAL(113, 21),  // "on_UserButton_clicked"
         QT_MOC_LITERAL(135, 21),  // "on_LoanButton_clicked"
         QT_MOC_LITERAL(157, 25),  // "on_SettingsButton_clicked"
-        QT_MOC_LITERAL(183, 21),  // "on_HelpButton_clicked"
-        QT_MOC_LITERAL(205, 27),  // "on_addNewUserButton_clicked"
-        QT_MOC_LITERAL(233, 27),  // "on_userCancelButton_clicked"
-        QT_MOC_LITERAL(261, 31),  // "on_ProfilePictureButton_clicked"
-        QT_MOC_LITERAL(293, 27),  // "on_addNewFoodButton_clicked"
-        QT_MOC_LITERAL(321, 33),  // "on_foodAddNewCancelButton_cli..."
-        QT_MOC_LITERAL(355, 27),  // "on_removeUserButton_clicked"
-        QT_MOC_LITERAL(383, 23),  // "on_views_currentChanged"
-        QT_MOC_LITERAL(407, 4),  // "arg1"
-        QT_MOC_LITERAL(412, 33),  // "on_foodAddNewSubmitButton_cli..."
-        QT_MOC_LITERAL(446, 27)   // "on_removeFoodButton_clicked"
+        QT_MOC_LITERAL(183, 27),  // "on_addNewUserButton_clicked"
+        QT_MOC_LITERAL(211, 27),  // "on_userCancelButton_clicked"
+        QT_MOC_LITERAL(239, 31),  // "on_ProfilePictureButton_clicked"
+        QT_MOC_LITERAL(271, 27),  // "on_addNewFoodButton_clicked"
+        QT_MOC_LITERAL(299, 33),  // "on_foodAddNewCancelButton_cli..."
+        QT_MOC_LITERAL(333, 27),  // "on_removeUserButton_clicked"
+        QT_MOC_LITERAL(361, 23),  // "on_views_currentChanged"
+        QT_MOC_LITERAL(385, 4),  // "arg1"
+        QT_MOC_LITERAL(390, 33),  // "on_foodAddNewSubmitButton_cli..."
+        QT_MOC_LITERAL(424, 27),  // "on_removeFoodButton_clicked"
+        QT_MOC_LITERAL(452, 22)   // "on_aboutbutton_clicked"
     },
     "Home\0selectedPushButton\0\0QPushButton*\0"
     "button\0on_HomeButton_clicked\0"
     "on_OrdersButton_clicked\0on_FoodButton_clicked\0"
     "on_UserButton_clicked\0on_LoanButton_clicked\0"
     "on_SettingsButton_clicked\0"
-    "on_HelpButton_clicked\0on_addNewUserButton_clicked\0"
+    "on_addNewUserButton_clicked\0"
     "on_userCancelButton_clicked\0"
     "on_ProfilePictureButton_clicked\0"
     "on_addNewFoodButton_clicked\0"
@@ -65,7 +65,8 @@ static const qt_meta_stringdata_Home_t qt_meta_stringdata_Home = {
     "on_removeUserButton_clicked\0"
     "on_views_currentChanged\0arg1\0"
     "on_foodAddNewSubmitButton_clicked\0"
-    "on_removeFoodButton_clicked"
+    "on_removeFoodButton_clicked\0"
+    "on_aboutbutton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -96,8 +97,8 @@ static const uint qt_meta_data_Home[] = {
       14,    0,  128,    2, 0x08,   12 /* Private */,
       15,    0,  129,    2, 0x08,   13 /* Private */,
       16,    0,  130,    2, 0x08,   14 /* Private */,
-      17,    0,  131,    2, 0x08,   15 /* Private */,
-      18,    1,  132,    2, 0x08,   16 /* Private */,
+      17,    1,  131,    2, 0x08,   15 /* Private */,
+      19,    0,  134,    2, 0x08,   17 /* Private */,
       20,    0,  135,    2, 0x08,   18 /* Private */,
       21,    0,  136,    2, 0x08,   19 /* Private */,
 
@@ -115,8 +116,8 @@ static const uint qt_meta_data_Home[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   18,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   19,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -136,16 +137,16 @@ void Home::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 4: _t->on_UserButton_clicked(); break;
         case 5: _t->on_LoanButton_clicked(); break;
         case 6: _t->on_SettingsButton_clicked(); break;
-        case 7: _t->on_HelpButton_clicked(); break;
-        case 8: _t->on_addNewUserButton_clicked(); break;
-        case 9: _t->on_userCancelButton_clicked(); break;
-        case 10: _t->on_ProfilePictureButton_clicked(); break;
-        case 11: _t->on_addNewFoodButton_clicked(); break;
-        case 12: _t->on_foodAddNewCancelButton_clicked(); break;
-        case 13: _t->on_removeUserButton_clicked(); break;
-        case 14: _t->on_views_currentChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 15: _t->on_foodAddNewSubmitButton_clicked(); break;
-        case 16: _t->on_removeFoodButton_clicked(); break;
+        case 7: _t->on_addNewUserButton_clicked(); break;
+        case 8: _t->on_userCancelButton_clicked(); break;
+        case 9: _t->on_ProfilePictureButton_clicked(); break;
+        case 10: _t->on_addNewFoodButton_clicked(); break;
+        case 11: _t->on_foodAddNewCancelButton_clicked(); break;
+        case 12: _t->on_removeUserButton_clicked(); break;
+        case 13: _t->on_views_currentChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 14: _t->on_foodAddNewSubmitButton_clicked(); break;
+        case 15: _t->on_removeFoodButton_clicked(); break;
+        case 16: _t->on_aboutbutton_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -170,7 +171,7 @@ const QMetaObject Home::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_Home_t
 , QtPrivate::TypeAndForceComplete<Home, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QPushButton *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QPushButton *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,

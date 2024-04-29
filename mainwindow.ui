@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -23,7 +26,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CafeKit</string>
   </property>
   <property name="windowIcon">
    <iconset resource="Resources/resources.qrc">
@@ -31,6 +34,9 @@
   </property>
   <property name="inputMethodHints">
    <set>Qt::ImhHiddenText|Qt::ImhSensitiveData</set>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -42,7 +48,7 @@
       <x>510</x>
       <y>0</y>
       <width>521</width>
-      <height>581</height>
+      <height>601</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -59,13 +65,13 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>-10</y>
+      <y>0</y>
       <width>511</width>
-      <height>591</height>
+      <height>611</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333333;</string>
+     <string notr="true">background-color: rgb(36, 31, 49);</string>
     </property>
     <widget class="QLineEdit" name="idTextField">
      <property name="geometry">
@@ -78,10 +84,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">#idTextField{
-background-color: rgb(255, 255, 255);
+border:1px solid  rgb(255, 255, 255);
 border-radius: 8px; 
 padding-left: 20px;
-color:rgb(0, 0, 0);
+color: rgb(255, 255, 255);
 }
 
 #idTextField:checked {
@@ -107,10 +113,10 @@ background-color: rgb(232, 233, 235);
      </property>
      <property name="styleSheet">
       <string notr="true">#passwordTextField{
-background-color: rgb(246, 245, 244);
+border:1px solid  rgb(255, 255, 255);
 border-radius: 8px; 
 padding-left: 20px;
-color:rgb(0, 0, 0);
+color: rgb(255, 255, 255);
 }
 
 #passwordTextField:checked {
@@ -202,7 +208,7 @@ border-radius: 10px;
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>59</x>
        <y>110</y>
        <width>241</width>
        <height>17</height>
@@ -218,8 +224,8 @@ border-radius: 10px;
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>170</y>
+       <x>102</x>
+       <y>174</y>
        <width>41</width>
        <height>17</height>
       </rect>
@@ -235,8 +241,8 @@ border-radius: 10px;
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>260</y>
+       <x>100</x>
+       <y>264</y>
        <width>111</width>
        <height>17</height>
       </rect>
@@ -269,16 +275,23 @@ border-radius: 10px;
      <bool>true</bool>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1028</width>
-     <height>22</height>
-    </rect>
-   </property>
+   <widget class="QLabel" name="dbstatus">
+    <property name="geometry">
+     <rect>
+      <x>1001</x>
+      <y>572</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(192, 28, 40);
+border-radius:7px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

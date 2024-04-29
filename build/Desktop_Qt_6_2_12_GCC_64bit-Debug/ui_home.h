@@ -94,9 +94,20 @@ public:
     QLabel *homeLasUserPicture_8;
     QLabel *label_16;
     QLabel *label_8;
-    QWidget *ghelppage;
-    QLabel *label;
-    QLabel *label_5;
+    QWidget *gaboutpage;
+    QLabel *logo_2;
+    QWidget *settingsButton1_2;
+    QLabel *homeLasUserName_11;
+    QLabel *label_24;
+    QWidget *settingsButton3_2;
+    QLabel *homeLasUserName_10;
+    QLabel *label_26;
+    QWidget *settingsButton2_2;
+    QLabel *homeLasUserName_9;
+    QLabel *label_25;
+    QLabel *homeLasUserName_12;
+    QLabel *homeLasUserName_13;
+    QLabel *homeLasUserName_14;
     QWidget *huser;
     QComboBox *empDept;
     QLabel *id_12;
@@ -149,11 +160,11 @@ public:
     QPushButton *UserButton;
     QPushButton *LoanButton;
     QPushButton *SettingsButton;
-    QPushButton *HelpButton;
     QLabel *logo;
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
+    QPushButton *aboutbutton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -898,7 +909,7 @@ public:
 "	border-top-right-radius: 20px;\n"
 "}\n"
 "#settingsButton1:Hover{\n"
-"	background-color: rgb(61, 56, 70);\n"
+"	background-color: rgb(87, 78, 108);\n"
 "}"));
         homeLasUserName_6 = new QLabel(settingsButton1);
         homeLasUserName_6->setObjectName(QString::fromUtf8("homeLasUserName_6"));
@@ -928,7 +939,7 @@ public:
         label_13->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         settingsButton3 = new QWidget(fsettingpage);
         settingsButton3->setObjectName(QString::fromUtf8("settingsButton3"));
-        settingsButton3->setGeometry(QRect(50, 338, 631, 61));
+        settingsButton3->setGeometry(QRect(50, 334, 631, 61));
         settingsButton3->setFont(font);
         settingsButton3->setStyleSheet(QString::fromUtf8("#settingsButton3{\n"
 "	background-color: rgb(36, 31, 49);\n"
@@ -936,7 +947,7 @@ public:
 "border-bottom-right-radius: 20px;\n"
 "}\n"
 "#settingsButton3:Hover{\n"
-"	background-color: rgb(61, 56, 70);\n"
+"	background-color: rgb(87, 78, 108);\n"
 "}"));
         homeLasUserName_7 = new QLabel(settingsButton3);
         homeLasUserName_7->setObjectName(QString::fromUtf8("homeLasUserName_7"));
@@ -966,13 +977,13 @@ public:
         label_14->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         settingsButton2 = new QWidget(fsettingpage);
         settingsButton2->setObjectName(QString::fromUtf8("settingsButton2"));
-        settingsButton2->setGeometry(QRect(50, 274, 631, 61));
+        settingsButton2->setGeometry(QRect(50, 272, 631, 61));
         settingsButton2->setFont(font);
         settingsButton2->setStyleSheet(QString::fromUtf8("#settingsButton2{\n"
 "	background-color: rgb(36, 31, 49);\n"
 "}\n"
 "#settingsButton2:Hover{\n"
-"	background-color: rgb(61, 56, 70);\n"
+"	background-color: rgb(87, 78, 108);\n"
 "}"));
         homeLasUserName_8 = new QLabel(settingsButton2);
         homeLasUserName_8->setObjectName(QString::fromUtf8("homeLasUserName_8"));
@@ -1004,15 +1015,102 @@ public:
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(60, 170, 129, 18));
         views->addWidget(fsettingpage);
-        ghelppage = new QWidget();
-        ghelppage->setObjectName(QString::fromUtf8("ghelppage"));
-        label = new QLabel(ghelppage);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(30, 30, 104, 58));
-        label_5 = new QLabel(ghelppage);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(100, 180, 66, 18));
-        views->addWidget(ghelppage);
+        gaboutpage = new QWidget();
+        gaboutpage->setObjectName(QString::fromUtf8("gaboutpage"));
+        logo_2 = new QLabel(gaboutpage);
+        logo_2->setObjectName(QString::fromUtf8("logo_2"));
+        logo_2->setGeometry(QRect(280, 50, 181, 151));
+        logo_2->setPixmap(QPixmap(QString::fromUtf8(":/Images/logo.svg")));
+        logo_2->setScaledContents(true);
+        settingsButton1_2 = new QWidget(gaboutpage);
+        settingsButton1_2->setObjectName(QString::fromUtf8("settingsButton1_2"));
+        settingsButton1_2->setGeometry(QRect(80, 408, 631, 61));
+        settingsButton1_2->setFont(font);
+        settingsButton1_2->setStyleSheet(QString::fromUtf8(" \n"
+"	background-color: rgb(36, 31, 49);\n"
+"	border-top-left-radius: 20px;\n"
+"	border-top-right-radius: 20px;\n"
+" "));
+        homeLasUserName_11 = new QLabel(settingsButton1_2);
+        homeLasUserName_11->setObjectName(QString::fromUtf8("homeLasUserName_11"));
+        homeLasUserName_11->setGeometry(QRect(30, 20, 371, 26));
+        homeLasUserName_11->setFont(font2);
+        homeLasUserName_11->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"font: 18pt \"Segoe UI\";\n"
+"color: rgb(0, 0, 0);"));
+        label_24 = new QLabel(settingsButton1_2);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setGeometry(QRect(580, 20, 21, 20));
+        label_24->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
+        label_24->setPixmap(QPixmap(QString::fromUtf8(":/Images/warning.svg")));
+        label_24->setScaledContents(true);
+        settingsButton3_2 = new QWidget(gaboutpage);
+        settingsButton3_2->setObjectName(QString::fromUtf8("settingsButton3_2"));
+        settingsButton3_2->setGeometry(QRect(80, 532, 631, 61));
+        settingsButton3_2->setFont(font);
+        settingsButton3_2->setStyleSheet(QString::fromUtf8(" \n"
+"	background-color: rgb(36, 31, 49);\n"
+"border-bottom-left-radius: 20px;\n"
+"border-bottom-right-radius: 20px;\n"
+" "));
+        homeLasUserName_10 = new QLabel(settingsButton3_2);
+        homeLasUserName_10->setObjectName(QString::fromUtf8("homeLasUserName_10"));
+        homeLasUserName_10->setGeometry(QRect(30, 16, 371, 26));
+        homeLasUserName_10->setFont(font2);
+        homeLasUserName_10->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"font: 18pt \"Segoe UI\";\n"
+"color: rgb(0, 0, 0);"));
+        label_26 = new QLabel(settingsButton3_2);
+        label_26->setObjectName(QString::fromUtf8("label_26"));
+        label_26->setGeometry(QRect(580, 20, 21, 20));
+        label_26->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
+        label_26->setPixmap(QPixmap(QString::fromUtf8(":/Images/warning.svg")));
+        label_26->setScaledContents(true);
+        settingsButton2_2 = new QWidget(gaboutpage);
+        settingsButton2_2->setObjectName(QString::fromUtf8("settingsButton2_2"));
+        settingsButton2_2->setGeometry(QRect(80, 470, 631, 61));
+        settingsButton2_2->setFont(font);
+        settingsButton2_2->setStyleSheet(QString::fromUtf8(" \n"
+"	background-color: rgb(36, 31, 49);\n"
+" "));
+        homeLasUserName_9 = new QLabel(settingsButton2_2);
+        homeLasUserName_9->setObjectName(QString::fromUtf8("homeLasUserName_9"));
+        homeLasUserName_9->setGeometry(QRect(30, 20, 371, 26));
+        homeLasUserName_9->setFont(font2);
+        homeLasUserName_9->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"font: 18pt \"Segoe UI\";\n"
+"color: rgb(0, 0, 0);"));
+        label_25 = new QLabel(settingsButton2_2);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setGeometry(QRect(580, 20, 21, 20));
+        label_25->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
+        label_25->setPixmap(QPixmap(QString::fromUtf8(":/Images/warning.svg")));
+        label_25->setScaledContents(true);
+        homeLasUserName_12 = new QLabel(gaboutpage);
+        homeLasUserName_12->setObjectName(QString::fromUtf8("homeLasUserName_12"));
+        homeLasUserName_12->setGeometry(QRect(290, 210, 163, 58));
+        homeLasUserName_12->setFont(font2);
+        homeLasUserName_12->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"font: 18pt \"Segoe UI\";\n"
+"color: rgb(0, 0, 0);"));
+        homeLasUserName_13 = new QLabel(gaboutpage);
+        homeLasUserName_13->setObjectName(QString::fromUtf8("homeLasUserName_13"));
+        homeLasUserName_13->setGeometry(QRect(320, 270, 107, 23));
+        homeLasUserName_13->setFont(font2);
+        homeLasUserName_13->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"font: 18pt \"Segoe UI\";\n"
+"color: rgb(0, 0, 0);"));
+        homeLasUserName_14 = new QLabel(gaboutpage);
+        homeLasUserName_14->setObjectName(QString::fromUtf8("homeLasUserName_14"));
+        homeLasUserName_14->setGeometry(QRect(340, 300, 71, 21));
+        homeLasUserName_14->setFont(font2);
+        homeLasUserName_14->setStyleSheet(QString::fromUtf8("background-color: rgb(230, 97, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 18pt \"Segoe UI\";\n"
+"border-radius:8px;\n"
+" "));
+        homeLasUserName_14->setAlignment(Qt::AlignCenter);
+        views->addWidget(gaboutpage);
         huser = new QWidget();
         huser->setObjectName(QString::fromUtf8("huser"));
         empDept = new QComboBox(huser);
@@ -1547,18 +1645,6 @@ public:
 "}\n"
 "\n"
 "#SettingsButton:hover{       text-align:left;       padding-left:20px;		border-top-left-radius: 20px;   border-bottom-left-radius: 20px;   border:none;	  color:white;	  background-color: rgb(61, 56, 70); }"));
-        HelpButton = new QPushButton(widget);
-        HelpButton->setObjectName(QString::fromUtf8("HelpButton"));
-        HelpButton->setGeometry(QRect(10, 480, 221, 44));
-        HelpButton->setStyleSheet(QString::fromUtf8("#HelpButton\n"
-"{\n"
-"	text-align:left;\n"
-"	padding-left:20px;\n"
-"	color:white;	\n"
-"	background:transparent;\n"
-"border:none;\n"
-"}\n"
-"#HelpButton:hover{       text-align:left;       padding-left:20px;		border-top-left-radius: 20px;   border-bottom-left-radius: 20px;   border:none;	  color:white;	  background-color: rgb(61, 56, 70); }"));
         logo = new QLabel(widget);
         logo->setObjectName(QString::fromUtf8("logo"));
         logo->setGeometry(QRect(60, 50, 121, 97));
@@ -1577,6 +1663,19 @@ public:
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(90, 660, 51, 17));
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        aboutbutton = new QPushButton(widget);
+        aboutbutton->setObjectName(QString::fromUtf8("aboutbutton"));
+        aboutbutton->setGeometry(QRect(10, 480, 221, 44));
+        aboutbutton->setStyleSheet(QString::fromUtf8("#aboutbutton\n"
+"{\n"
+"	text-align:left;\n"
+"	padding-left:20px;\n"
+"	color:white;	\n"
+"	background:transparent;\n"
+"border:none;\n"
+"}\n"
+"\n"
+"#aboutbutton:hover{       text-align:left;       padding-left:20px;		border-top-left-radius: 20px;   border-bottom-left-radius: 20px;   border:none;	  color:white;	  background-color: rgb(61, 56, 70); }"));
         Home->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Home);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -1588,7 +1687,7 @@ public:
 
         retranslateUi(Home);
 
-        views->setCurrentIndex(5);
+        views->setCurrentIndex(6);
         ProfilePictureButton->setDefault(true);
         foodItemPicture->setDefault(true);
 
@@ -1687,8 +1786,37 @@ public:
         homeLasUserPicture_8->setText(QString());
         label_16->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
         label_8->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">App Configurations</span></p></body></html>", nullptr));
-        label->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:36pt; font-weight:700; color:#ff7800;\">Help</span></p></body></html>", nullptr));
-        label_5->setText(QCoreApplication::translate("Home", "TextLabel", nullptr));
+        logo_2->setText(QString());
+        homeLasUserName_11->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Email us</span></p></body></html>", nullptr));
+        label_24->setText(QString());
+        homeLasUserName_10->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">...</span></p></body></html>", nullptr));
+        label_26->setText(QString());
+        homeLasUserName_9->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">...</span></p></body></html>", nullptr));
+        label_25->setText(QString());
+        homeLasUserName_12->setText(QCoreApplication::translate("Home", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt; font-weight:700; color:#ffffff;\">CafeKit</span></p></body></html>", nullptr));
+        homeLasUserName_13->setText(QCoreApplication::translate("Home", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; font-weight:700; color:#c0bfbc;\">OOP Project</span></p></body></html>", nullptr));
+        homeLasUserName_14->setText(QCoreApplication::translate("Home", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:700; color:#ffffff;\">V 1.0.0</span></p></body></html>", nullptr));
         empDept->setItemText(0, QCoreApplication::translate("Home", "Enabled", nullptr));
         empDept->setItemText(1, QCoreApplication::translate("Home", "Disabaled", nullptr));
 
@@ -1734,11 +1862,11 @@ public:
         UserButton->setText(QCoreApplication::translate("Home", "Users", nullptr));
         LoanButton->setText(QCoreApplication::translate("Home", "Loan Management", nullptr));
         SettingsButton->setText(QCoreApplication::translate("Home", "Settings", nullptr));
-        HelpButton->setText(QCoreApplication::translate("Home", "Help", nullptr));
         logo->setText(QString());
         label_2->setText(QCoreApplication::translate("Home", "Made with", nullptr));
-        label_3->setText(QCoreApplication::translate("Home", "\342\231\241  ", nullptr));
+        label_3->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#a51d2d;\">\342\231\241  </span></p></body></html>", nullptr));
         label_4->setText(QCoreApplication::translate("Home", "v 1.0.0", nullptr));
+        aboutbutton->setText(QCoreApplication::translate("Home", "About", nullptr));
     } // retranslateUi
 
 };

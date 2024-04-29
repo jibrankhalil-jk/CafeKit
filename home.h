@@ -37,8 +37,6 @@ private slots:
 
     void on_SettingsButton_clicked();
 
-    void on_HelpButton_clicked();
-
     void on_addNewUserButton_clicked();
 
     void on_userCancelButton_clicked();
@@ -56,6 +54,8 @@ private slots:
     void on_foodAddNewSubmitButton_clicked();
 
     void on_removeFoodButton_clicked();
+
+    void on_aboutbutton_clicked();
 
 private:
     Ui::Home *ui;
