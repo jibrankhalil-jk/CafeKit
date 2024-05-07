@@ -3864,13 +3864,13 @@ border-radius:14px;
        <string>Submit</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="newOrderFinalItemstableWidget">
       <property name="geometry">
        <rect>
         <x>220</x>
         <y>250</y>
         <width>521</width>
-        <height>281</height>
+        <height>111</height>
        </rect>
       </property>
       <property name="sortingEnabled">
@@ -3906,6 +3906,16 @@ border-radius:14px;
        </property>
       </column>
      </widget>
+     <widget class="QTableView" name="newOrderFinalItemstableview">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>370</y>
+        <width>521</width>
+        <height>181</height>
+       </rect>
+      </property>
+     </widget>
      <zorder>id_36</zorder>
      <zorder>id_35</zorder>
      <zorder>id_33</zorder>
@@ -3920,7 +3930,8 @@ border-radius:14px;
      <zorder>newOrderItemsListView</zorder>
      <zorder>newOrderCancel</zorder>
      <zorder>newOrdersubmit</zorder>
-     <zorder>tableWidget</zorder>
+     <zorder>newOrderFinalItemstableWidget</zorder>
+     <zorder>newOrderFinalItemstableview</zorder>
     </widget>
    </widget>
    <widget class="QWidget" name="widget" native="true">

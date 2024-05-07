@@ -172,7 +172,8 @@ public:
     QListView *newOrderItemsListView;
     QPushButton *newOrderCancel;
     QPushButton *newOrdersubmit;
-    QTableWidget *tableWidget;
+    QTableWidget *newOrderFinalItemstableWidget;
+    QTableView *newOrderFinalItemstableview;
     QWidget *widget;
     QPushButton *HomeButton;
     QPushButton *OrdersButton;
@@ -1638,23 +1639,26 @@ public:
 "	border:2px solid #00855C;\n"
 "	color:#00855C;\n"
 "}"));
-        tableWidget = new QTableWidget(jAddNewOrder);
-        if (tableWidget->columnCount() < 4)
-            tableWidget->setColumnCount(4);
+        newOrderFinalItemstableWidget = new QTableWidget(jAddNewOrder);
+        if (newOrderFinalItemstableWidget->columnCount() < 4)
+            newOrderFinalItemstableWidget->setColumnCount(4);
         QTableWidgetItem *__qtablewidgetitem83 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem83);
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem83);
         QTableWidgetItem *__qtablewidgetitem84 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem84);
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem84);
         QTableWidgetItem *__qtablewidgetitem85 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem85);
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem85);
         QTableWidgetItem *__qtablewidgetitem86 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem86);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(220, 250, 521, 281));
-        tableWidget->setSortingEnabled(false);
-        tableWidget->horizontalHeader()->setCascadingSectionResizes(false);
-        tableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
-        tableWidget->horizontalHeader()->setStretchLastSection(true);
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem86);
+        newOrderFinalItemstableWidget->setObjectName(QString::fromUtf8("newOrderFinalItemstableWidget"));
+        newOrderFinalItemstableWidget->setGeometry(QRect(220, 250, 521, 111));
+        newOrderFinalItemstableWidget->setSortingEnabled(false);
+        newOrderFinalItemstableWidget->horizontalHeader()->setCascadingSectionResizes(false);
+        newOrderFinalItemstableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
+        newOrderFinalItemstableWidget->horizontalHeader()->setStretchLastSection(true);
+        newOrderFinalItemstableview = new QTableView(jAddNewOrder);
+        newOrderFinalItemstableview->setObjectName(QString::fromUtf8("newOrderFinalItemstableview"));
+        newOrderFinalItemstableview->setGeometry(QRect(220, 370, 521, 181));
         views->addWidget(jAddNewOrder);
         id_36->raise();
         id_35->raise();
@@ -1670,7 +1674,8 @@ public:
         newOrderItemsListView->raise();
         newOrderCancel->raise();
         newOrdersubmit->raise();
-        tableWidget->raise();
+        newOrderFinalItemstableWidget->raise();
+        newOrderFinalItemstableview->raise();
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(0, 0, 231, 741));
@@ -1968,13 +1973,13 @@ public:
         newOrderStudentName->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:14pt; color:#ffffff;\">Student Cnic</span></p></body></html>", nullptr));
         newOrderCancel->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
         newOrdersubmit->setText(QCoreApplication::translate("Home", "Submit", nullptr));
-        QTableWidgetItem *___qtablewidgetitem19 = tableWidget->horizontalHeaderItem(0);
+        QTableWidgetItem *___qtablewidgetitem19 = newOrderFinalItemstableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem19->setText(QCoreApplication::translate("Home", "id", nullptr));
-        QTableWidgetItem *___qtablewidgetitem20 = tableWidget->horizontalHeaderItem(1);
+        QTableWidgetItem *___qtablewidgetitem20 = newOrderFinalItemstableWidget->horizontalHeaderItem(1);
         ___qtablewidgetitem20->setText(QCoreApplication::translate("Home", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem21 = tableWidget->horizontalHeaderItem(2);
+        QTableWidgetItem *___qtablewidgetitem21 = newOrderFinalItemstableWidget->horizontalHeaderItem(2);
         ___qtablewidgetitem21->setText(QCoreApplication::translate("Home", "Qty", nullptr));
-        QTableWidgetItem *___qtablewidgetitem22 = tableWidget->horizontalHeaderItem(3);
+        QTableWidgetItem *___qtablewidgetitem22 = newOrderFinalItemstableWidget->horizontalHeaderItem(3);
         ___qtablewidgetitem22->setText(QCoreApplication::translate("Home", "Price", nullptr));
         HomeButton->setText(QCoreApplication::translate("Home", "Home", nullptr));
         OrdersButton->setText(QCoreApplication::translate("Home", "Orders", nullptr));

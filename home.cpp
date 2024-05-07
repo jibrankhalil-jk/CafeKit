@@ -7,6 +7,7 @@
 #include <QLabel>
 #include <QPixmap>
 #include <QMessageBox>
+#include <QtSql/QSqlDatabase>
 
 Home::Home(QWidget *parent)
     : QMainWindow(parent),
@@ -299,6 +300,17 @@ void Home::on_pushButton_clicked()
 void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
 {
     qDebug() << index<<" .. \n";
-    qDebug() << index.column() <<" .. \n";
+    qDebug() << index.model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString() <<" .. \n";
+
+     // QSqlQueryModel model =  QSqlQueryModel();
+
+    // item.setText(index.data().toString());
+    ui->newOrderFinalItemstableWidget->setRowCount(ui->newOrderFinalItemstableWidget->rowCount()+1 );
+    ui->newOrderFinalItemstableWidget->setItem(0,0,new QTableWidgetItem("ddd"));
+    // ui->newOrderFinalItemstableWidget->setItem(1 ,1,&item);
+
+    // ui->newOrderFinalItemstableWidget->model()->setData(ui->newOrderFinalItemstableWidget->model()->index(0,0),
+                                                    // index);
+
 }
 
