@@ -307,6 +307,7 @@ DIST          = /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/spec_pre.pr
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/qt_config.prf \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/linux-clang/qmake.conf \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/spec_post.prf \
+		../../.qmake.stash \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/toolchain.prf \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/default_pre.prf \
@@ -587,6 +588,7 @@ Makefile: ../../CafeKit.pro /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/linux-cl
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/qt_config.prf \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/linux-clang/qmake.conf \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/toolchain.prf \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/default_pre.prf \
@@ -856,6 +858,7 @@ Makefile: ../../CafeKit.pro /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/linux-cl
 /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/qt_config.prf:
 /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/linux-clang/qmake.conf:
 /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/toolchain.prf:
 /home/jibrankhalil/Qt/6.2.12/gcc_64/mkspecs/features/default_pre.prf:
@@ -2173,18 +2176,37 @@ home.o: ../../home.cpp ../../home.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qtablewidget.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qtableview.h \
 		ui_home.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtCore/QVariant \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/QIcon \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QApplication \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qapplication.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qguiapplication.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qinputmethod.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qguiapplication_platform.h \
-		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QFileDialog \
-		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qfiledialog.h \
-		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QComboBox \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QLabel \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qlabel.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qpicture.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qtextdocument.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QLineEdit \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qtextcursor.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qtextformat.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qpen.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qtextoption.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QMenuBar \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qmenu.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qaction.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QStackedWidget \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qstackedwidget.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QStatusBar \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qstatusbar.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QTableView \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QWidget \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QFileDialog \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qfiledialog.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qdialog.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/QPixmap \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qmessagebox.h
@@ -2790,10 +2812,37 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qtablewidget.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qtableview.h \
 		ui_mainwindow.h \
-		../../home.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtCore/QVariant \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/QIcon \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QApplication \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QGraphicsView \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qgraphicsview.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qpainter.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qtextoption.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qpen.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qscrollarea.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QLabel \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qlabel.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qpicture.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qtextdocument.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QLineEdit \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qtextcursor.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qtextformat.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QMenuBar \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qmenu.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtGui/qaction.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QPushButton \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qpushbutton.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QWidget \
+		../../home.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qmessagebox.h \
 		/home/jibrankhalil/Qt/6.2.12/gcc_64/include/QtWidgets/qdialog.h

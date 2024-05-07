@@ -5,6 +5,7 @@
 #include<QtSql>
 #include<QTableWidget>
 #include<QTableWidgetItem>
+#include <QLabel>
 
 QSqlDatabase Database::db = QSqlDatabase::addDatabase("QMYSQL", "CafeKit_db_connection");
 bool Database::dbConnected = false;
@@ -114,7 +115,6 @@ void TableView(QTableWidget *table) {
 
 }
 
-
 void Database::getHomeOrdersTableData(QTableView *table) {
 
 
@@ -176,8 +176,6 @@ void Database::getHomeOrdersTableData(QTableView *table) {
     table->viewport()->update();
 }
 
-
-
 void Database::getorders(QTableWidget *table) {
 
     QSqlQueryModel *model = new QSqlQueryModel();
@@ -221,6 +219,7 @@ QString Database::getTotalUsers(){
     int total = query.value(0).toInt();
     return QString::number(total);
 };
+
 QString Database::getTotalSalesToday(){
     QSqlQuery query = QSqlQuery(db);
     query.prepare("SELECT COUNT(nic) FROM `users`;");
@@ -229,6 +228,7 @@ QString Database::getTotalSalesToday(){
     int total = query.value(0).toInt();
     return QString::number(total);
 }
+
 QString Database::getTotalOrdersTodays(){
     QSqlQuery query = QSqlQuery(db);
     query.prepare("SELECT COUNT(nic) FROM `users`;");
@@ -237,6 +237,7 @@ QString Database::getTotalOrdersTodays(){
     int total = query.value(0).toInt();
     return QString::number(total);
 }
+
 QMap<QString, QString> Database::getTodaysLastOderandUser(){
     QSqlQuery query = QSqlQuery(db);
     query.prepare("SELECT orders.date_time , orders.total_charges ,users.user_name , users.roll_no FROM `orders` LEFT JOIN users ON users.nic = orders.order_by ORDER BY orders.date_time DESC LIMIT 1;");
@@ -272,8 +273,60 @@ void Database::getUsers(QTableView *table){
 
 }
 
-//
 
+void Database::getUserWithCnic(QString cnic,QLabel *label){
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QSqlQuery query = QSqlQuery(db);
+
+    query.prepare("SELECT users.nic , users.roll_no , users.user_name FROM `users` WHERE `nic` = " + cnic + ";");
+    query.exec();
+    model->setQuery(std::move(query));
+    // qDebug() << model->data(model->index(0,2)).toString() ;
+
+    if(!model->data(model->index(0,2)).toString().isEmpty()){
+        label->setText(model->data(model->index(0,2)).toString());
+         label->setStyleSheet("color:white;");
+    }else{
+        label->setText("Student Cnic");
+        label->setStyleSheet("color:white;");
+    }
+};
+
+
+void Database::getItemsWithName(QString name,QListView *list){
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QSqlQuery query = QSqlQuery(db);
+
+    query.prepare("SELECT * FROM `food_items` WHERE `food_name` LIKE '%" + name + "%' ;");
+    query.exec();
+    model->setQuery(std::move(query));
+    list->setModel(model);
+    list->setModelColumn(1);
+};
+
+
+
+void Database::addnewUser(QString enc,QTableView *table){
+    QSqlQuery query =  QSqlQuery(db);
+    if(db.isOpen())
+    {
+        query.prepare("INSERT INTO `users` (`nic`, `email`, `user_name`, `roll_no`, `account_status`, `phone_number`, 'profile_pic',`datetime`) VALUES ('7140299299999', NULL, 'jibran khalil', '23p0030', '0', '03100000000','" + enc +"', '2024-04-22 20:20:35');");
+        if(query.exec())
+        {
+            getFoods(table);
+
+            //QMessageBox::information(this, "Success", "Data inserted successfully",QMessageBox::Ok);
+
+        }
+        else
+        {
+            qDebug() << "Error : "<<query.lastError().text() << query.isValid();
+        }
+    }
+}
+
+
+//
 void Database::getFoods(QTableView *table){
 
     QSqlQueryModel *model = new QSqlQueryModel();
@@ -335,8 +388,6 @@ void Database::addNewFood(QString name,QString qnt,QString size,QString price,QT
 }
 
 
-
-
 bool Database::removeFoodItem(QString id,QTableView *table){
     QSqlQuery query =  QSqlQuery(db);
     if(db.isOpen())
@@ -347,7 +398,6 @@ bool Database::removeFoodItem(QString id,QTableView *table){
             getFoods(table);
             return true;
             //QMessageBox::information(this, "Success", "Data inserted successfully",QMessageBox::Ok);
-
         }
         else
         {
@@ -357,3 +407,8 @@ bool Database::removeFoodItem(QString id,QTableView *table){
     return false;
 
 }
+
+
+// void Database::searchUserWithCnic(){
+
+// }

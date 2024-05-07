@@ -33,8 +33,6 @@ private slots:
 
     void on_UserButton_clicked();
 
-    void on_LoanButton_clicked();
-
     void on_SettingsButton_clicked();
 
     void on_addNewUserButton_clicked();
@@ -56,6 +54,20 @@ private slots:
     void on_removeFoodButton_clicked();
 
     void on_aboutbutton_clicked();
+
+    void on_foodItemPicture_clicked();
+
+    void on_newOrderStudentCnic_editingFinished();
+
+    void on_newOrderStudentCnic_textChanged(const QString &arg1);
+
+    void on_newOrderItemName_textChanged(const QString &arg1);
+
+    void on_newOrderCancel_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_newOrderItemsListView_clicked(const QModelIndex &index);
 
 private:
     Ui::Home *ui;

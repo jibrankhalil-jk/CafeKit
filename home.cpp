@@ -13,13 +13,14 @@ Home::Home(QWidget *parent)
       ui(new Ui::Home)
 {
     ui->setupUi(this);
-
+        ui->newOrderItemsListView->setVisible(false);
     //qDebug() << " db status : "<<db.isConnected()<<"\n" ; // checking if db is connnected
-
     loadHomeData();
     getUsersViewData();
     getFoodViewData();
 
+
+    // ui->columnView->setModel();
 }
 
 
@@ -32,28 +33,24 @@ void Home::selectedPushButton(QPushButton *button)
 {
     const QString active= "QPushButton{text-align:left;padding-left:20px;	border-bottom: 2px solid dodgerblue; border-top: 2px solid dodgerblue;border-left: 2px solid dodgerblue; border-top-left-radius: 20px;border-bottom-left-radius: 20px;   color:white;	  	background:transparent; } #QPushButton:hover{       text-align:left;       padding-left:26px;	   border:none;	  color:white;	  background:#333333; }";
     const QString deactive= "QPushButton{text-align:left;padding-left:20px; color:white;	border:none;	background:transparent; } QPushButton:hover{       text-align:left;       padding-left:20px;		border-top-left-radius: 20px;   border-bottom-left-radius: 20px;   border:none;	  color:white;	  background-color: rgb(61, 56, 70); }";
-
     if(button ==  ui->HomeButton){
         ui->HomeButton->setStyleSheet(active);
         ui->views->setCurrentIndex(0);
     }else{
         ui->HomeButton->setStyleSheet(deactive);
     }
-
     if(button ==  ui->OrdersButton){
         ui->OrdersButton->setStyleSheet(active);
         ui->views->setCurrentIndex(1);
     }else{
         ui->OrdersButton->setStyleSheet(deactive);
     }
-
     if(button ==  ui->FoodButton){
         ui->FoodButton->setStyleSheet(active);
         ui->views->setCurrentIndex(2);
     }else{
         ui->FoodButton->setStyleSheet(deactive);
     }
-
     if(button ==  ui->UserButton){
         ui->UserButton->setStyleSheet(active);
         ui->views->setCurrentIndex(3);
@@ -61,26 +58,18 @@ void Home::selectedPushButton(QPushButton *button)
         ui->UserButton->setStyleSheet(deactive);
     }
 
-    if(button ==  ui->LoanButton){
-        ui->LoanButton->setStyleSheet(active);
-        ui->views->setCurrentIndex(4);
-    }else{
-        ui->LoanButton->setStyleSheet(deactive);
-    }
     if(button ==  ui->SettingsButton){
         ui->SettingsButton->setStyleSheet(active);
         ui->views->setCurrentIndex(5);
     }else{
         ui->SettingsButton->setStyleSheet(deactive);
     }
-
     if(button ==  ui->aboutbutton){
         ui->aboutbutton->setStyleSheet(active);
         ui->views->setCurrentIndex(6);
     }else{
         ui->aboutbutton->setStyleSheet(deactive);
     }
-
 }
 
 void Home::on_HomeButton_clicked(){
@@ -106,20 +95,13 @@ void Home::on_UserButton_clicked()
 {
     selectedPushButton(ui->UserButton);
     // db.getusers(this->ui->userstableView);
-
 }
 
-void Home::on_LoanButton_clicked()
-{
-    selectedPushButton(ui->LoanButton);
-}
 
 void Home::on_SettingsButton_clicked()
 {
     selectedPushButton(ui->SettingsButton);
 }
-
-
 
 void Home::loadHomeData(){
     db.getorders(ui->table1);
@@ -139,17 +121,15 @@ void Home::loadHomeData(){
    // qDebug() << QDateTime::fromString(user["date_time"]).time().toString();
 
 }
+
 void Home::getUsersViewData(){
-
     db.getUsers(ui->usersViewUsersTable);
-
-
 }
+
 void Home::getFoodViewData(){
     db.getCategories(ui->foodViewCategoryTable);
     db.getFoods(ui->foodViewFoodItemTable);
 }
-
 
 // User View
 void Home::on_addNewUserButton_clicked()
@@ -158,12 +138,10 @@ void Home::on_addNewUserButton_clicked()
     ui->views->setCurrentIndex(7);
 }
 
-
 void Home::on_userCancelButton_clicked()
 {
      ui->views->setCurrentIndex(3);
 }
-
 
 void Home::on_ProfilePictureButton_clicked()
 {
@@ -180,22 +158,18 @@ void Home::on_ProfilePictureButton_clicked()
     }
 }
 
-
 void Home::on_addNewFoodButton_clicked()
 {
     ui->views->setCurrentIndex(8);
 }
-
 
 void Home::on_foodAddNewCancelButton_clicked()
 {
     ui->views->setCurrentIndex(2);
 }
 
-
 void Home::on_removeUserButton_clicked()
 {
-
    int itemRow = ui->usersViewUsersTable->currentIndex().row();
 
     QString userName = ui->usersViewUsersTable->model()->itemData(ui->usersViewUsersTable->model()->index(itemRow,0)).value(0).toString();
@@ -216,33 +190,25 @@ void Home::on_removeUserButton_clicked()
 
 }
 
-
 void Home::on_views_currentChanged(int arg1)
 {
     qDebug() << arg1;
 }
 
-
 void Home::on_foodAddNewSubmitButton_clicked()
 {
-     db.addNewFood(ui->newFoodItemName->text(),
+    db.addNewFood(ui->newFoodItemName->text(),
     ui->newFoodItemQuantity->text(),
     ui->newFoodItemSize->text(),
     ui->newFoodItemPrice->text(),
     ui->foodViewFoodItemTable
     );
-
     ui->views->setCurrentIndex(2);
-
-
     ui->newFoodItemName->clear();
     ui->newFoodItemQuantity->clear();
     ui->newFoodItemSize->clear();
     ui->newFoodItemPrice->clear();
-
 }
-
-
 void Home::on_removeFoodButton_clicked()
 {
     int itemRow = ui->foodViewFoodItemTable->currentIndex().row();
@@ -265,10 +231,74 @@ void Home::on_removeFoodButton_clicked()
     }
 }
 
-
-
 void Home::on_aboutbutton_clicked()
 {
     selectedPushButton(ui->aboutbutton);
+}
+
+
+void Home::on_foodItemPicture_clicked()
+{
+
+
+    QString imagePath = QFileDialog::getOpenFileName(nullptr, "Select Profile Picture", QDir::homePath(), "Images (*.png *.jpg *.jpeg)");
+
+    if (!imagePath.isEmpty()) {
+
+        QPixmap image(imagePath);
+        ui->userprofilepctureview_2->setPixmap(image);
+        ui->userprofilepctureview_2->setScaledContents(true);
+
+
+        QFile* pic = new QFile(imagePath);
+        pic->open(QIODevice::ReadOnly);
+        QByteArray picture = pic->readAll();
+        int originalSize = picture.length();
+
+        QString encoded = QString(picture.toBase64());
+        int encodedSize = encoded.size();
+
+        db.addnewUser(encoded,ui->usersViewUsersTable);
+
+    }
+}
+
+
+void Home::on_newOrderStudentCnic_editingFinished()
+{
+    qDebug() << " end ";
+}
+
+
+void Home::on_newOrderStudentCnic_textChanged(const QString &arg1)
+{
+    db.getUserWithCnic(ui->newOrderStudentCnic->text(),ui->newOrderStudentName);
+}
+
+
+void Home::on_newOrderItemName_textChanged(const QString &arg1)
+{
+    ui->newOrderItemsListView->setVisible(true);
+    db.getItemsWithName(ui->newOrderItemName->text(),ui->newOrderItemsListView);
+
+}
+
+
+void Home::on_newOrderCancel_clicked()
+{
+     ui->views->setCurrentIndex(1);
+}
+
+
+void Home::on_pushButton_clicked()
+{
+     ui->views->setCurrentIndex(9);
+}
+
+
+void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
+{
+    qDebug() << index<<" .. \n";
+    qDebug() << index.column() <<" .. \n";
 }
 

@@ -16,7 +16,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -36,12 +35,13 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QLabel *label_5;
-    QMenuBar *menubar;
+    QLabel *dbstatus;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+        MainWindow->setWindowModality(Qt::WindowModal);
         MainWindow->resize(1028, 600);
         MainWindow->setMinimumSize(QSize(1028, 600));
         MainWindow->setMaximumSize(QSize(1028, 600));
@@ -49,26 +49,27 @@ public:
         icon.addFile(QString::fromUtf8(":/Images/logo.svg"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
         MainWindow->setInputMethodHints(Qt::ImhHiddenText|Qt::ImhSensitiveData);
+        MainWindow->setDocumentMode(false);
         MainWindow->setTabShape(QTabWidget::Rounded);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         graphicsView_2 = new QGraphicsView(centralwidget);
         graphicsView_2->setObjectName(QString::fromUtf8("graphicsView_2"));
-        graphicsView_2->setGeometry(QRect(510, 0, 521, 581));
+        graphicsView_2->setGeometry(QRect(510, 0, 521, 601));
         graphicsView_2->setMinimumSize(QSize(521, 561));
         graphicsView_2->setStyleSheet(QString::fromUtf8("background-color: #383C60;"));
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(0, -10, 511, 591));
-        widget->setStyleSheet(QString::fromUtf8("background-color: #333333;"));
+        widget->setGeometry(QRect(0, 0, 511, 611));
+        widget->setStyleSheet(QString::fromUtf8("background-color: rgb(36, 31, 49);"));
         idTextField = new QLineEdit(widget);
         idTextField->setObjectName(QString::fromUtf8("idTextField"));
         idTextField->setGeometry(QRect(90, 200, 281, 41));
         idTextField->setStyleSheet(QString::fromUtf8("#idTextField{\n"
-"background-color: rgb(255, 255, 255);\n"
+"border:1px solid  rgb(255, 255, 255);\n"
 "border-radius: 8px; \n"
 "padding-left: 20px;\n"
-"color:rgb(0, 0, 0);\n"
+"color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "#idTextField:checked {\n"
@@ -79,10 +80,10 @@ public:
         passwordTextField->setObjectName(QString::fromUtf8("passwordTextField"));
         passwordTextField->setGeometry(QRect(90, 290, 281, 41));
         passwordTextField->setStyleSheet(QString::fromUtf8("#passwordTextField{\n"
-"background-color: rgb(246, 245, 244);\n"
+"border:1px solid  rgb(255, 255, 255);\n"
 "border-radius: 8px; \n"
 "padding-left: 20px;\n"
-"color:rgb(0, 0, 0);\n"
+"color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "#passwordTextField:checked {\n"
@@ -124,16 +125,16 @@ public:
 ""));
         label_2 = new QLabel(widget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(60, 110, 241, 17));
+        label_2->setGeometry(QRect(59, 110, 241, 17));
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label_3 = new QLabel(widget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(90, 170, 41, 17));
+        label_3->setGeometry(QRect(102, 174, 41, 17));
         label_3->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 ""));
         label_4 = new QLabel(widget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(90, 260, 111, 17));
+        label_4->setGeometry(QRect(100, 264, 111, 17));
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 ""));
         label_5 = new QLabel(centralwidget);
@@ -141,11 +142,12 @@ public:
         label_5->setGeometry(QRect(510, 40, 501, 501));
         label_5->setPixmap(QPixmap(QString::fromUtf8(":/Images/bg.svg")));
         label_5->setScaledContents(true);
+        dbstatus = new QLabel(centralwidget);
+        dbstatus->setObjectName(QString::fromUtf8("dbstatus"));
+        dbstatus->setGeometry(QRect(1001, 572, 16, 16));
+        dbstatus->setStyleSheet(QString::fromUtf8("background-color: rgb(192, 28, 40);\n"
+"border-radius:7px;"));
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1028, 22));
-        MainWindow->setMenuBar(menubar);
 
         retranslateUi(MainWindow);
 
@@ -154,7 +156,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "CafeKit", nullptr));
         idTextField->setText(QString());
         idTextField->setPlaceholderText(QString());
         passwordTextField->setText(QString());
@@ -165,6 +167,7 @@ public:
         label_3->setText(QCoreApplication::translate("MainWindow", "ID", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
         label_5->setText(QString());
+        dbstatus->setText(QString());
     } // retranslateUi
 
 };

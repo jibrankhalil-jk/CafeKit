@@ -5,6 +5,8 @@
 #include <QtSql/QSqlDatabase>
 #include <QtSql>
 #include <QTableWidget>
+#include <QLabel>
+#include <QList>
 
 class Database
 {
@@ -15,9 +17,7 @@ public:
 private:
    static QSqlDatabase db; 
    static bool dbConnected;
-
 public:
-
    void getHomeOrdersTableData(QTableView *table);
     static bool isConnected(){return dbConnected;}
     void readvalues(QString sqlquery);
@@ -39,6 +39,10 @@ public:
     bool removeFoodItem(QString id,QTableView *table);
     void getCategories(QTableView *table);
     void getUsers(QTableView *table);
+    void getUserWithCnic(QString cnic,QLabel *label);
+    void getItemsWithName(QString name,QListView *list);
+
+
 
     //
 
@@ -47,7 +51,7 @@ public:
     void addNewOrder();
     void addNewFood(QString,QString,QString,QString,QTableView *table);
     void addnewCategorie();
-    void addnewUser();
+    void addnewUser(QString,QTableView *table);
 
     //
     void updateOrder();
