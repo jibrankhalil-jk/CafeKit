@@ -6,6 +6,7 @@
 #include<QTableWidget>
 #include<QTableWidgetItem>
 #include <QLabel>
+#include <QMessageBox>
 
 QSqlDatabase Database::db = QSqlDatabase::addDatabase("QMYSQL", "CafeKit_db_connection");
 bool Database::dbConnected = false;
@@ -287,7 +288,7 @@ void Database::getUserWithCnic(QString cnic,QLabel *label){
         label->setText(model->data(model->index(0,2)).toString());
          label->setStyleSheet("color:white;");
     }else{
-        label->setText("Student Cnic");
+        label->setText("Student Name");
         label->setStyleSheet("color:white;");
     }
 };
@@ -408,6 +409,56 @@ bool Database::removeFoodItem(QString id,QTableView *table){
 
 }
 
+
+void Database::addNewOrder( QString cnic,QString total,QString items,QTableWidget *table){
+    QSqlQuery query =  QSqlQuery(db);
+    items = items.left(items.length() - 1);
+    if(db.isOpen())
+    {
+        query.prepare("INSERT INTO `orders` (`oid`, `order_by`, `items`, `total_charges`, `date_time`, `paid`) VALUES (NULL, '"+cnic+"', '["+items +"]','"+total+"', current_timestamp(), '1');");
+        if(query.exec())
+        {
+
+            getAllOrders(table);
+            // QMessageBox::information(this, "Success", "Order placed successfully",QMessageBox::Ok);
+
+        }
+        else
+        {
+            qDebug() << "Error : "<<query.lastError().text() << query.isValid();
+        }
+    }
+
+
+};
+
+void Database::getAllOrders(QTableWidget *table ){
+
+    QSqlQueryModel *model = new QSqlQueryModel();
+
+    QSqlQuery query = QSqlQuery(db);
+    query.prepare("SELECT orders.oid , users.user_name ,users.roll_no, orders.items ,orders.paid FROM `orders` LEFT JOIN users ON users.nic = orders.order_by WHERE orders.date_time >= DATE_FORMAT(CURDATE(), '%Y-%m-%d 00:00:00') AND date_time <= DATE_FORMAT(CURDATE(), '%Y-%m-%d 23:59:59');");
+    query.exec();
+    model->setQuery(std::move(query));
+    // model->insertColumn(0);
+    table->setRowCount(model->rowCount());
+
+    for (int row = 0; row < model->rowCount(); ++row) {
+        for (int col = 0; col < model->columnCount() ; ++col) {
+            QModelIndex index = model->index(row, col);
+            if(col == 4 ){
+                if(model->index(index.row(), col).data().toString().contains("1")){
+                    table->setItem(row, col, new QTableWidgetItem("Paid"));
+                }else{
+                    table->setItem(row, col, new QTableWidgetItem("Not Paid"));
+                }
+            }else{
+            table->setItem(row, col, new QTableWidgetItem(model->index(index.row(), col).data().toString()));
+            }
+        }
+        table->setItem(row, 5, new QTableWidgetItem("Cancel"));
+    }
+};
 
 // void Database::searchUserWithCnic(){
 

@@ -72,6 +72,8 @@ private slots:
 
     void on_newOrderFinalItemstableWidget_cellClicked(int row, int column);
 
+    void on_newOrdersubmit_clicked();
+
 private:
     Ui::Home *ui;
 };

@@ -88,7 +88,7 @@ background-color: rgb(61, 56, 70);
      <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
-     <number>9</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="ahomepage">
      <widget class="QWidget" name="userstoday" native="true">
@@ -643,7 +643,7 @@ font: 700 11pt &quot;Ubuntu Mono&quot;;
      </widget>
     </widget>
     <widget class="QWidget" name="borderspage">
-     <widget class="QTableWidget" name="orderstable2">
+     <widget class="QTableWidget" name="allorderstable">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -653,16 +653,37 @@ font: 700 11pt &quot;Ubuntu Mono&quot;;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#orderstable2{
+       <string notr="true">
   background-color: #C6F3E0;
 border-radius: 15px;
 color: rgb(0, 0, 0);
-}</string>
+</string>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::SelectedClicked</set>
+      </property>
+      <property name="tabKeyNavigation">
+       <bool>false</bool>
+      </property>
+      <property name="showDropIndicator" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
       </property>
       <property name="gridStyle">
        <enum>Qt::SolidLine</enum>
       </property>
       <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="cornerButtonEnabled">
        <bool>false</bool>
       </property>
       <attribute name="horizontalHeaderCascadingSectionResizes">
@@ -672,7 +693,10 @@ color: rgb(0, 0, 0);
        <number>27</number>
       </attribute>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>143</number>
+       <number>115</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
       </attribute>
       <attribute name="verticalHeaderCascadingSectionResizes">
        <bool>false</bool>
@@ -682,6 +706,9 @@ color: rgb(0, 0, 0);
       </attribute>
       <attribute name="verticalHeaderDefaultSectionSize">
        <number>36</number>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
       </attribute>
       <row>
        <property name="text">
@@ -760,7 +787,7 @@ color: rgb(0, 0, 0);
       </row>
       <column>
        <property name="text">
-        <string>#</string>
+        <string>Order Id</string>
        </property>
       </column>
       <column>
@@ -775,7 +802,12 @@ color: rgb(0, 0, 0);
       </column>
       <column>
        <property name="text">
-        <string>Payment</string>
+        <string>Items</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Paid</string>
        </property>
       </column>
       <column>
@@ -3662,12 +3694,18 @@ color: rgb(255, 255, 255);
       </property>
       <property name="font">
        <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
+        <family>Cantarell</family>
+        <pointsize>20</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">font: 20pt &quot;Cantarell&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ffffff;&quot;&gt;Student Cnic&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>Student Name</string>
       </property>
      </widget>
      <widget class="QListView" name="newOrderItemsListView">
@@ -3794,11 +3832,6 @@ color: rgb(0, 0, 0);</string>
       </attribute>
       <column>
        <property name="text">
-        <string>id</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
         <string>Name</string>
        </property>
       </column>
@@ -3841,22 +3874,28 @@ color: rgb(0, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>650</y>
-        <width>141</width>
-        <height>23</height>
+        <y>644</y>
+        <width>161</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>10</pointsize>
+        <family>Cantarell</family>
+        <pointsize>22</pointsize>
+        <italic>false</italic>
         <bold>true</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 700 22pt &quot;Cantarell&quot;;</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ffffff;&quot;&gt;00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; color:#ffffff;&quot;&gt;00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>

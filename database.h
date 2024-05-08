@@ -34,6 +34,7 @@ public:
 
     void getTodaysPaymets();
     void getOrderDetails();
+    void getAllOrders(QTableWidget *table);
     void getUser();
     void getFoods(QTableView *table);
     bool removeFoodItem(QString id,QTableView *table);
@@ -48,7 +49,7 @@ public:
 
     void removeOrder();
     void acceptOrder();
-    void addNewOrder();
+    void addNewOrder(QString cnic,QString total,QString items,QTableWidget *table);
     void addNewFood(QString,QString,QString,QString,QTableView *table);
     void addnewCategorie();
     void addnewUser(QString,QTableView *table);

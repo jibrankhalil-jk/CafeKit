@@ -14,7 +14,7 @@ Home::Home(QWidget *parent)
       ui(new Ui::Home)
 {
     ui->setupUi(this);
-        ui->newOrderItemsListView->setVisible(false);
+    ui->newOrderItemsListView->setVisible(false);
     //qDebug() << " db status : "<<db.isConnected()<<"\n" ; // checking if db is connnected
     loadHomeData();
     getUsersViewData();
@@ -194,6 +194,9 @@ void Home::on_removeUserButton_clicked()
 void Home::on_views_currentChanged(int arg1)
 {
     qDebug() << arg1;
+    if(arg1 == 1){
+        db.getAllOrders(ui->allorderstable);
+    }
 }
 
 void Home::on_foodAddNewSubmitButton_clicked()
@@ -303,7 +306,7 @@ void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
 
     QMap<QString,QString> tempItem;
     tempItem["id"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString();
-    tempItem["itemid"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString();
+    // tempItem["itemid"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString();
     tempItem["Name"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),1).data().toString();
     tempItem["Quantity"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),2).data().toString();
     tempItem["Price"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),5).data().toString();
@@ -314,11 +317,11 @@ void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
 
     int i = ui->newOrderFinalItemstableWidget->rowCount();
     ui->newOrderFinalItemstableWidget->setRowCount(ui->newOrderFinalItemstableWidget->rowCount() + 1 );
-    ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(finItems.back()["id"]));
-    ui->newOrderFinalItemstableWidget->setItem(i,1,new QTableWidgetItem(finItems.back()["Name"]));
-    ui->newOrderFinalItemstableWidget->setItem(i,2,new QTableWidgetItem(finItems.back()["Quantity"]));
-    ui->newOrderFinalItemstableWidget->setItem(i,3,new QTableWidgetItem(finItems.back()["Price"]));
-    ui->newOrderFinalItemstableWidget->setItem(i,4,new QTableWidgetItem("Remove"));
+    // ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(finItems.back()["id"]));
+    ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(finItems.back()["Name"]));
+    ui->newOrderFinalItemstableWidget->setItem(i,1,new QTableWidgetItem(finItems.back()["Quantity"]));
+    ui->newOrderFinalItemstableWidget->setItem(i,2,new QTableWidgetItem(finItems.back()["Price"]));
+    ui->newOrderFinalItemstableWidget->setItem(i,3,new QTableWidgetItem("Remove"));
 
     int total = 0;
     qDebug() << "size of veotr " <<  finItems.size() <<"\n";
@@ -331,11 +334,11 @@ void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
 
 void Home::on_newOrderFinalItemstableWidget_cellClicked(int row, int column)
 {
-    if(column == 4 && row >= 0 ){
+    if(column == 3 && row >= 0 ){
 
         QMessageBox msgBox(this);
         msgBox.setWindowTitle("Delete Item");
-        msgBox.setText("Are you sure you want to delete  ? ");
+        msgBox.setText("Are you sure you want to delete this item ? ");
         msgBox.setInformativeText("This action cannot be undone.");
         msgBox.setStandardButtons(QMessageBox::No | QMessageBox::Yes);
         msgBox.setDefaultButton(QMessageBox::No);
@@ -348,25 +351,20 @@ void Home::on_newOrderFinalItemstableWidget_cellClicked(int row, int column)
                 qDebug()<< item["Name"] << ", " ;
             }
     qDebug()<<"]]..";
-            // // Fill the gap by shifting elements to the left
-            // for (size_t i  = row; i < finItems.size(); ++i) {
-            //     if(finItems.size() != i + 1 ){
-            //     finItems[i] = finItems[i + 1];
-            //     }
-            // }
-            // // finItems.pop_back(); // Remove the last element (which is now duplicated)
 
             int i  = 0 ;
             ui->newOrderFinalItemstableWidget->clear();
             ui->newOrderFinalItemstableWidget->setRowCount(finItems.size());
+            QStringList list = {"Name","Qty","Price","Remove"};
+            ui->newOrderFinalItemstableWidget->setHorizontalHeaderLabels(list);
             int total = 0;
             for(auto item : finItems){
                  total += item["Price"].toInt();
-                ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(item["id"]));
-                ui->newOrderFinalItemstableWidget->setItem(i,1,new QTableWidgetItem(item["Name"]));
-                ui->newOrderFinalItemstableWidget->setItem(i,2,new QTableWidgetItem(item["Quantity"]));
-                ui->newOrderFinalItemstableWidget->setItem(i,3,new QTableWidgetItem(item["Price"]));
-                ui->newOrderFinalItemstableWidget->setItem(i,4,new QTableWidgetItem("Remove"));
+                // ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(item["id"]));
+                ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(item["Name"]));
+                ui->newOrderFinalItemstableWidget->setItem(i,1,new QTableWidgetItem(item["Quantity"]));
+                ui->newOrderFinalItemstableWidget->setItem(i,2,new QTableWidgetItem(item["Price"]));
+                ui->newOrderFinalItemstableWidget->setItem(i,3,new QTableWidgetItem("Remove"));
                 ++i;
             }
 
@@ -385,5 +383,27 @@ void Home::on_newOrderFinalItemstableWidget_cellClicked(int row, int column)
             msgBox.close();
         }
     }
+}
+
+
+void Home::on_newOrdersubmit_clicked()
+{
+
+    if (ui->newOrderStudentName->text().contains("Student Name")) {
+        QMessageBox::critical(this, "Error", "Add a Student");
+    }else if(!(finItems.size() > 0 )){
+        QMessageBox::critical(this, "Error", "Add items to the order.");
+    }else{
+
+        QString itemsIds = "";
+        for(auto item : finItems){
+            itemsIds += item["id"] + ",";
+        }
+
+        db.addNewOrder(ui->newOrderStudentCnic->text(),ui->newOrderTotalPrice->text(),itemsIds,ui->allorderstable);
+            // ui->views->setCurrentIndex(1);
+    }
+
+
 }
 
