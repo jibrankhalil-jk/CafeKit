@@ -341,8 +341,45 @@ void Home::on_newOrderFinalItemstableWidget_cellClicked(int row, int column)
         msgBox.setDefaultButton(QMessageBox::No);
         int btn = msgBox.exec();
         if ( btn == QMessageBox::Yes) {
-            // Delete the item here
+            finItems.erase(finItems.begin() + row); // Erase the element at the specified index
+            // qDebug() << "ppppppp  " << row << " removed"<<  " "<<ui->newOrderFinalItemstableWidget->rowCount() <<" " <<finItems.size() <<".\n";
+             qDebug()<<"..[[";
+            for(auto item : finItems){
+                qDebug()<< item["Name"] << ", " ;
+            }
+    qDebug()<<"]]..";
+            // // Fill the gap by shifting elements to the left
+            // for (size_t i  = row; i < finItems.size(); ++i) {
+            //     if(finItems.size() != i + 1 ){
+            //     finItems[i] = finItems[i + 1];
+            //     }
+            // }
+            // // finItems.pop_back(); // Remove the last element (which is now duplicated)
+
+            int i  = 0 ;
+            ui->newOrderFinalItemstableWidget->clear();
+            ui->newOrderFinalItemstableWidget->setRowCount(finItems.size());
+            int total = 0;
+            for(auto item : finItems){
+                 total += item["Price"].toInt();
+                ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(item["id"]));
+                ui->newOrderFinalItemstableWidget->setItem(i,1,new QTableWidgetItem(item["Name"]));
+                ui->newOrderFinalItemstableWidget->setItem(i,2,new QTableWidgetItem(item["Quantity"]));
+                ui->newOrderFinalItemstableWidget->setItem(i,3,new QTableWidgetItem(item["Price"]));
+                ui->newOrderFinalItemstableWidget->setItem(i,4,new QTableWidgetItem("Remove"));
+                ++i;
+            }
+
+
+
+
+            ui->newOrderTotalPrice->setText(QString("%1").arg(total));
+
+
         }
+
+
+
 
         if (btn == QMessageBox::No) {
             msgBox.close();

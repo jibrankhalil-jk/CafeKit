@@ -164,10 +164,6 @@ public:
     QLabel *userprofilepctureview_5;
     QLabel *id_34;
     QLineEdit *newOrderItemName;
-    QLineEdit *newOrderStudentCnic_3;
-    QLabel *id_35;
-    QLineEdit *newOrderStudentCnic_4;
-    QLabel *id_36;
     QLabel *newOrderStudentName;
     QListView *newOrderItemsListView;
     QPushButton *newOrderCancel;
@@ -1559,38 +1555,6 @@ public:
 "color: rgb(255, 255, 255);\n"
 " "));
         newOrderItemName->setInputMethodHints(Qt::ImhPreferLowercase);
-        newOrderStudentCnic_3 = new QLineEdit(jAddNewOrder);
-        newOrderStudentCnic_3->setObjectName(QString::fromUtf8("newOrderStudentCnic_3"));
-        newOrderStudentCnic_3->setEnabled(false);
-        newOrderStudentCnic_3->setGeometry(QRect(240, 200, 171, 35));
-        newOrderStudentCnic_3->setFont(font4);
-        newOrderStudentCnic_3->setStyleSheet(QString::fromUtf8(" \n"
-"border:1px solid  rgb(255, 255, 255);\n"
-"border-radius: 8px; \n"
-"padding-left: 20px;\n"
-"color: rgb(255, 255, 255);\n"
-" "));
-        newOrderStudentCnic_3->setInputMethodHints(Qt::ImhPreferLowercase);
-        id_35 = new QLabel(jAddNewOrder);
-        id_35->setObjectName(QString::fromUtf8("id_35"));
-        id_35->setGeometry(QRect(246, 180, 141, 21));
-        id_35->setFont(font5);
-        newOrderStudentCnic_4 = new QLineEdit(jAddNewOrder);
-        newOrderStudentCnic_4->setObjectName(QString::fromUtf8("newOrderStudentCnic_4"));
-        newOrderStudentCnic_4->setEnabled(false);
-        newOrderStudentCnic_4->setGeometry(QRect(446, 200, 191, 35));
-        newOrderStudentCnic_4->setFont(font4);
-        newOrderStudentCnic_4->setStyleSheet(QString::fromUtf8(" \n"
-"border:1px solid  rgb(255, 255, 255);\n"
-"border-radius: 8px; \n"
-"padding-left: 20px;\n"
-"color: rgb(255, 255, 255);\n"
-" "));
-        newOrderStudentCnic_4->setInputMethodHints(Qt::ImhPreferLowercase);
-        id_36 = new QLabel(jAddNewOrder);
-        id_36->setObjectName(QString::fromUtf8("id_36"));
-        id_36->setGeometry(QRect(456, 180, 141, 21));
-        id_36->setFont(font5);
         newOrderStudentName = new QLabel(jAddNewOrder);
         newOrderStudentName->setObjectName(QString::fromUtf8("newOrderStudentName"));
         newOrderStudentName->setGeometry(QRect(300, 132, 241, 23));
@@ -1654,7 +1618,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem87 = new QTableWidgetItem();
         newOrderFinalItemstableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem87);
         newOrderFinalItemstableWidget->setObjectName(QString::fromUtf8("newOrderFinalItemstableWidget"));
-        newOrderFinalItemstableWidget->setGeometry(QRect(220, 250, 491, 341));
+        newOrderFinalItemstableWidget->setGeometry(QRect(240, 200, 501, 411));
         newOrderFinalItemstableWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(143, 240, 164);\n"
 "border-radius: 12px;\n"
 "color: rgb(0, 0, 0);"));
@@ -1670,24 +1634,8 @@ public:
         newOrderTotalPrice->setObjectName(QString::fromUtf8("newOrderTotalPrice"));
         newOrderTotalPrice->setGeometry(QRect(160, 650, 141, 23));
         newOrderTotalPrice->setFont(font5);
+        newOrderTotalPrice->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         views->addWidget(jAddNewOrder);
-        id_36->raise();
-        id_35->raise();
-        id_33->raise();
-        newOrderStudentCnic->raise();
-        label_46->raise();
-        userprofilepctureview_5->raise();
-        id_34->raise();
-        newOrderItemName->raise();
-        newOrderStudentCnic_3->raise();
-        newOrderStudentCnic_4->raise();
-        newOrderStudentName->raise();
-        newOrderItemsListView->raise();
-        newOrderCancel->raise();
-        newOrdersubmit->raise();
-        newOrderFinalItemstableWidget->raise();
-        newOrderStudentName_2->raise();
-        newOrderTotalPrice->raise();
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(0, 0, 231, 741));
@@ -1980,8 +1928,6 @@ public:
         label_46->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; color:#1c71d8;\">New Food Item</span></p></body></html>", nullptr));
         userprofilepctureview_5->setText(QString());
         id_34->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Item Name</span></p></body></html>", nullptr));
-        id_35->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Quantity</span></p></body></html>", nullptr));
-        id_36->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Price</span></p></body></html>", nullptr));
         newOrderStudentName->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:14pt; color:#ffffff;\">Student Cnic</span></p></body></html>", nullptr));
         newOrderCancel->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
         newOrdersubmit->setText(QCoreApplication::translate("Home", "Submit", nullptr));
