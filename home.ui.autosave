@@ -3651,85 +3651,6 @@ color: rgb(255, 255, 255);
        <set>Qt::ImhPreferLowercase</set>
       </property>
      </widget>
-     <widget class="QLineEdit" name="newOrderStudentCnic_3">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>200</y>
-        <width>171</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"> 
-border:1px solid  rgb(255, 255, 255);
-border-radius: 8px; 
-padding-left: 20px;
-color: rgb(255, 255, 255);
- </string>
-      </property>
-      <property name="inputMethodHints">
-       <set>Qt::ImhPreferLowercase</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="id_35">
-      <property name="geometry">
-       <rect>
-        <x>246</x>
-        <y>180</y>
-        <width>141</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Quantity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="newOrderStudentCnic_4">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>446</x>
-        <y>200</y>
-        <width>191</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"> 
-border:1px solid  rgb(255, 255, 255);
-border-radius: 8px; 
-padding-left: 20px;
-color: rgb(255, 255, 255);
- </string>
-      </property>
-      <property name="inputMethodHints">
-       <set>Qt::ImhPreferLowercase</set>
-      </property>
-     </widget>
      <widget class="QLabel" name="id_36">
       <property name="geometry">
        <rect>
@@ -3955,15 +3876,12 @@ color: rgb(0, 0, 0);</string>
       </property>
      </widget>
      <zorder>id_36</zorder>
-     <zorder>id_35</zorder>
      <zorder>id_33</zorder>
      <zorder>newOrderStudentCnic</zorder>
      <zorder>label_46</zorder>
      <zorder>userprofilepctureview_5</zorder>
      <zorder>id_34</zorder>
      <zorder>newOrderItemName</zorder>
-     <zorder>newOrderStudentCnic_3</zorder>
-     <zorder>newOrderStudentCnic_4</zorder>
      <zorder>newOrderStudentName</zorder>
      <zorder>newOrderItemsListView</zorder>
      <zorder>newOrderCancel</zorder>

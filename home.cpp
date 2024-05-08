@@ -299,18 +299,54 @@ void Home::on_pushButton_clicked()
 
 void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
 {
-    qDebug() << index<<" .. \n";
-    qDebug() << index.model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString() <<" .. \n";
 
-     // QSqlQueryModel model =  QSqlQueryModel();
 
-    // item.setText(index.data().toString());
-    ui->newOrderFinalItemstableWidget->setRowCount(ui->newOrderFinalItemstableWidget->rowCount()+1 );
-    ui->newOrderFinalItemstableWidget->setItem(0,0,new QTableWidgetItem("ddd"));
-    // ui->newOrderFinalItemstableWidget->setItem(1 ,1,&item);
+    QMap<QString,QString> tempItem;
+    tempItem["id"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString();
+    tempItem["itemid"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString();
+    tempItem["Name"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),1).data().toString();
+    tempItem["Quantity"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),2).data().toString();
+    tempItem["Price"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),5).data().toString();
 
-    // ui->newOrderFinalItemstableWidget->model()->setData(ui->newOrderFinalItemstableWidget->model()->index(0,0),
-                                                    // index);
+    qDebug() << tempItem["itemid"]<< tempItem["Name"] <<  tempItem["Quantity"]<< tempItem["Price"]<<"\n";
 
+    finItems.push_back(tempItem);
+
+    int i = ui->newOrderFinalItemstableWidget->rowCount();
+    ui->newOrderFinalItemstableWidget->setRowCount(ui->newOrderFinalItemstableWidget->rowCount() + 1 );
+    ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(finItems.back()["id"]));
+    ui->newOrderFinalItemstableWidget->setItem(i,1,new QTableWidgetItem(finItems.back()["Name"]));
+    ui->newOrderFinalItemstableWidget->setItem(i,2,new QTableWidgetItem(finItems.back()["Quantity"]));
+    ui->newOrderFinalItemstableWidget->setItem(i,3,new QTableWidgetItem(finItems.back()["Price"]));
+    ui->newOrderFinalItemstableWidget->setItem(i,4,new QTableWidgetItem("Remove"));
+
+    int total = 0;
+    qDebug() << "size of veotr " <<  finItems.size() <<"\n";
+    for(auto item: finItems){
+        total += item["Price"].toInt();
+    }
+
+    ui->newOrderTotalPrice->setText(QString("%1").arg(total));
+}
+
+void Home::on_newOrderFinalItemstableWidget_cellClicked(int row, int column)
+{
+    if(column == 4 && row >= 0 ){
+
+        QMessageBox msgBox(this);
+        msgBox.setWindowTitle("Delete Item");
+        msgBox.setText("Are you sure you want to delete  ? ");
+        msgBox.setInformativeText("This action cannot be undone.");
+        msgBox.setStandardButtons(QMessageBox::No | QMessageBox::Yes);
+        msgBox.setDefaultButton(QMessageBox::No);
+        int btn = msgBox.exec();
+        if ( btn == QMessageBox::Yes) {
+            // Delete the item here
+        }
+
+        if (btn == QMessageBox::No) {
+            msgBox.close();
+        }
+    }
 }
 

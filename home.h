@@ -22,6 +22,7 @@ private:
     void loadHomeData();
     void getUsersViewData();
     void getFoodViewData();
+    std::pmr::vector<QMap<QString ,QString>> finItems;
 private slots:
     void selectedPushButton(QPushButton *button);
 
@@ -68,6 +69,8 @@ private slots:
     void on_pushButton_clicked();
 
     void on_newOrderItemsListView_clicked(const QModelIndex &index);
+
+    void on_newOrderFinalItemstableWidget_cellClicked(int row, int column);
 
 private:
     Ui::Home *ui;
