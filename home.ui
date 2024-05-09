@@ -88,7 +88,7 @@ background-color: rgb(61, 56, 70);
      <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="ahomepage">
      <widget class="QWidget" name="userstoday" native="true">
@@ -643,7 +643,7 @@ font: 700 11pt &quot;Ubuntu Mono&quot;;
      </widget>
     </widget>
     <widget class="QWidget" name="borderspage">
-     <widget class="QTableWidget" name="allorderstable">
+     <widget class="QTableWidget" name="ordersViewAllOrdersTable">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -847,7 +847,7 @@ color: rgb(0, 0, 0);
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; color:#ffffff;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="ordersViewAddNewButton">
       <property name="geometry">
        <rect>
         <x>505</x>
@@ -894,10 +894,10 @@ font:bold;</string>
      </widget>
     </widget>
     <widget class="QWidget" name="cfoodpage">
-     <widget class="QPushButton" name="updateFoodButton">
+     <widget class="QPushButton" name="FoodViewUpdateFoodButton">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>480</x>
         <y>20</y>
         <width>121</width>
         <height>41</height>
@@ -916,10 +916,10 @@ background-color: rgb(220, 138, 221);
        <string>Update Item</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="addNewFoodButton">
+     <widget class="QPushButton" name="FoodViewAddNewFoodButton">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>340</x>
         <y>20</y>
         <width>121</width>
         <height>41</height>
@@ -938,10 +938,10 @@ background-color: rgb(143, 240, 164)
        <string>Add new Item</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="removeFoodButton">
+     <widget class="QPushButton" name="FoodViewRemoveFoodButton">
       <property name="geometry">
        <rect>
-        <x>620</x>
+        <x>610</x>
         <y>20</y>
         <width>121</width>
         <height>41</height>
@@ -960,7 +960,7 @@ background-color: rgb(246, 97, 81);
        <string>Remove Item</string>
       </property>
      </widget>
-     <widget class="QTableView" name="foodViewFoodItemTable">
+     <widget class="QTableView" name="foodViewFoodItemsTable">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -997,19 +997,19 @@ alternate-background-color: lightgray;</string>
      </widget>
     </widget>
     <widget class="QWidget" name="duserpage">
-     <widget class="QPushButton" name="addNewUserButton">
+     <widget class="QPushButton" name="usersViewAddNewUserButton">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>50</y>
-        <width>101</width>
-        <height>101</height>
+        <x>340</x>
+        <y>20</y>
+        <width>151</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">#addNewUserButton{
 background-color: rgb(46, 194, 126);
-border-radius: 50%;
+border-radius: 20%;
 }
 #addNewUserButton::hover{
 background-color: rgb(143, 240, 164)
@@ -1019,19 +1019,19 @@ background-color: rgb(143, 240, 164)
        <string>Add New</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="removeUserButton">
+     <widget class="QPushButton" name="usersViewRemoveUserButton">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>180</y>
+        <x>510</x>
+        <y>20</y>
         <width>101</width>
-        <height>101</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">#removeUserButton{
 background-color: rgb(224, 27, 36);
-border-radius: 50%;
+border-radius: 20%;
 }
 #removeUserButton::hover{
 background-color: rgb(246, 97, 81);
@@ -1044,16 +1044,16 @@ background-color: rgb(246, 97, 81);
      <widget class="QPushButton" name="updateUserButton">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>310</y>
+        <x>630</x>
+        <y>20</y>
         <width>101</width>
-        <height>101</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">#updateUserButton{
 background-color: rgb(192, 97, 203);
-border-radius: 50%;
+border-radius: 20%;
 }
 #updateUserButton::hover{
 background-color: rgb(220, 138, 221);
@@ -1067,8 +1067,8 @@ background-color: rgb(220, 138, 221);
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>20</y>
-        <width>601</width>
+        <y>90</y>
+        <width>711</width>
         <height>581</height>
        </rect>
       </property>
@@ -1083,6 +1083,19 @@ alternate-background-color: lightgray;</string>
       </property>
       <property name="alternatingRowColors">
        <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>73</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; color:#1c71d8;&quot;&gt;Users&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>

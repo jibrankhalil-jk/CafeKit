@@ -3,10 +3,11 @@
 
 #include <QMainWindow>
 #include <QPushButton>
-#include"database.h"
+#include "database.h"
 
-namespace Ui {
-class Home;
+namespace Ui
+{
+    class Home;
 }
 
 class Home : public QMainWindow
@@ -25,7 +26,7 @@ private:
     void loadOrdersViewData();
     void getSettingViewData();
 
-    std::pmr::vector<QMap<QString ,QString>> finItems;
+    std::pmr::vector<QMap<QString, QString>> finItems;
 
 private slots:
     void selectedPushButton(QPushButton *button);
@@ -40,23 +41,15 @@ private slots:
 
     void on_SettingsButton_clicked();
 
-    void on_addNewUserButton_clicked();
-
     void on_userCancelButton_clicked();
 
     void on_ProfilePictureButton_clicked();
 
-    void on_addNewFoodButton_clicked();
+    void on_FoodViewAddNewFoodButton_clicked();
 
     void on_foodAddNewCancelButton_clicked();
 
-    void on_removeUserButton_clicked();
-
-    void on_views_currentChanged(int arg1);
-
     void on_foodAddNewSubmitButton_clicked();
-
-    void on_removeFoodButton_clicked();
 
     void on_aboutbutton_clicked();
 
@@ -70,13 +63,19 @@ private slots:
 
     void on_newOrderCancel_clicked();
 
-    void on_pushButton_clicked();
-
     void on_newOrderItemsListView_clicked(const QModelIndex &index);
 
     void on_newOrderFinalItemstableWidget_cellClicked(int row, int column);
 
     void on_newOrdersubmit_clicked();
+
+    void on_ordersViewAddNewButton_clicked();
+
+    void on_FoodViewRemoveFoodButton_clicked();
+
+    void on_usersViewRemoveUserButton_clicked();
+    
+    void on_usersViewAddNewUserButton_clicked();
 
 private:
     Ui::Home *ui;
