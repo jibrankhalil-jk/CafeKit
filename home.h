@@ -19,10 +19,14 @@ public:
     Database db = Database();
 
 private:
-    void loadHomeData();
+    void loadHomeViewData();
     void getUsersViewData();
     void getFoodViewData();
+    void loadOrdersViewData();
+    void getSettingViewData();
+
     std::pmr::vector<QMap<QString ,QString>> finItems;
+
 private slots:
     void selectedPushButton(QPushButton *button);
 

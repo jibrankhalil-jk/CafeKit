@@ -14,15 +14,56 @@ Home::Home(QWidget *parent)
       ui(new Ui::Home)
 {
     ui->setupUi(this);
-    ui->newOrderItemsListView->setVisible(false);
-    //qDebug() << " db status : "<<db.isConnected()<<"\n" ; // checking if db is connnected
-    loadHomeData();
-    getUsersViewData();
-    getFoodViewData();
-    db.getAllOrders(ui->allorderstable);
 
-    // ui->columnView->setModel();
+// geting all views data
+    loadHomeViewData();
+    loadOrdersViewData();
+    getFoodViewData();
+    getUsersViewData();
+    getSettingViewData();
+
 }
+
+// ************************************* Views **************************************************************
+
+void Home::loadHomeViewData(){
+    // getting total ordes data for table on home view
+    db.getorders(ui->table1);
+
+    // getting total size of total users, today orders , total sales for today
+    ui->homeTotalUsers->setText(db.getTotalUsers());
+    ui->homeTotalOrders->setText(db.getTotalOrdersTodays());
+    ui->homeTotalSales->setText(db.getTotalSalesToday());
+
+    // getting data of last user who order something
+    QMap<QString,QString> user = db.getTodaysLastOderandUser();
+    ui->homeLasUserName->setText(user["user_name"]);
+    ui->homeLasUserRollno->setText(user["roll_no"]);
+    ui->homeLasUserOrderDateTime->setText("sdfs");
+    ui->homeLasUserPayement->setText("Rs." + user["total_charges"]);
+
+}
+
+void Home::loadOrdersViewData(){
+    // geting data of all orders today
+    db.getAllOrders(ui->allorderstable);
+}
+
+void Home::getFoodViewData(){
+    db.getFoods(ui->foodViewFoodItemTable);
+}
+
+void Home::getUsersViewData(){
+    db.getUsers(ui->usersViewUsersTable);
+}
+
+void Home::getSettingViewData(){
+
+}
+
+// ************************************* home View **************************************************************
+
+
 
 
 Home::~Home()
@@ -98,41 +139,17 @@ void Home::on_UserButton_clicked()
     // db.getusers(this->ui->userstableView);
 }
 
-
 void Home::on_SettingsButton_clicked()
 {
     selectedPushButton(ui->SettingsButton);
 }
 
-void Home::loadHomeData(){
-    db.getorders(ui->table1);
 
-    ui->homeTotalUsers->setText(db.getTotalUsers());
 
-    ui->homeTotalOrders->setText(db.getTotalOrdersTodays());
 
-    ui->homeTotalSales->setText(db.getTotalSalesToday());
 
-    QMap<QString,QString> user = db.getTodaysLastOderandUser();
-    ui->homeLasUserName->setText(user["user_name"]);
-    ui->homeLasUserRollno->setText(user["roll_no"]);
-    ui->homeLasUserOrderDateTime->setText("sdfs");
-    ui->homeLasUserPayement->setText("Rs." + user["total_charges"]);
 
-   // qDebug() << QDateTime::fromString(user["date_time"]).time().toString();
-
-}
-
-void Home::getUsersViewData(){
-    db.getUsers(ui->usersViewUsersTable);
-}
-
-void Home::getFoodViewData(){
-    db.getCategories(ui->foodViewCategoryTable);
-    db.getFoods(ui->foodViewFoodItemTable);
-}
-
-// User View
+// ************************************* User View **************************************************************
 void Home::on_addNewUserButton_clicked()
 {
     // changing view to user ,to add new user
@@ -201,17 +218,49 @@ void Home::on_views_currentChanged(int arg1)
 
 void Home::on_foodAddNewSubmitButton_clicked()
 {
-    db.addNewFood(ui->newFoodItemName->text(),
-    ui->newFoodItemQuantity->text(),
-    ui->newFoodItemSize->text(),
-    ui->newFoodItemPrice->text(),
-    ui->foodViewFoodItemTable
-    );
-    ui->views->setCurrentIndex(2);
-    ui->newFoodItemName->clear();
-    ui->newFoodItemQuantity->clear();
-    ui->newFoodItemSize->clear();
-    ui->newFoodItemPrice->clear();
+
+
+    QString name = ui->newFoodItemName->text().toLower();
+    int qty = ui->newFoodItemQuantity->text().toInt();
+    QString size = ui->newFoodItemSize->text().toLower();
+    int price = ui->newFoodItemPrice->text().toInt();
+
+
+    if(name.isEmpty()){
+        QMessageBox::warning(this, "Error", "Please enter a name for the food item.");
+
+    }else if(qty <=0||qty>=10){
+
+
+
+    }else if (size.isEmpty() || (size != "small" && size != "medium" && size != "large")) {
+        QMessageBox::warning(this, "Error", "Please select a size for the food item.");
+
+    } else if (price <= 0.0 || price >= 2000.0) {
+        QMessageBox::warning(this, "Error", "Please enter a valid price");
+    }
+
+    else{
+
+        QString qtyString = QString::number(qty);
+        QString priceString = QString::number(price);
+
+        db.addNewFood(name, qtyString, size, priceString,
+                      ui->foodViewFoodItemTable
+                      );
+
+        ui->views->setCurrentIndex(2);
+
+
+        ui->newFoodItemName->clear();
+        ui->newFoodItemQuantity->clear();
+        ui->newFoodItemPrice->clear();
+        ui->newFoodItemSize->clear();
+
+        QMessageBox::information(this, "Success", "Food item added successfully!");
+
+    }
+
 }
 void Home::on_removeFoodButton_clicked()
 {

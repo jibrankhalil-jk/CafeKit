@@ -25,11 +25,6 @@ public:
     void getusers(QTableWidget* tableView);
 
 
-    QString getTotalUsers();
-    QString getTotalSalesToday();
-    QString getTotalOrdersTodays();
-
-    QMap<QString, QString> getTodaysLastOderandUser();
 
 
     void getTodaysPaymets();
@@ -61,7 +56,18 @@ public:
     void updateUser();
 
 
+
+
+
+// home view  *******************************************
+
     void getorders(QTableWidget *table);
+    QString getTotalUsers();
+    QString getTotalSalesToday();
+    QString getTotalOrdersTodays();
+
+    QMap<QString, QString> getTodaysLastOderandUser();
+
 };
 
 

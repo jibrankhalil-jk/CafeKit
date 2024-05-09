@@ -59,14 +59,11 @@ public:
     QLabel *label_12;
     QLabel *label_15;
     QWidget *cfoodpage;
-    QPushButton *addNewFoodCategorieButton;
-    QPushButton *updateFoodCategorieButton;
-    QPushButton *removeFoodCategorieButton;
-    QTableView *foodViewCategoryTable;
     QPushButton *updateFoodButton;
     QPushButton *addNewFoodButton;
     QPushButton *removeFoodButton;
     QTableView *foodViewFoodItemTable;
+    QLabel *label_22;
     QWidget *duserpage;
     QPushButton *addNewUserButton;
     QPushButton *removeUserButton;
@@ -530,51 +527,9 @@ public:
         views->addWidget(borderspage);
         cfoodpage = new QWidget();
         cfoodpage->setObjectName(QString::fromUtf8("cfoodpage"));
-        addNewFoodCategorieButton = new QPushButton(cfoodpage);
-        addNewFoodCategorieButton->setObjectName(QString::fromUtf8("addNewFoodCategorieButton"));
-        addNewFoodCategorieButton->setGeometry(QRect(650, 30, 101, 51));
-        addNewFoodCategorieButton->setStyleSheet(QString::fromUtf8("#addNewFoodCategorieButton{\n"
-"background-color: rgb(46, 194, 126);\n"
-"border-radius: 50%;\n"
-"}\n"
-"#addNewFoodCategorieButton::hover{\n"
-"background-color: rgb(143, 240, 164)\n"
-"}"));
-        updateFoodCategorieButton = new QPushButton(cfoodpage);
-        updateFoodCategorieButton->setObjectName(QString::fromUtf8("updateFoodCategorieButton"));
-        updateFoodCategorieButton->setGeometry(QRect(650, 150, 101, 51));
-        updateFoodCategorieButton->setStyleSheet(QString::fromUtf8("#updateFoodCategorieButton{\n"
-"background-color: rgb(192, 97, 203);\n"
-"border-radius: 50%;\n"
-"}\n"
-"#updateFoodCategorieButton::hover{\n"
-"background-color: rgb(220, 138, 221);\n"
-"}"));
-        removeFoodCategorieButton = new QPushButton(cfoodpage);
-        removeFoodCategorieButton->setObjectName(QString::fromUtf8("removeFoodCategorieButton"));
-        removeFoodCategorieButton->setGeometry(QRect(650, 90, 101, 51));
-        removeFoodCategorieButton->setStyleSheet(QString::fromUtf8("#removeFoodCategorieButton{\n"
-"background-color: rgb(224, 27, 36);\n"
-"border-radius: 50%;\n"
-"}\n"
-"#removeFoodCategorieButton::hover{\n"
-"background-color: rgb(246, 97, 81);\n"
-"}"));
-        foodViewCategoryTable = new QTableView(cfoodpage);
-        foodViewCategoryTable->setObjectName(QString::fromUtf8("foodViewCategoryTable"));
-        foodViewCategoryTable->setGeometry(QRect(20, 20, 601, 241));
-        foodViewCategoryTable->setStyleSheet(QString::fromUtf8("background-color: #C6F3E0;\n"
-"border-radius: 15px;\n"
-"color: rgb(0, 0, 0);\n"
-"alternate-background-color: lightgray;"));
-        foodViewCategoryTable->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
-        foodViewCategoryTable->setAutoScrollMargin(21);
-        foodViewCategoryTable->setAlternatingRowColors(true);
-        foodViewCategoryTable->verticalHeader()->setMinimumSectionSize(11);
-        foodViewCategoryTable->verticalHeader()->setDefaultSectionSize(34);
         updateFoodButton = new QPushButton(cfoodpage);
         updateFoodButton->setObjectName(QString::fromUtf8("updateFoodButton"));
-        updateFoodButton->setGeometry(QRect(650, 410, 101, 51));
+        updateFoodButton->setGeometry(QRect(490, 20, 121, 41));
         updateFoodButton->setStyleSheet(QString::fromUtf8("#updateFoodButton{\n"
 "background-color: rgb(192, 97, 203);\n"
 "border-radius: 20%;\n"
@@ -584,7 +539,7 @@ public:
 "}"));
         addNewFoodButton = new QPushButton(cfoodpage);
         addNewFoodButton->setObjectName(QString::fromUtf8("addNewFoodButton"));
-        addNewFoodButton->setGeometry(QRect(650, 290, 101, 51));
+        addNewFoodButton->setGeometry(QRect(360, 20, 121, 41));
         addNewFoodButton->setStyleSheet(QString::fromUtf8("#addNewFoodButton{\n"
 "background-color: rgb(46, 194, 126);\n"
 "border-radius: 20%;\n"
@@ -594,7 +549,7 @@ public:
 "}"));
         removeFoodButton = new QPushButton(cfoodpage);
         removeFoodButton->setObjectName(QString::fromUtf8("removeFoodButton"));
-        removeFoodButton->setGeometry(QRect(650, 350, 101, 51));
+        removeFoodButton->setGeometry(QRect(620, 20, 121, 41));
         removeFoodButton->setStyleSheet(QString::fromUtf8("#removeFoodButton{\n"
 "background-color: rgb(224, 27, 36);\n"
 "border-radius: 20%;\n"
@@ -604,13 +559,16 @@ public:
 "}"));
         foodViewFoodItemTable = new QTableView(cfoodpage);
         foodViewFoodItemTable->setObjectName(QString::fromUtf8("foodViewFoodItemTable"));
-        foodViewFoodItemTable->setGeometry(QRect(20, 280, 601, 361));
+        foodViewFoodItemTable->setGeometry(QRect(30, 80, 711, 591));
         foodViewFoodItemTable->setStyleSheet(QString::fromUtf8("background-color: #C6F3E0;\n"
 "border-radius: 15px;\n"
 "color: rgb(0, 0, 0);\n"
 "alternate-background-color: lightgray;"));
         foodViewFoodItemTable->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
         foodViewFoodItemTable->setAlternatingRowColors(true);
+        label_22 = new QLabel(cfoodpage);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        label_22->setGeometry(QRect(50, 20, 149, 35));
         views->addWidget(cfoodpage);
         duserpage = new QWidget();
         duserpage->setObjectName(QString::fromUtf8("duserpage"));
@@ -1782,7 +1740,7 @@ public:
 
         retranslateUi(Home);
 
-        views->setCurrentIndex(0);
+        views->setCurrentIndex(2);
         ProfilePictureButton->setDefault(true);
         foodItemPicture->setDefault(true);
 
@@ -1841,12 +1799,10 @@ public:
         pushButton->setText(QCoreApplication::translate("Home", "Add New", nullptr));
         label_12->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">0</span></p></body></html>", nullptr));
         label_15->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">Total Sales Today : </span></p></body></html>", nullptr));
-        addNewFoodCategorieButton->setText(QCoreApplication::translate("Home", "Add New", nullptr));
-        updateFoodCategorieButton->setText(QCoreApplication::translate("Home", "Update User", nullptr));
-        removeFoodCategorieButton->setText(QCoreApplication::translate("Home", "Remove User", nullptr));
-        updateFoodButton->setText(QCoreApplication::translate("Home", "Update User", nullptr));
-        addNewFoodButton->setText(QCoreApplication::translate("Home", "Add New", nullptr));
-        removeFoodButton->setText(QCoreApplication::translate("Home", "Remove User", nullptr));
+        updateFoodButton->setText(QCoreApplication::translate("Home", "Update Item", nullptr));
+        addNewFoodButton->setText(QCoreApplication::translate("Home", "Add new Item", nullptr));
+        removeFoodButton->setText(QCoreApplication::translate("Home", "Remove Item", nullptr));
+        label_22->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; font-weight:700; color:#1c71d8;\">Food Items</span></p></body></html>", nullptr));
         addNewUserButton->setText(QCoreApplication::translate("Home", "Add New", nullptr));
         removeUserButton->setText(QCoreApplication::translate("Home", "Remove User", nullptr));
         updateUserButton->setText(QCoreApplication::translate("Home", "Update User", nullptr));
