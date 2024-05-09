@@ -223,7 +223,7 @@ QString Database::getTotalUsers(){
 
 QString Database::getTotalSalesToday(){
     QSqlQuery query = QSqlQuery(db);
-    query.prepare("SELECT COUNT(nic) FROM `users`;");
+    query.prepare("SELECT SUM(orders.total_charges) FROM `orders` LEFT JOIN users ON users.nic = orders.order_by WHERE orders.date_time >= DATE_FORMAT(CURDATE(), '%Y-%m-%d 00:00:00') AND date_time <= DATE_FORMAT(CURDATE(), '%Y-%m-%d 23:59:59');    ");
     query.exec();
     query.next();
     int total = query.value(0).toInt();
@@ -232,7 +232,7 @@ QString Database::getTotalSalesToday(){
 
 QString Database::getTotalOrdersTodays(){
     QSqlQuery query = QSqlQuery(db);
-    query.prepare("SELECT COUNT(nic) FROM `users`;");
+    query.prepare("SELECT COUNT(orders.oid) FROM `orders` LEFT JOIN users ON users.nic = orders.order_by WHERE orders.date_time >= DATE_FORMAT(CURDATE(), '%Y-%m-%d 00:00:00') AND date_time <= DATE_FORMAT(CURDATE(), '%Y-%m-%d 23:59:59');");
     query.exec();
     query.next();
     int total = query.value(0).toInt();
@@ -437,7 +437,7 @@ void Database::getAllOrders(QTableWidget *table ){
     QSqlQueryModel *model = new QSqlQueryModel();
 
     QSqlQuery query = QSqlQuery(db);
-    query.prepare("SELECT orders.oid , users.user_name ,users.roll_no, orders.items ,orders.paid FROM `orders` LEFT JOIN users ON users.nic = orders.order_by WHERE orders.date_time >= DATE_FORMAT(CURDATE(), '%Y-%m-%d 00:00:00') AND date_time <= DATE_FORMAT(CURDATE(), '%Y-%m-%d 23:59:59');");
+    query.prepare("SELECT orders.oid , users.user_name ,users.roll_no, orders.items ,orders.paid,orders.total_charges FROM `orders` LEFT JOIN users ON users.nic = orders.order_by WHERE orders.date_time >= DATE_FORMAT(CURDATE(), '%Y-%m-%d 00:00:00') AND date_time <= DATE_FORMAT(CURDATE(), '%Y-%m-%d 23:59:59');");
     query.exec();
     model->setQuery(std::move(query));
     // model->insertColumn(0);
@@ -456,7 +456,7 @@ void Database::getAllOrders(QTableWidget *table ){
             table->setItem(row, col, new QTableWidgetItem(model->index(index.row(), col).data().toString()));
             }
         }
-        table->setItem(row, 5, new QTableWidgetItem("Cancel"));
+        table->setItem(row, 6, new QTableWidgetItem("Cancel"));
     }
 };
 

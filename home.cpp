@@ -19,7 +19,7 @@ Home::Home(QWidget *parent)
     loadHomeData();
     getUsersViewData();
     getFoodViewData();
-
+    db.getAllOrders(ui->allorderstable);
 
     // ui->columnView->setModel();
 }
@@ -401,7 +401,7 @@ void Home::on_newOrdersubmit_clicked()
         }
 
         db.addNewOrder(ui->newOrderStudentCnic->text(),ui->newOrderTotalPrice->text(),itemsIds,ui->allorderstable);
-            // ui->views->setCurrentIndex(1);
+        ui->views->setCurrentIndex(1);
     }
 
 

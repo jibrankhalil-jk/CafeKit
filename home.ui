@@ -88,7 +88,7 @@ background-color: rgb(61, 56, 70);
      <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="ahomepage">
      <widget class="QWidget" name="userstoday" native="true">
@@ -136,7 +136,7 @@ color: rgb(0, 0, 0);</string>
         <rect>
          <x>30</x>
          <y>60</y>
-         <width>81</width>
+         <width>151</width>
          <height>41</height>
         </rect>
        </property>
@@ -201,7 +201,7 @@ color: rgb(0, 0, 0);</string>
         <rect>
          <x>30</x>
          <y>60</y>
-         <width>81</width>
+         <width>151</width>
          <height>41</height>
         </rect>
        </property>
@@ -266,7 +266,7 @@ color: rgb(0, 0, 0);</string>
         <rect>
          <x>30</x>
          <y>60</y>
-         <width>81</width>
+         <width>171</width>
          <height>41</height>
         </rect>
        </property>
@@ -693,7 +693,7 @@ color: rgb(0, 0, 0);
        <number>27</number>
       </attribute>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>115</number>
+       <number>100</number>
       </attribute>
       <attribute name="horizontalHeaderStretchLastSection">
        <bool>true</bool>
@@ -808,6 +808,11 @@ color: rgb(0, 0, 0);
       <column>
        <property name="text">
         <string>Paid</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Total</string>
        </property>
       </column>
       <column>
