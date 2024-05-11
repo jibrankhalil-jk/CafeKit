@@ -377,3 +377,22 @@ void Database::removeOrder(QString oid, QTableWidget *table){
         }
     }
 };
+
+
+
+void Database::updateFood(QString id, QString name, QString qty, QString size,QString price, QTableView *table){
+    QSqlQuery query =  QSqlQuery(db);
+    if(db.isOpen())
+    {
+        query.prepare("UPDATE `food_items` SET `food_name` = '"+name+"' , quantity = '"+qty+"' , size= '"+size+"', price = '"+price+"' WHERE `food_items`.`fid` = '"+id+"';");
+        if(query.exec())
+        {
+            getFoods(table);
+        }
+        else
+        {
+            qDebug() << "Error : "<<query.lastError().text() << query.isValid();
+        }
+    }
+
+}

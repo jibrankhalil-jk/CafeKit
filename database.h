@@ -20,6 +20,7 @@ private:
 
 
 public:
+
     static QString admin;
     bool login(QString id ,QString pass);
     QString getAdminDetail();
@@ -41,7 +42,8 @@ public:
 
     void removeOrder(QString oid, QTableWidget *table);
     void addNewOrder(QString cnic, QString total, QString items, QTableWidget *table);
-    void addNewFood(QString, QString, QString, QString, QTableView *table);
+    void addNewFood(QString name,QString qnt,QString size,QString price,QTableView *table);
+    void updateFood(QString, QString, QString, QString,QString, QTableView *table);
     void addnewCategorie();
     bool addnewUser(QString data, QTableView *table);
 

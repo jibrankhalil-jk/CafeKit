@@ -47,7 +47,6 @@ public:
     QLabel *homeLasUserRollno;
     QLabel *homeLasUserPayement;
     QLabel *homeLasUserPicture;
-    QLabel *homeLasUserOrderDateTime;
     QTableWidget *table1;
     QWidget *borderspage;
     QTableWidget *ordersViewAllOrdersTable;
@@ -68,7 +67,20 @@ public:
     QPushButton *updateUserButton;
     QTableView *usersViewUsersTable;
     QLabel *label_23;
-    QWidget *blankview;
+    QWidget *updateFoodView;
+    QLabel *id_17;
+    QLabel *id_18;
+    QPushButton *updateNewCancelButton;
+    QLabel *id_12;
+    QPushButton *updateNewSubmitButton;
+    QLineEdit *updateFoodItemSize;
+    QLineEdit *updateFoodItemQuantity;
+    QLabel *label_24;
+    QLineEdit *updateFoodItemPrice;
+    QLineEdit *updateFoodItemName;
+    QLabel *id_13;
+    QLabel *label_25;
+    QLabel *updateFoodId;
     QWidget *fsettingpage;
     QWidget *settingsUserEditButton;
     QLabel *settingsAdminName;
@@ -323,13 +335,6 @@ public:
         homeLasUserPicture->setScaledContents(true);
         homeLasUserPicture->setWordWrap(true);
         homeLasUserPicture->setIndent(0);
-        homeLasUserOrderDateTime = new QLabel(namerollno);
-        homeLasUserOrderDateTime->setObjectName(QString::fromUtf8("homeLasUserOrderDateTime"));
-        homeLasUserOrderDateTime->setGeometry(QRect(290, 78, 61, 31));
-        homeLasUserOrderDateTime->setFont(font3);
-        homeLasUserOrderDateTime->setStyleSheet(QString::fromUtf8("background-color: #9FFB7E;\n"
-"color: rgb(0, 0, 0);\n"
-""));
         table1 = new QTableWidget(ahomepage);
         if (table1->columnCount() < 4)
             table1->setColumnCount(4);
@@ -593,9 +598,145 @@ public:
         label_23->setObjectName(QString::fromUtf8("label_23"));
         label_23->setGeometry(QRect(50, 30, 73, 35));
         views->addWidget(duserpage);
-        blankview = new QWidget();
-        blankview->setObjectName(QString::fromUtf8("blankview"));
-        views->addWidget(blankview);
+        updateFoodView = new QWidget();
+        updateFoodView->setObjectName(QString::fromUtf8("updateFoodView"));
+        id_17 = new QLabel(updateFoodView);
+        id_17->setObjectName(QString::fromUtf8("id_17"));
+        id_17->setGeometry(QRect(80, 300, 141, 21));
+        QFont font4;
+        font4.setPointSize(10);
+        font4.setBold(true);
+        id_17->setFont(font4);
+        id_18 = new QLabel(updateFoodView);
+        id_18->setObjectName(QString::fromUtf8("id_18"));
+        id_18->setGeometry(QRect(80, 480, 141, 21));
+        id_18->setFont(font4);
+        updateNewCancelButton = new QPushButton(updateFoodView);
+        updateNewCancelButton->setObjectName(QString::fromUtf8("updateNewCancelButton"));
+        updateNewCancelButton->setEnabled(true);
+        updateNewCancelButton->setGeometry(QRect(430, 620, 151, 41));
+        QFont font5;
+        font5.setPointSize(10);
+        updateNewCancelButton->setFont(font5);
+        updateNewCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
+        updateNewCancelButton->setFocusPolicy(Qt::TabFocus);
+        updateNewCancelButton->setStyleSheet(QString::fromUtf8("#updateNewCancelButton\n"
+"{\n"
+"	background:#EC3245;\n"
+"	border:none;\n"
+"	color:white;\n"
+"border-radius:14px;\n"
+"}\n"
+"\n"
+"#updateNewCancelButton:hover\n"
+"{\n"
+"	background:#2d2d2d;\n"
+"	border:2px solid #EC3245;\n"
+"	color:#EC3245;\n"
+"}"));
+        id_12 = new QLabel(updateFoodView);
+        id_12->setObjectName(QString::fromUtf8("id_12"));
+        id_12->setGeometry(QRect(80, 390, 141, 21));
+        id_12->setFont(font4);
+        updateNewSubmitButton = new QPushButton(updateFoodView);
+        updateNewSubmitButton->setObjectName(QString::fromUtf8("updateNewSubmitButton"));
+        updateNewSubmitButton->setGeometry(QRect(590, 620, 141, 41));
+        updateNewSubmitButton->setFont(font5);
+        updateNewSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
+        updateNewSubmitButton->setFocusPolicy(Qt::TabFocus);
+        updateNewSubmitButton->setStyleSheet(QString::fromUtf8("#updateNewSubmitButton\n"
+"{\n"
+"	background:#00855C;\n"
+"	border:none;\n"
+"	color:white;\n"
+"border-radius:14px;\n"
+"}\n"
+"\n"
+"#updateNewSubmitButton:hover\n"
+"{\n"
+"	background:#2D2D2D;\n"
+"	border:2px solid #00855C;\n"
+"	color:#00855C;\n"
+"}"));
+        updateFoodItemSize = new QLineEdit(updateFoodView);
+        updateFoodItemSize->setObjectName(QString::fromUtf8("updateFoodItemSize"));
+        updateFoodItemSize->setGeometry(QRect(70, 410, 391, 41));
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Arial")});
+        font6.setPointSize(10);
+        updateFoodItemSize->setFont(font6);
+        updateFoodItemSize->setStyleSheet(QString::fromUtf8("background:white;\n"
+"color:black;\n"
+"border:none;\n"
+"padding-left:12px;\n"
+"border-radius: 10px;\n"
+""));
+        updateFoodItemQuantity = new QLineEdit(updateFoodView);
+        updateFoodItemQuantity->setObjectName(QString::fromUtf8("updateFoodItemQuantity"));
+        updateFoodItemQuantity->setGeometry(QRect(70, 320, 391, 41));
+        updateFoodItemQuantity->setFont(font6);
+        updateFoodItemQuantity->setStyleSheet(QString::fromUtf8("background:white;\n"
+"color:black;\n"
+"border:none;\n"
+"padding-left:12px;\n"
+"border-radius: 10px;\n"
+""));
+        label_24 = new QLabel(updateFoodView);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setGeometry(QRect(60, 70, 271, 36));
+        QFont font7;
+        font7.setFamilies({QString::fromUtf8("Arial")});
+        font7.setPointSize(12);
+        font7.setBold(true);
+        label_24->setFont(font7);
+        updateFoodItemPrice = new QLineEdit(updateFoodView);
+        updateFoodItemPrice->setObjectName(QString::fromUtf8("updateFoodItemPrice"));
+        updateFoodItemPrice->setGeometry(QRect(70, 500, 391, 41));
+        updateFoodItemPrice->setFont(font6);
+        updateFoodItemPrice->setStyleSheet(QString::fromUtf8("background:white;\n"
+"color:black;\n"
+"border:none;\n"
+"padding-left:12px;\n"
+"border-radius: 10px;\n"
+""));
+        updateFoodItemName = new QLineEdit(updateFoodView);
+        updateFoodItemName->setObjectName(QString::fromUtf8("updateFoodItemName"));
+        updateFoodItemName->setGeometry(QRect(70, 230, 391, 41));
+        updateFoodItemName->setFont(font6);
+        updateFoodItemName->setStyleSheet(QString::fromUtf8("background:white;\n"
+"color:black;\n"
+"border:none;\n"
+"padding-left:12px;\n"
+"border-radius: 10px;\n"
+""));
+        updateFoodItemName->setInputMethodHints(Qt::ImhPreferLowercase);
+        id_13 = new QLabel(updateFoodView);
+        id_13->setObjectName(QString::fromUtf8("id_13"));
+        id_13->setGeometry(QRect(80, 210, 141, 21));
+        id_13->setFont(font4);
+        label_25 = new QLabel(updateFoodView);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setGeometry(QRect(60, 140, 61, 36));
+        label_25->setFont(font7);
+        updateFoodId = new QLabel(updateFoodView);
+        updateFoodId->setObjectName(QString::fromUtf8("updateFoodId"));
+        updateFoodId->setGeometry(QRect(130, 130, 221, 51));
+        updateFoodId->setStyleSheet(QString::fromUtf8("font: 800 24pt \"Cantarell\";\n"
+"color: rgb(38, 162, 105);"));
+        views->addWidget(updateFoodView);
+        id_13->raise();
+        id_17->raise();
+        id_18->raise();
+        updateNewCancelButton->raise();
+        id_12->raise();
+        updateNewSubmitButton->raise();
+        updateFoodItemSize->raise();
+        updateFoodItemQuantity->raise();
+        label_24->raise();
+        updateFoodItemPrice->raise();
+        updateFoodItemName->raise();
+        label_25->raise();
+        updateFoodId->raise();
         fsettingpage = new QWidget();
         fsettingpage->setObjectName(QString::fromUtf8("fsettingpage"));
         settingsUserEditButton = new QWidget(fsettingpage);
@@ -853,9 +994,7 @@ public:
         newUserSubmitButton = new QPushButton(huser);
         newUserSubmitButton->setObjectName(QString::fromUtf8("newUserSubmitButton"));
         newUserSubmitButton->setGeometry(QRect(590, 621, 151, 41));
-        QFont font4;
-        font4.setPointSize(10);
-        newUserSubmitButton->setFont(font4);
+        newUserSubmitButton->setFont(font5);
         newUserSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
         newUserSubmitButton->setFocusPolicy(Qt::TabFocus);
         newUserSubmitButton->setStyleSheet(QString::fromUtf8("#newUserSubmitButton\n"
@@ -875,16 +1014,12 @@ public:
         label_18 = new QLabel(huser);
         label_18->setObjectName(QString::fromUtf8("label_18"));
         label_18->setGeometry(QRect(30, 50, 146, 36));
-        QFont font5;
-        font5.setFamilies({QString::fromUtf8("Arial")});
-        font5.setPointSize(12);
-        font5.setBold(true);
-        label_18->setFont(font5);
+        label_18->setFont(font7);
         newUserCancelButton = new QPushButton(huser);
         newUserCancelButton->setObjectName(QString::fromUtf8("newUserCancelButton"));
         newUserCancelButton->setEnabled(true);
         newUserCancelButton->setGeometry(QRect(420, 620, 161, 41));
-        newUserCancelButton->setFont(font4);
+        newUserCancelButton->setFont(font5);
         newUserCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
         newUserCancelButton->setFocusPolicy(Qt::TabFocus);
         newUserCancelButton->setStyleSheet(QString::fromUtf8("#newUserCancelButton\n"
@@ -904,32 +1039,26 @@ public:
         id_4 = new QLabel(huser);
         id_4->setObjectName(QString::fromUtf8("id_4"));
         id_4->setGeometry(QRect(80, 540, 141, 21));
-        QFont font6;
-        font6.setPointSize(10);
-        font6.setBold(true);
-        id_4->setFont(font6);
+        id_4->setFont(font4);
         id_2 = new QLabel(huser);
         id_2->setObjectName(QString::fromUtf8("id_2"));
         id_2->setGeometry(QRect(80, 120, 141, 21));
-        id_2->setFont(font6);
+        id_2->setFont(font4);
         id = new QLabel(huser);
         id->setObjectName(QString::fromUtf8("id"));
         id->setGeometry(QRect(80, 200, 141, 21));
-        id->setFont(font6);
+        id->setFont(font4);
         id_5 = new QLabel(huser);
         id_5->setObjectName(QString::fromUtf8("id_5"));
         id_5->setGeometry(QRect(80, 360, 141, 21));
-        id_5->setFont(font6);
+        id_5->setFont(font4);
         newUserGender = new QComboBox(huser);
         newUserGender->addItem(QString());
         newUserGender->addItem(QString());
         newUserGender->addItem(QString());
         newUserGender->setObjectName(QString::fromUtf8("newUserGender"));
         newUserGender->setGeometry(QRect(70, 560, 191, 41));
-        QFont font7;
-        font7.setFamilies({QString::fromUtf8("Arial")});
-        font7.setPointSize(10);
-        newUserGender->setFont(font7);
+        newUserGender->setFont(font6);
         newUserGender->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -939,11 +1068,11 @@ public:
         id_6 = new QLabel(huser);
         id_6->setObjectName(QString::fromUtf8("id_6"));
         id_6->setGeometry(QRect(80, 450, 141, 21));
-        id_6->setFont(font6);
+        id_6->setFont(font4);
         newUserNicNumber = new QLineEdit(huser);
         newUserNicNumber->setObjectName(QString::fromUtf8("newUserNicNumber"));
         newUserNicNumber->setGeometry(QRect(70, 140, 421, 41));
-        newUserNicNumber->setFont(font7);
+        newUserNicNumber->setFont(font6);
         newUserNicNumber->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -955,7 +1084,7 @@ public:
         newUserPhoneNumber = new QLineEdit(huser);
         newUserPhoneNumber->setObjectName(QString::fromUtf8("newUserPhoneNumber"));
         newUserPhoneNumber->setGeometry(QRect(70, 470, 301, 41));
-        newUserPhoneNumber->setFont(font7);
+        newUserPhoneNumber->setFont(font6);
         newUserPhoneNumber->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -966,7 +1095,7 @@ public:
         newUserEmail = new QLineEdit(huser);
         newUserEmail->setObjectName(QString::fromUtf8("newUserEmail"));
         newUserEmail->setGeometry(QRect(70, 380, 421, 41));
-        newUserEmail->setFont(font7);
+        newUserEmail->setFont(font6);
         newUserEmail->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -976,7 +1105,7 @@ public:
         newUserName = new QLineEdit(huser);
         newUserName->setObjectName(QString::fromUtf8("newUserName"));
         newUserName->setGeometry(QRect(70, 220, 421, 41));
-        newUserName->setFont(font7);
+        newUserName->setFont(font6);
         newUserName->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -987,11 +1116,11 @@ public:
         id_7 = new QLabel(huser);
         id_7->setObjectName(QString::fromUtf8("id_7"));
         id_7->setGeometry(QRect(80, 280, 141, 21));
-        id_7->setFont(font6);
+        id_7->setFont(font4);
         newUserRollNo = new QLineEdit(huser);
         newUserRollNo->setObjectName(QString::fromUtf8("newUserRollNo"));
         newUserRollNo->setGeometry(QRect(70, 300, 421, 41));
-        newUserRollNo->setFont(font7);
+        newUserRollNo->setFont(font6);
         newUserRollNo->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1020,19 +1149,19 @@ public:
         label_21 = new QLabel(iFoods);
         label_21->setObjectName(QString::fromUtf8("label_21"));
         label_21->setGeometry(QRect(60, 70, 228, 36));
-        label_21->setFont(font5);
+        label_21->setFont(font7);
         id_8 = new QLabel(iFoods);
         id_8->setObjectName(QString::fromUtf8("id_8"));
         id_8->setGeometry(QRect(80, 160, 141, 21));
-        id_8->setFont(font6);
+        id_8->setFont(font4);
         id_9 = new QLabel(iFoods);
         id_9->setObjectName(QString::fromUtf8("id_9"));
         id_9->setGeometry(QRect(80, 340, 141, 21));
-        id_9->setFont(font6);
+        id_9->setFont(font4);
         foodAddNewSubmitButton = new QPushButton(iFoods);
         foodAddNewSubmitButton->setObjectName(QString::fromUtf8("foodAddNewSubmitButton"));
         foodAddNewSubmitButton->setGeometry(QRect(590, 620, 141, 41));
-        foodAddNewSubmitButton->setFont(font4);
+        foodAddNewSubmitButton->setFont(font5);
         foodAddNewSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
         foodAddNewSubmitButton->setFocusPolicy(Qt::TabFocus);
         foodAddNewSubmitButton->setStyleSheet(QString::fromUtf8("#foodAddNewSubmitButton\n"
@@ -1052,7 +1181,7 @@ public:
         newFoodItemSize = new QLineEdit(iFoods);
         newFoodItemSize->setObjectName(QString::fromUtf8("newFoodItemSize"));
         newFoodItemSize->setGeometry(QRect(70, 360, 391, 41));
-        newFoodItemSize->setFont(font7);
+        newFoodItemSize->setFont(font6);
         newFoodItemSize->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1063,7 +1192,7 @@ public:
         foodAddNewCancelButton->setObjectName(QString::fromUtf8("foodAddNewCancelButton"));
         foodAddNewCancelButton->setEnabled(true);
         foodAddNewCancelButton->setGeometry(QRect(430, 620, 151, 41));
-        foodAddNewCancelButton->setFont(font4);
+        foodAddNewCancelButton->setFont(font5);
         foodAddNewCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
         foodAddNewCancelButton->setFocusPolicy(Qt::TabFocus);
         foodAddNewCancelButton->setStyleSheet(QString::fromUtf8("#foodAddNewCancelButton\n"
@@ -1083,7 +1212,7 @@ public:
         newFoodItemName = new QLineEdit(iFoods);
         newFoodItemName->setObjectName(QString::fromUtf8("newFoodItemName"));
         newFoodItemName->setGeometry(QRect(70, 180, 391, 41));
-        newFoodItemName->setFont(font7);
+        newFoodItemName->setFont(font6);
         newFoodItemName->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1094,11 +1223,11 @@ public:
         id_15 = new QLabel(iFoods);
         id_15->setObjectName(QString::fromUtf8("id_15"));
         id_15->setGeometry(QRect(80, 430, 141, 21));
-        id_15->setFont(font6);
+        id_15->setFont(font4);
         newFoodItemPrice = new QLineEdit(iFoods);
         newFoodItemPrice->setObjectName(QString::fromUtf8("newFoodItemPrice"));
         newFoodItemPrice->setGeometry(QRect(70, 450, 391, 41));
-        newFoodItemPrice->setFont(font7);
+        newFoodItemPrice->setFont(font6);
         newFoodItemPrice->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1108,11 +1237,11 @@ public:
         id_16 = new QLabel(iFoods);
         id_16->setObjectName(QString::fromUtf8("id_16"));
         id_16->setGeometry(QRect(80, 250, 141, 21));
-        id_16->setFont(font6);
+        id_16->setFont(font4);
         newFoodItemQuantity = new QLineEdit(iFoods);
         newFoodItemQuantity->setObjectName(QString::fromUtf8("newFoodItemQuantity"));
         newFoodItemQuantity->setGeometry(QRect(70, 270, 391, 41));
-        newFoodItemQuantity->setFont(font7);
+        newFoodItemQuantity->setFont(font6);
         newFoodItemQuantity->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1125,11 +1254,11 @@ public:
         id_33 = new QLabel(jAddNewOrder);
         id_33->setObjectName(QString::fromUtf8("id_33"));
         id_33->setGeometry(QRect(70, 80, 141, 21));
-        id_33->setFont(font6);
+        id_33->setFont(font4);
         newOrderStudentCnic = new QLineEdit(jAddNewOrder);
         newOrderStudentCnic->setObjectName(QString::fromUtf8("newOrderStudentCnic"));
         newOrderStudentCnic->setGeometry(QRect(40, 100, 351, 41));
-        newOrderStudentCnic->setFont(font7);
+        newOrderStudentCnic->setFont(font6);
         newOrderStudentCnic->setStyleSheet(QString::fromUtf8("#newOrderStudentCnic{\n"
 "border:1px solid  rgb(255, 255, 255);\n"
 "border-radius: 8px; \n"
@@ -1140,15 +1269,15 @@ public:
         label_46 = new QLabel(jAddNewOrder);
         label_46->setObjectName(QString::fromUtf8("label_46"));
         label_46->setGeometry(QRect(40, 30, 241, 31));
-        label_46->setFont(font5);
+        label_46->setFont(font7);
         id_34 = new QLabel(jAddNewOrder);
         id_34->setObjectName(QString::fromUtf8("id_34"));
         id_34->setGeometry(QRect(40, 160, 141, 21));
-        id_34->setFont(font6);
+        id_34->setFont(font4);
         newOrderItemName = new QLineEdit(jAddNewOrder);
         newOrderItemName->setObjectName(QString::fromUtf8("newOrderItemName"));
         newOrderItemName->setGeometry(QRect(40, 181, 171, 41));
-        newOrderItemName->setFont(font7);
+        newOrderItemName->setFont(font6);
         newOrderItemName->setStyleSheet(QString::fromUtf8(" \n"
 "border:1px solid  rgb(255, 255, 255);\n"
 "border-radius: 8px; \n"
@@ -1175,7 +1304,7 @@ public:
         newOrderCancel->setObjectName(QString::fromUtf8("newOrderCancel"));
         newOrderCancel->setEnabled(true);
         newOrderCancel->setGeometry(QRect(410, 630, 161, 41));
-        newOrderCancel->setFont(font4);
+        newOrderCancel->setFont(font5);
         newOrderCancel->setCursor(QCursor(Qt::PointingHandCursor));
         newOrderCancel->setFocusPolicy(Qt::TabFocus);
         newOrderCancel->setStyleSheet(QString::fromUtf8("#newOrderCancel\n"
@@ -1195,7 +1324,7 @@ public:
         newOrdersubmit = new QPushButton(jAddNewOrder);
         newOrdersubmit->setObjectName(QString::fromUtf8("newOrdersubmit"));
         newOrdersubmit->setGeometry(QRect(580, 631, 161, 41));
-        newOrdersubmit->setFont(font4);
+        newOrdersubmit->setFont(font5);
         newOrdersubmit->setCursor(QCursor(Qt::PointingHandCursor));
         newOrdersubmit->setFocusPolicy(Qt::TabFocus);
         newOrdersubmit->setStyleSheet(QString::fromUtf8("#newOrdersubmit\n"
@@ -1235,7 +1364,7 @@ public:
         newOrderStudentName_2 = new QLabel(jAddNewOrder);
         newOrderStudentName_2->setObjectName(QString::fromUtf8("newOrderStudentName_2"));
         newOrderStudentName_2->setGeometry(QRect(60, 436, 82, 23));
-        newOrderStudentName_2->setFont(font6);
+        newOrderStudentName_2->setFont(font4);
         newOrderTotalPrice = new QLabel(jAddNewOrder);
         newOrderTotalPrice->setObjectName(QString::fromUtf8("newOrderTotalPrice"));
         newOrderTotalPrice->setGeometry(QRect(80, 470, 111, 41));
@@ -1254,15 +1383,15 @@ public:
         id_10 = new QLabel(kUpdateUser);
         id_10->setObjectName(QString::fromUtf8("id_10"));
         id_10->setGeometry(QRect(70, 240, 141, 21));
-        id_10->setFont(font6);
+        id_10->setFont(font4);
         label_19 = new QLabel(kUpdateUser);
         label_19->setObjectName(QString::fromUtf8("label_19"));
         label_19->setGeometry(QRect(70, 50, 189, 36));
-        label_19->setFont(font5);
+        label_19->setFont(font7);
         updateUserEmail = new QLineEdit(kUpdateUser);
         updateUserEmail->setObjectName(QString::fromUtf8("updateUserEmail"));
         updateUserEmail->setGeometry(QRect(60, 260, 421, 41));
-        updateUserEmail->setFont(font7);
+        updateUserEmail->setFont(font6);
         updateUserEmail->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1272,7 +1401,7 @@ public:
         updateUserPhoneNumber = new QLineEdit(kUpdateUser);
         updateUserPhoneNumber->setObjectName(QString::fromUtf8("updateUserPhoneNumber"));
         updateUserPhoneNumber->setGeometry(QRect(60, 350, 301, 41));
-        updateUserPhoneNumber->setFont(font7);
+        updateUserPhoneNumber->setFont(font6);
         updateUserPhoneNumber->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1283,7 +1412,7 @@ public:
         updateUserSubmitButton = new QPushButton(kUpdateUser);
         updateUserSubmitButton->setObjectName(QString::fromUtf8("updateUserSubmitButton"));
         updateUserSubmitButton->setGeometry(QRect(550, 580, 151, 41));
-        updateUserSubmitButton->setFont(font4);
+        updateUserSubmitButton->setFont(font5);
         updateUserSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
         updateUserSubmitButton->setFocusPolicy(Qt::TabFocus);
         updateUserSubmitButton->setStyleSheet(QString::fromUtf8("#updateUserSubmitButton\n"
@@ -1303,16 +1432,16 @@ public:
         id_3 = new QLabel(kUpdateUser);
         id_3->setObjectName(QString::fromUtf8("id_3"));
         id_3->setGeometry(QRect(70, 160, 141, 21));
-        id_3->setFont(font6);
+        id_3->setFont(font4);
         id_11 = new QLabel(kUpdateUser);
         id_11->setObjectName(QString::fromUtf8("id_11"));
         id_11->setGeometry(QRect(70, 330, 141, 21));
-        id_11->setFont(font6);
+        id_11->setFont(font4);
         updateUserCancelButton = new QPushButton(kUpdateUser);
         updateUserCancelButton->setObjectName(QString::fromUtf8("updateUserCancelButton"));
         updateUserCancelButton->setEnabled(true);
         updateUserCancelButton->setGeometry(QRect(370, 580, 161, 41));
-        updateUserCancelButton->setFont(font4);
+        updateUserCancelButton->setFont(font5);
         updateUserCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
         updateUserCancelButton->setFocusPolicy(Qt::TabFocus);
         updateUserCancelButton->setStyleSheet(QString::fromUtf8("#updateUserCancelButton\n"
@@ -1332,7 +1461,7 @@ public:
         updateUserName = new QLineEdit(kUpdateUser);
         updateUserName->setObjectName(QString::fromUtf8("updateUserName"));
         updateUserName->setGeometry(QRect(60, 180, 421, 41));
-        updateUserName->setFont(font7);
+        updateUserName->setFont(font6);
         updateUserName->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1484,7 +1613,7 @@ public:
 
         retranslateUi(Home);
 
-        views->setCurrentIndex(5);
+        views->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Home);
@@ -1503,7 +1632,6 @@ public:
         homeLasUserRollno->setText(QCoreApplication::translate("Home", "  23p-0000", nullptr));
         homeLasUserPayement->setText(QCoreApplication::translate("Home", "Rs. 200 ", nullptr));
         homeLasUserPicture->setText(QString());
-        homeLasUserOrderDateTime->setText(QCoreApplication::translate("Home", "3:12 am", nullptr));
         QTableWidgetItem *___qtablewidgetitem = table1->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QCoreApplication::translate("Home", "#", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = table1->horizontalHeaderItem(1);
@@ -1544,6 +1672,15 @@ public:
         usersViewRemoveUserButton->setText(QCoreApplication::translate("Home", "Remove User", nullptr));
         updateUserButton->setText(QCoreApplication::translate("Home", "Update User", nullptr));
         label_23->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; color:#1c71d8;\">Users</span></p></body></html>", nullptr));
+        id_17->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Quantity</span></p></body></html>", nullptr));
+        id_18->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Price</span></p></body></html>", nullptr));
+        updateNewCancelButton->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
+        id_12->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Size</span></p></body></html>", nullptr));
+        updateNewSubmitButton->setText(QCoreApplication::translate("Home", "Submit", nullptr));
+        label_24->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#e66100;\">Update Food Item</span></p></body></html>", nullptr));
+        id_13->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>", nullptr));
+        label_25->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#e66100;\">ID : </span></p></body></html>", nullptr));
+        updateFoodId->setText(QCoreApplication::translate("Home", "TextLabel", nullptr));
         settingsAdminName->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; font-weight:700; color:#ffffff;\">User Name</span></p></body></html>", nullptr));
         homeLasUserPicture_2->setText(QString());
         label_6->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));

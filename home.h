@@ -86,6 +86,12 @@ private slots:
 
     void on_settingsLogoutButton_clicked();
 
+    void on_FoodViewUpdateFoodButton_clicked();
+
+    void on_updateNewCancelButton_clicked();
+
+    void on_updateNewSubmitButton_clicked();
+
 private:
     Ui::Home *ui;
 };

@@ -40,7 +40,6 @@ void Home::loadHomeViewData()
     QMap<QString, QString> user = db.getTodaysLastOderandUser();
     ui->homeLasUserName->setText(user["user_name"]);
     ui->homeLasUserRollno->setText(user["roll_no"]);
-    ui->homeLasUserOrderDateTime->setText("sdfs");
     ui->homeLasUserPayement->setText("Rs." + user["total_charges"]);
 }
 
@@ -586,6 +585,67 @@ void Home::on_settingsLogoutButton_clicked()
 
 void Home::on_FoodViewUpdateFoodButton_clicked()
 {
+    int row = ui->foodViewFoodItemsTable->currentIndex().row();
+    if(row >= 0 ){
+        ui->views->setCurrentIndex(4);
 
+        ui->updateFoodId->setText(ui->foodViewFoodItemsTable->model()->itemData(ui->foodViewFoodItemsTable->model()->index(row,1)).value(0).toString());
+
+        ui->updateFoodItemName->setText(ui->foodViewFoodItemsTable->model()->itemData(ui->foodViewFoodItemsTable->model()->index(row,0)).value(0).toString());
+        ui->updateFoodItemSize->setText(ui->foodViewFoodItemsTable->model()->itemData(ui->foodViewFoodItemsTable->model()->index(row,3)).value(0).toString());
+        ui->updateFoodItemPrice->setText(ui->foodViewFoodItemsTable->model()->itemData(ui->foodViewFoodItemsTable->model()->index(row,4)).value(0).toString());
+        ui->updateFoodItemQuantity->setText(ui->foodViewFoodItemsTable->model()->itemData(ui->foodViewFoodItemsTable->model()->index(row,2)).value(0).toString());
+      }
+}
+
+
+void Home::on_updateNewCancelButton_clicked()
+{
+       ui->views->setCurrentIndex(2);
+}
+
+
+void Home::on_updateNewSubmitButton_clicked()
+{
+    QString id = ui->updateFoodId->text();
+    QString name = ui->updateFoodItemName->text().toLower();
+    int qty = ui->updateFoodItemQuantity->text().toInt();
+    QString size = ui->updateFoodItemSize->text().toLower();
+    int price = ui->updateFoodItemPrice->text().toInt();
+
+    if (name.isEmpty())
+    {
+        QMessageBox::warning(this, "Error", "Please enter a name for the food item.");
+    }
+    else if (qty <= 0 || qty >= 10)
+    {
+    }
+    else if (size.isEmpty() || (size != "small" && size != "medium" && size != "large"))
+    {
+        QMessageBox::warning(this, "Error", "Please select a size for the food item.");
+    }
+    else if (price <= 0.0 || price >= 2000.0)
+    {
+        QMessageBox::warning(this, "Error", "Please enter a valid price");
+    }
+
+    else
+    {
+
+        QString qtyString = QString::number(qty);
+        QString priceString = QString::number(price);
+
+        db.updateFood(id,name, qtyString, size, priceString, ui->foodViewFoodItemsTable);
+
+        ui->views->setCurrentIndex(2);
+
+        ui->updateFoodId->setText(" ");
+        ui->updateFoodItemName->clear();
+        ui->updateFoodItemQuantity->clear();
+        ui->updateFoodItemPrice->clear();
+        ui->updateFoodItemSize->clear();
+
+        QMessageBox::information(this, "Success", "Food item added successfully!");
+    }
 }
 
