@@ -1,3 +1,7 @@
+// cafekit
+// coder : jibran khalil , marya amin
+// purpose of code: the login window , class prototyping in here
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

@@ -1,3 +1,6 @@
+// cafekit
+// coder : jibran khalil , marya amin
+// purpose of code: this is database header file , it consists of all the function and class to manage the databse connection , inserting , updatig and removing data .
 
 
 #include "database.h"

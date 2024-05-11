@@ -1,3 +1,6 @@
+// cafekit
+// coder : jibran khalil , marya amin
+// purpose of code:prototyping of home class function and data memberes
 #ifndef HOME_H
 #define HOME_H
 

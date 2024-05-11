@@ -1,3 +1,8 @@
+// cafekit
+// coder : jibran khalil , marya amin
+// purpose of code: database header file for prototyping the class data members and functions
+
+
 #ifndef DATABASE_H
 #define DATABASE_H
 

@@ -1,3 +1,9 @@
+// cafekit
+// coder : jibran khalil , marya amin
+// purpose of code: the home view , the implementaton of home screen is done here
+
+
+
 #include "home.h"
 #include "ui_home.h"
 #include "database.h"

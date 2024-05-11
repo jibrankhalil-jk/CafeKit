@@ -1,3 +1,8 @@
+// cafekit
+// coder : jibran khalil , marya amin
+// purpose of code: the main login window code is here
+
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "home.h"
