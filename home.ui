@@ -1677,7 +1677,7 @@ padding:10px;
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>408</y>
+        <y>360</y>
         <width>631</width>
         <height>61</height>
        </rect>
@@ -1694,6 +1694,9 @@ padding:10px;
 	background-color: rgb(36, 31, 49);
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+ 
  </string>
       </property>
       <widget class="QLabel" name="homeLasUserName_11">
@@ -1701,7 +1704,7 @@ padding:10px;
         <rect>
          <x>30</x>
          <y>20</y>
-         <width>371</width>
+         <width>201</width>
          <height>26</height>
         </rect>
        </property>
@@ -1722,26 +1725,17 @@ color: rgb(0, 0, 0);</string>
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Email us&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_24">
+      <widget class="QLabel" name="label_17">
        <property name="geometry">
         <rect>
-         <x>580</x>
+         <x>420</x>
          <y>20</y>
-         <width>21</width>
-         <height>20</height>
+         <width>173</width>
+         <height>18</height>
         </rect>
        </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: transparent;</string>
-       </property>
        <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="Resources/resources.qrc">:/Images/warning.svg</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;p230030@pwr.nu.edu.pk&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </widget>
@@ -1791,29 +1785,7 @@ font: 18pt &quot;Segoe UI&quot;;
 color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_26">
-       <property name="geometry">
-        <rect>
-         <x>580</x>
-         <y>20</y>
-         <width>21</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: transparent;</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="Resources/resources.qrc">:/Images/warning.svg</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Mirium Amin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </widget>
@@ -1836,7 +1808,8 @@ color: rgb(0, 0, 0);</string>
       <property name="styleSheet">
        <string notr="true"> 
 	background-color: rgb(36, 31, 49);
- </string>
+ 	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;</string>
       </property>
       <widget class="QLabel" name="homeLasUserName_9">
        <property name="geometry">
@@ -1861,29 +1834,7 @@ font: 18pt &quot;Segoe UI&quot;;
 color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_25">
-       <property name="geometry">
-        <rect>
-         <x>580</x>
-         <y>20</y>
-         <width>21</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: transparent;</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="Resources/resources.qrc">:/Images/warning.svg</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Jibran khalil&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </widget>
@@ -1991,15 +1942,41 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="homeLasUserName_15">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>440</y>
+        <width>78</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>18</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+font: 18pt &quot;Segoe UI&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Created By&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="huser">
      <widget class="QPushButton" name="newUserSubmitButton">
       <property name="geometry">
        <rect>
-        <x>620</x>
-        <y>630</y>
-        <width>121</width>
-        <height>32</height>
+        <x>590</x>
+        <y>621</y>
+        <width>151</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2014,7 +1991,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <enum>Qt::TabFocus</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">#pushButton_5
+       <string notr="true">#newUserSubmitButton
 {
 	background:#00855C;
 	border:none;
@@ -2022,7 +1999,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 border-radius:14px;
 }
 
-#pushButton_5:hover
+#newUserSubmitButton:hover
 {
 	background:#2D2D2D;
 	border:2px solid #00855C;
@@ -2038,8 +2015,8 @@ border-radius:14px;
        <rect>
         <x>30</x>
         <y>50</y>
-        <width>241</width>
-        <height>31</height>
+        <width>146</width>
+        <height>36</height>
        </rect>
       </property>
       <property name="font">
@@ -2059,10 +2036,10 @@ border-radius:14px;
       </property>
       <property name="geometry">
        <rect>
-        <x>480</x>
-        <y>630</y>
-        <width>121</width>
-        <height>32</height>
+        <x>420</x>
+        <y>620</y>
+        <width>161</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2077,7 +2054,7 @@ border-radius:14px;
        <enum>Qt::TabFocus</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">#userCancelButton
+       <string notr="true">#newUserCancelButton
 {
 	background:#EC3245;
 	border:none;
@@ -2085,7 +2062,7 @@ border-radius:14px;
 border-radius:14px;
 }
 
-#userCancelButton:hover
+#newUserCancelButton:hover
 {
 	background:#2d2d2d;
 	border:2px solid #EC3245;
@@ -2096,43 +2073,11 @@ border-radius:14px;
        <string>Cancel</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>130</y>
-        <width>41</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
-	border:none;
-	background:white;
-border-radius: 10px;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>:/Images/id_card.png</normaloff>:/Images/id_card.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>32</width>
-        <height>32</height>
-       </size>
-      </property>
-     </widget>
      <widget class="QLabel" name="id_4">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>460</y>
+        <x>80</x>
+        <y>540</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2150,8 +2095,8 @@ border-radius: 10px;</string>
      <widget class="QLabel" name="id_2">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>110</y>
+        <x>80</x>
+        <y>120</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2169,8 +2114,8 @@ border-radius: 10px;</string>
      <widget class="QLabel" name="id">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>180</y>
+        <x>80</x>
+        <y>200</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2188,8 +2133,8 @@ border-radius: 10px;</string>
      <widget class="QLabel" name="id_5">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>320</y>
+        <x>80</x>
+        <y>360</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2204,13 +2149,13 @@ border-radius: 10px;</string>
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Email&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="empGender">
+     <widget class="QComboBox" name="newUserGender">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>480</y>
-        <width>131</width>
-        <height>32</height>
+        <x>70</x>
+        <y>560</y>
+        <width>191</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2246,8 +2191,8 @@ border-radius: 10px;
      <widget class="QLabel" name="id_6">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>390</y>
+        <x>80</x>
+        <y>450</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2262,13 +2207,13 @@ border-radius: 10px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Phone No&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="empFather">
+     <widget class="QLineEdit" name="newUserNicNumber">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>130</y>
-        <width>241</width>
-        <height>32</height>
+        <x>70</x>
+        <y>140</y>
+        <width>421</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2293,13 +2238,13 @@ border-radius: 10px;
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="empPhone">
+     <widget class="QLineEdit" name="newUserPhoneNumber">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>410</y>
-        <width>240</width>
-        <height>32</height>
+        <x>70</x>
+        <y>470</y>
+        <width>301</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2320,13 +2265,13 @@ border-radius: 10px;
        <set>Qt::ImhPreferNumbers</set>
       </property>
      </widget>
-     <widget class="QLineEdit" name="empEmail">
+     <widget class="QLineEdit" name="newUserEmail">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>340</y>
-        <width>221</width>
-        <height>32</height>
+        <x>70</x>
+        <y>380</y>
+        <width>421</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2344,13 +2289,13 @@ border-radius: 10px;
 </string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="empName">
+     <widget class="QLineEdit" name="newUserName">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>200</y>
-        <width>240</width>
-        <height>32</height>
+        <x>70</x>
+        <y>220</y>
+        <width>421</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2374,8 +2319,8 @@ border-radius: 10px;
      <widget class="QLabel" name="id_7">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>250</y>
+        <x>80</x>
+        <y>280</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2390,13 +2335,13 @@ border-radius: 10px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Roll  No&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="empPhone_2">
+     <widget class="QLineEdit" name="newUserRollNo">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>270</y>
-        <width>221</width>
-        <height>32</height>
+        <x>70</x>
+        <y>300</y>
+        <width>421</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -2422,15 +2367,14 @@ border-radius: 10px;
      <zorder>id_2</zorder>
      <zorder>id</zorder>
      <zorder>id_5</zorder>
-     <zorder>empGender</zorder>
+     <zorder>newUserGender</zorder>
      <zorder>id_6</zorder>
-     <zorder>empFather</zorder>
-     <zorder>empPhone</zorder>
-     <zorder>empEmail</zorder>
-     <zorder>empName</zorder>
-     <zorder>pushButton_2</zorder>
+     <zorder>newUserNicNumber</zorder>
+     <zorder>newUserPhoneNumber</zorder>
+     <zorder>newUserEmail</zorder>
+     <zorder>newUserName</zorder>
      <zorder>id_7</zorder>
-     <zorder>empPhone_2</zorder>
+     <zorder>newUserRollNo</zorder>
      <zorder>newUserSubmitButton</zorder>
      <zorder>newUserCancelButton</zorder>
     </widget>

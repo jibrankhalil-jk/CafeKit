@@ -233,16 +233,84 @@ void Home::on_newUserCancelButton_clicked()
     ui->views->setCurrentIndex(3);
 }
 
-// ************************************* Add New Food Sub View **************************************************************
+void Home::on_newUserSubmitButton_clicked()
+{
+    QString nic, name, rollNo, email, phoneNumber, gender;
 
+
+    nic = ui->newUserNicNumber->text();
+    name = ui->newUserName->text().toLower();
+    rollNo = ui->newUserRollNo->text();
+    email = ui->newUserEmail->text();
+    phoneNumber = ui->newUserPhoneNumber->text();
+    int tempGender = ui->newUserGender->currentIndex();
+    {
+        if (tempGender == 0)
+        {
+            gender = "male";
+        }
+        else if (tempGender == 1)
+        {
+            gender = "female";
+        }
+        else
+        {
+            gender = "other";
+        }
+    }
+
+    if (nic.length() != 13)
+    {
+        QMessageBox::warning(this, "Error", "Please enter a nic number.");
+    }
+    else if (name.isEmpty() || name.length() > 50)
+    {
+        QMessageBox::warning(this, "Error", "Please enter a valid name.");
+    }else if (rollNo.size() < 7 || name.length() > 11){
+             QMessageBox::warning(this, "Error", "Please select a valid roll number.");
+    }
+    else if (email.length() < 1 || email.length() >= 50)
+    {
+        QMessageBox::warning(this, "Error", "Please enter a valid email id");
+    }
+    else if (tempGender < 0 || tempGender > 2 )
+    {
+        QMessageBox::warning(this, "Error", "Please chose a gender from the options.");
+    }
+    else if (phoneNumber.length() != 11 )
+    {
+        QMessageBox::warning(this, "Error", "Please enter a valid number e.g (03...).");
+    }
+    else{
+
+        QString data  = "'"+nic+"', '"+email+"','"+ name+"', '"+ rollNo +"', '0', '"+ phoneNumber+"',current_timestamp()";
+        if(db.addnewUser(data,ui->usersViewUsersTable)){
+
+
+            ui->views->setCurrentIndex(3);
+
+           ui->newUserNicNumber->clear();
+           ui->newUserName->clear();
+           ui->newUserRollNo->clear();
+           ui->newUserEmail->clear();
+           ui->newUserPhoneNumber->clear();
+           ui->newUserGender->setCurrentIndex(0);
+
+
+        }
+        else{
+            QMessageBox::warning(this, "Error", "Failed to add new user.");
+        }
+
+
+     }
+}
+
+// ************************************* Add New Food Sub View **************************************************************
 
 // ************************************* Add New Order Sub View **************************************************************
 
-
 // ************************************* other **************************************************************
-
-
-
 
 void Home::on_foodAddNewCancelButton_clicked()
 {
@@ -448,12 +516,3 @@ void Home::on_newOrdersubmit_clicked()
         ui->views->setCurrentIndex(1);
     }
 }
-
-
-
-
-void Home::on_newUserSubmitButton_clicked()
-{
-
-}
-

@@ -40,7 +40,7 @@ public:
     void addNewOrder(QString cnic, QString total, QString items, QTableWidget *table);
     void addNewFood(QString, QString, QString, QString, QTableView *table);
     void addnewCategorie();
-    void addnewUser(QString, QTableView *table);
+    bool addnewUser(QString data, QTableView *table);
 
     void updateOrder();
     void updateFoodDetails();

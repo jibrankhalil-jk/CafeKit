@@ -259,7 +259,7 @@ void Database::getUsers(QTableView *table){
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery query = QSqlQuery(db);
 
-    query.prepare("SELECT users.user_name ,users.roll_no,users.nic , users.account_status,users.loan_status FROM `users` ORDER BY users.datetime ;");
+    query.prepare("SELECT users.user_name ,users.roll_no,users.nic FROM `users` ORDER BY users.datetime ;");
     query.exec();
     model->setQuery(std::move(query));
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("Name"));
@@ -307,23 +307,25 @@ void Database::getItemsWithName(QString name,QListView *list){
 
 
 
-void Database::addnewUser(QString enc,QTableView *table){
+bool Database::addnewUser(QString data,QTableView *table){
     QSqlQuery query =  QSqlQuery(db);
     if(db.isOpen())
     {
-        query.prepare("INSERT INTO `users` (`nic`, `email`, `user_name`, `roll_no`, `account_status`, `phone_number`, 'profile_pic',`datetime`) VALUES ('7140299299999', NULL, 'jibran khalil', '23p0030', '0', '03100000000','" + enc +"', '2024-04-22 20:20:35');");
+
+        qDebug() << "INSERT INTO `users` (`nic`, `email`, `user_name`, `roll_no`, `account_status`, `phone_number`, `datetime`) VALUES ("+data+");";
+        query.prepare("INSERT INTO `users` (`nic`, `email`, `user_name`, `roll_no`, `account_status`, `phone_number`, `datetime`) VALUES ("+data+");");
         if(query.exec())
         {
-            getFoods(table);
-
-            //QMessageBox::information(this, "Success", "Data inserted successfully",QMessageBox::Ok);
-
+            getUsers(table);
+            return 1;
         }
         else
         {
+            return 0;
             qDebug() << "Error : "<<query.lastError().text() << query.isValid();
         }
     }
+     return 0;
 }
 
 

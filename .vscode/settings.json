@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.css": "tailwindcss",
+        "*.html": "html",
+        "optional": "cpp",
+        "system_error": "cpp"
+    }
+}

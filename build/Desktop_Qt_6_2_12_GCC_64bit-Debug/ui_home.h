@@ -10,7 +10,6 @@
 #define UI_HOME_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QHeaderView>
@@ -97,33 +96,31 @@ public:
     QLabel *logo_2;
     QWidget *settingsButton1_2;
     QLabel *homeLasUserName_11;
-    QLabel *label_24;
+    QLabel *label_17;
     QWidget *settingsButton3_2;
     QLabel *homeLasUserName_10;
-    QLabel *label_26;
     QWidget *settingsButton2_2;
     QLabel *homeLasUserName_9;
-    QLabel *label_25;
     QLabel *homeLasUserName_12;
     QLabel *homeLasUserName_13;
     QLabel *homeLasUserName_14;
+    QLabel *homeLasUserName_15;
     QWidget *huser;
     QPushButton *newUserSubmitButton;
     QLabel *label_18;
     QPushButton *newUserCancelButton;
-    QPushButton *pushButton_2;
     QLabel *id_4;
     QLabel *id_2;
     QLabel *id;
     QLabel *id_5;
-    QComboBox *empGender;
+    QComboBox *newUserGender;
     QLabel *id_6;
-    QLineEdit *empFather;
-    QLineEdit *empPhone;
-    QLineEdit *empEmail;
-    QLineEdit *empName;
+    QLineEdit *newUserNicNumber;
+    QLineEdit *newUserPhoneNumber;
+    QLineEdit *newUserEmail;
+    QLineEdit *newUserName;
     QLabel *id_7;
-    QLineEdit *empPhone_2;
+    QLineEdit *newUserRollNo;
     QWidget *iFoods;
     QLabel *label_21;
     QPushButton *foodItemPicture;
@@ -805,26 +802,26 @@ public:
         logo_2->setScaledContents(true);
         settingsButton1_2 = new QWidget(gaboutpage);
         settingsButton1_2->setObjectName(QString::fromUtf8("settingsButton1_2"));
-        settingsButton1_2->setGeometry(QRect(80, 408, 631, 61));
+        settingsButton1_2->setGeometry(QRect(80, 360, 631, 61));
         settingsButton1_2->setFont(font);
         settingsButton1_2->setStyleSheet(QString::fromUtf8(" \n"
 "	background-color: rgb(36, 31, 49);\n"
 "	border-top-left-radius: 20px;\n"
 "	border-top-right-radius: 20px;\n"
+"border-bottom-left-radius: 20px;\n"
+"border-bottom-right-radius: 20px;\n"
+" \n"
 " "));
         homeLasUserName_11 = new QLabel(settingsButton1_2);
         homeLasUserName_11->setObjectName(QString::fromUtf8("homeLasUserName_11"));
-        homeLasUserName_11->setGeometry(QRect(30, 20, 371, 26));
+        homeLasUserName_11->setGeometry(QRect(30, 20, 201, 26));
         homeLasUserName_11->setFont(font2);
         homeLasUserName_11->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "font: 18pt \"Segoe UI\";\n"
 "color: rgb(0, 0, 0);"));
-        label_24 = new QLabel(settingsButton1_2);
-        label_24->setObjectName(QString::fromUtf8("label_24"));
-        label_24->setGeometry(QRect(580, 20, 21, 20));
-        label_24->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
-        label_24->setPixmap(QPixmap(QString::fromUtf8(":/Images/warning.svg")));
-        label_24->setScaledContents(true);
+        label_17 = new QLabel(settingsButton1_2);
+        label_17->setObjectName(QString::fromUtf8("label_17"));
+        label_17->setGeometry(QRect(420, 20, 173, 18));
         settingsButton3_2 = new QWidget(gaboutpage);
         settingsButton3_2->setObjectName(QString::fromUtf8("settingsButton3_2"));
         settingsButton3_2->setGeometry(QRect(80, 532, 631, 61));
@@ -841,19 +838,14 @@ public:
         homeLasUserName_10->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "font: 18pt \"Segoe UI\";\n"
 "color: rgb(0, 0, 0);"));
-        label_26 = new QLabel(settingsButton3_2);
-        label_26->setObjectName(QString::fromUtf8("label_26"));
-        label_26->setGeometry(QRect(580, 20, 21, 20));
-        label_26->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
-        label_26->setPixmap(QPixmap(QString::fromUtf8(":/Images/warning.svg")));
-        label_26->setScaledContents(true);
         settingsButton2_2 = new QWidget(gaboutpage);
         settingsButton2_2->setObjectName(QString::fromUtf8("settingsButton2_2"));
         settingsButton2_2->setGeometry(QRect(80, 470, 631, 61));
         settingsButton2_2->setFont(font);
         settingsButton2_2->setStyleSheet(QString::fromUtf8(" \n"
 "	background-color: rgb(36, 31, 49);\n"
-" "));
+" 	border-top-left-radius: 20px;\n"
+"	border-top-right-radius: 20px;"));
         homeLasUserName_9 = new QLabel(settingsButton2_2);
         homeLasUserName_9->setObjectName(QString::fromUtf8("homeLasUserName_9"));
         homeLasUserName_9->setGeometry(QRect(30, 20, 371, 26));
@@ -861,12 +853,6 @@ public:
         homeLasUserName_9->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "font: 18pt \"Segoe UI\";\n"
 "color: rgb(0, 0, 0);"));
-        label_25 = new QLabel(settingsButton2_2);
-        label_25->setObjectName(QString::fromUtf8("label_25"));
-        label_25->setGeometry(QRect(580, 20, 21, 20));
-        label_25->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
-        label_25->setPixmap(QPixmap(QString::fromUtf8(":/Images/warning.svg")));
-        label_25->setScaledContents(true);
         homeLasUserName_12 = new QLabel(gaboutpage);
         homeLasUserName_12->setObjectName(QString::fromUtf8("homeLasUserName_12"));
         homeLasUserName_12->setGeometry(QRect(290, 210, 163, 58));
@@ -891,18 +877,25 @@ public:
 "border-radius:8px;\n"
 " "));
         homeLasUserName_14->setAlignment(Qt::AlignCenter);
+        homeLasUserName_15 = new QLabel(gaboutpage);
+        homeLasUserName_15->setObjectName(QString::fromUtf8("homeLasUserName_15"));
+        homeLasUserName_15->setGeometry(QRect(90, 440, 78, 20));
+        homeLasUserName_15->setFont(font2);
+        homeLasUserName_15->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"font: 18pt \"Segoe UI\";\n"
+"color: rgb(0, 0, 0);"));
         views->addWidget(gaboutpage);
         huser = new QWidget();
         huser->setObjectName(QString::fromUtf8("huser"));
         newUserSubmitButton = new QPushButton(huser);
         newUserSubmitButton->setObjectName(QString::fromUtf8("newUserSubmitButton"));
-        newUserSubmitButton->setGeometry(QRect(620, 630, 121, 32));
+        newUserSubmitButton->setGeometry(QRect(590, 621, 151, 41));
         QFont font4;
         font4.setPointSize(10);
         newUserSubmitButton->setFont(font4);
         newUserSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
         newUserSubmitButton->setFocusPolicy(Qt::TabFocus);
-        newUserSubmitButton->setStyleSheet(QString::fromUtf8("#pushButton_5\n"
+        newUserSubmitButton->setStyleSheet(QString::fromUtf8("#newUserSubmitButton\n"
 "{\n"
 "	background:#00855C;\n"
 "	border:none;\n"
@@ -910,7 +903,7 @@ public:
 "border-radius:14px;\n"
 "}\n"
 "\n"
-"#pushButton_5:hover\n"
+"#newUserSubmitButton:hover\n"
 "{\n"
 "	background:#2D2D2D;\n"
 "	border:2px solid #00855C;\n"
@@ -918,7 +911,7 @@ public:
 "}"));
         label_18 = new QLabel(huser);
         label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setGeometry(QRect(30, 50, 241, 31));
+        label_18->setGeometry(QRect(30, 50, 146, 36));
         QFont font5;
         font5.setFamilies({QString::fromUtf8("Arial")});
         font5.setPointSize(12);
@@ -927,11 +920,11 @@ public:
         newUserCancelButton = new QPushButton(huser);
         newUserCancelButton->setObjectName(QString::fromUtf8("newUserCancelButton"));
         newUserCancelButton->setEnabled(true);
-        newUserCancelButton->setGeometry(QRect(480, 630, 121, 32));
+        newUserCancelButton->setGeometry(QRect(420, 620, 161, 41));
         newUserCancelButton->setFont(font4);
         newUserCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
         newUserCancelButton->setFocusPolicy(Qt::TabFocus);
-        newUserCancelButton->setStyleSheet(QString::fromUtf8("#userCancelButton\n"
+        newUserCancelButton->setStyleSheet(QString::fromUtf8("#newUserCancelButton\n"
 "{\n"
 "	background:#EC3245;\n"
 "	border:none;\n"
@@ -939,54 +932,42 @@ public:
 "border-radius:14px;\n"
 "}\n"
 "\n"
-"#userCancelButton:hover\n"
+"#newUserCancelButton:hover\n"
 "{\n"
 "	background:#2d2d2d;\n"
 "	border:2px solid #EC3245;\n"
 "	color:#EC3245;\n"
 "}"));
-        pushButton_2 = new QPushButton(huser);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(230, 130, 41, 32));
-        pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_2->setStyleSheet(QString::fromUtf8("\n"
-"	border:none;\n"
-"	background:white;\n"
-"border-radius: 10px;"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Images/id_card.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_2->setIcon(icon);
-        pushButton_2->setIconSize(QSize(32, 32));
         id_4 = new QLabel(huser);
         id_4->setObjectName(QString::fromUtf8("id_4"));
-        id_4->setGeometry(QRect(40, 460, 141, 21));
+        id_4->setGeometry(QRect(80, 540, 141, 21));
         QFont font6;
         font6.setPointSize(10);
         font6.setBold(true);
         id_4->setFont(font6);
         id_2 = new QLabel(huser);
         id_2->setObjectName(QString::fromUtf8("id_2"));
-        id_2->setGeometry(QRect(40, 110, 141, 21));
+        id_2->setGeometry(QRect(80, 120, 141, 21));
         id_2->setFont(font6);
         id = new QLabel(huser);
         id->setObjectName(QString::fromUtf8("id"));
-        id->setGeometry(QRect(40, 180, 141, 21));
+        id->setGeometry(QRect(80, 200, 141, 21));
         id->setFont(font6);
         id_5 = new QLabel(huser);
         id_5->setObjectName(QString::fromUtf8("id_5"));
-        id_5->setGeometry(QRect(40, 320, 141, 21));
+        id_5->setGeometry(QRect(80, 360, 141, 21));
         id_5->setFont(font6);
-        empGender = new QComboBox(huser);
-        empGender->addItem(QString());
-        empGender->addItem(QString());
-        empGender->addItem(QString());
-        empGender->setObjectName(QString::fromUtf8("empGender"));
-        empGender->setGeometry(QRect(30, 480, 131, 32));
+        newUserGender = new QComboBox(huser);
+        newUserGender->addItem(QString());
+        newUserGender->addItem(QString());
+        newUserGender->addItem(QString());
+        newUserGender->setObjectName(QString::fromUtf8("newUserGender"));
+        newUserGender->setGeometry(QRect(70, 560, 191, 41));
         QFont font7;
         font7.setFamilies({QString::fromUtf8("Arial")});
         font7.setPointSize(10);
-        empGender->setFont(font7);
-        empGender->setStyleSheet(QString::fromUtf8("background:white;\n"
+        newUserGender->setFont(font7);
+        newUserGender->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
 "padding-left:12px;\n"
@@ -994,82 +975,81 @@ public:
 ""));
         id_6 = new QLabel(huser);
         id_6->setObjectName(QString::fromUtf8("id_6"));
-        id_6->setGeometry(QRect(40, 390, 141, 21));
+        id_6->setGeometry(QRect(80, 450, 141, 21));
         id_6->setFont(font6);
-        empFather = new QLineEdit(huser);
-        empFather->setObjectName(QString::fromUtf8("empFather"));
-        empFather->setGeometry(QRect(30, 130, 241, 32));
-        empFather->setFont(font7);
-        empFather->setStyleSheet(QString::fromUtf8("background:white;\n"
+        newUserNicNumber = new QLineEdit(huser);
+        newUserNicNumber->setObjectName(QString::fromUtf8("newUserNicNumber"));
+        newUserNicNumber->setGeometry(QRect(70, 140, 421, 41));
+        newUserNicNumber->setFont(font7);
+        newUserNicNumber->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
 "padding-left:12px;\n"
 "border-radius: 10px;\n"
 "\n"
 ""));
-        empFather->setInputMethodHints(Qt::ImhPreferNumbers);
-        empPhone = new QLineEdit(huser);
-        empPhone->setObjectName(QString::fromUtf8("empPhone"));
-        empPhone->setGeometry(QRect(30, 410, 240, 32));
-        empPhone->setFont(font7);
-        empPhone->setStyleSheet(QString::fromUtf8("background:white;\n"
+        newUserNicNumber->setInputMethodHints(Qt::ImhPreferNumbers);
+        newUserPhoneNumber = new QLineEdit(huser);
+        newUserPhoneNumber->setObjectName(QString::fromUtf8("newUserPhoneNumber"));
+        newUserPhoneNumber->setGeometry(QRect(70, 470, 301, 41));
+        newUserPhoneNumber->setFont(font7);
+        newUserPhoneNumber->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
 "padding-left:12px;\n"
 "border-radius: 10px;\n"
 ""));
-        empPhone->setInputMethodHints(Qt::ImhPreferNumbers);
-        empEmail = new QLineEdit(huser);
-        empEmail->setObjectName(QString::fromUtf8("empEmail"));
-        empEmail->setGeometry(QRect(30, 340, 221, 32));
-        empEmail->setFont(font7);
-        empEmail->setStyleSheet(QString::fromUtf8("background:white;\n"
+        newUserPhoneNumber->setInputMethodHints(Qt::ImhPreferNumbers);
+        newUserEmail = new QLineEdit(huser);
+        newUserEmail->setObjectName(QString::fromUtf8("newUserEmail"));
+        newUserEmail->setGeometry(QRect(70, 380, 421, 41));
+        newUserEmail->setFont(font7);
+        newUserEmail->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
 "padding-left:12px;\n"
 "border-radius: 10px;\n"
 ""));
-        empName = new QLineEdit(huser);
-        empName->setObjectName(QString::fromUtf8("empName"));
-        empName->setGeometry(QRect(30, 200, 240, 32));
-        empName->setFont(font7);
-        empName->setStyleSheet(QString::fromUtf8("background:white;\n"
+        newUserName = new QLineEdit(huser);
+        newUserName->setObjectName(QString::fromUtf8("newUserName"));
+        newUserName->setGeometry(QRect(70, 220, 421, 41));
+        newUserName->setFont(font7);
+        newUserName->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
 "padding-left:12px;\n"
 "border-radius: 10px;\n"
 ""));
-        empName->setInputMethodHints(Qt::ImhPreferLowercase);
+        newUserName->setInputMethodHints(Qt::ImhPreferLowercase);
         id_7 = new QLabel(huser);
         id_7->setObjectName(QString::fromUtf8("id_7"));
-        id_7->setGeometry(QRect(40, 250, 141, 21));
+        id_7->setGeometry(QRect(80, 280, 141, 21));
         id_7->setFont(font6);
-        empPhone_2 = new QLineEdit(huser);
-        empPhone_2->setObjectName(QString::fromUtf8("empPhone_2"));
-        empPhone_2->setGeometry(QRect(30, 270, 221, 32));
-        empPhone_2->setFont(font7);
-        empPhone_2->setStyleSheet(QString::fromUtf8("background:white;\n"
+        newUserRollNo = new QLineEdit(huser);
+        newUserRollNo->setObjectName(QString::fromUtf8("newUserRollNo"));
+        newUserRollNo->setGeometry(QRect(70, 300, 421, 41));
+        newUserRollNo->setFont(font7);
+        newUserRollNo->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
 "padding-left:12px;\n"
 "border-radius: 10px;\n"
 ""));
-        empPhone_2->setInputMethodHints(Qt::ImhPreferNumbers);
+        newUserRollNo->setInputMethodHints(Qt::ImhPreferNumbers);
         views->addWidget(huser);
         id_4->raise();
         label_18->raise();
         id_2->raise();
         id->raise();
         id_5->raise();
-        empGender->raise();
+        newUserGender->raise();
         id_6->raise();
-        empFather->raise();
-        empPhone->raise();
-        empEmail->raise();
-        empName->raise();
-        pushButton_2->raise();
+        newUserNicNumber->raise();
+        newUserPhoneNumber->raise();
+        newUserEmail->raise();
+        newUserName->raise();
         id_7->raise();
-        empPhone_2->raise();
+        newUserRollNo->raise();
         newUserSubmitButton->raise();
         newUserCancelButton->raise();
         iFoods = new QWidget();
@@ -1549,11 +1529,9 @@ public:
         label_8->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">App Configurations</span></p></body></html>", nullptr));
         logo_2->setText(QString());
         homeLasUserName_11->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Email us</span></p></body></html>", nullptr));
-        label_24->setText(QString());
-        homeLasUserName_10->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">...</span></p></body></html>", nullptr));
-        label_26->setText(QString());
-        homeLasUserName_9->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">...</span></p></body></html>", nullptr));
-        label_25->setText(QString());
+        label_17->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">p230030@pwr.nu.edu.pk</span></p></body></html>", nullptr));
+        homeLasUserName_10->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Mirium Amin</span></p></body></html>", nullptr));
+        homeLasUserName_9->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Jibran khalil</span></p></body></html>", nullptr));
         homeLasUserName_12->setText(QCoreApplication::translate("Home", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1578,20 +1556,20 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:700; color:#ffffff;\">V 1.0.0</span></p></body></html>", nullptr));
+        homeLasUserName_15->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Created By</span></p></body></html>", nullptr));
         newUserSubmitButton->setText(QCoreApplication::translate("Home", "Submit", nullptr));
         label_18->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#e66100;\">New User</span></p></body></html>", nullptr));
         newUserCancelButton->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
-        pushButton_2->setText(QString());
         id_4->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Gender</span></p></body></html>", nullptr));
         id_2->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Nic Number</span></p></body></html>", nullptr));
         id->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>", nullptr));
         id_5->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Email</span></p></body></html>", nullptr));
-        empGender->setItemText(0, QCoreApplication::translate("Home", "Male", nullptr));
-        empGender->setItemText(1, QCoreApplication::translate("Home", "Female", nullptr));
-        empGender->setItemText(2, QCoreApplication::translate("Home", "Other", nullptr));
+        newUserGender->setItemText(0, QCoreApplication::translate("Home", "Male", nullptr));
+        newUserGender->setItemText(1, QCoreApplication::translate("Home", "Female", nullptr));
+        newUserGender->setItemText(2, QCoreApplication::translate("Home", "Other", nullptr));
 
         id_6->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Phone No</span></p></body></html>", nullptr));
-        empFather->setText(QString());
+        newUserNicNumber->setText(QString());
         id_7->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Roll  No</span></p></body></html>", nullptr));
         label_21->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#e66100;\">New Food Item</span></p></body></html>", nullptr));
         foodItemPicture->setText(QCoreApplication::translate("Home", "Picture", nullptr));
