@@ -71,9 +71,6 @@ public:
     QTableView *usersViewUsersTable;
     QLabel *label_23;
     QWidget *eloanpage;
-    QTableWidget *loantable2;
-    QTableWidget *loantable1;
-    QLabel *label_17;
     QWidget *fsettingpage;
     QWidget *settingsUserEditButton;
     QLabel *homeLasUserName_2;
@@ -111,12 +108,9 @@ public:
     QLabel *homeLasUserName_13;
     QLabel *homeLasUserName_14;
     QWidget *huser;
-    QComboBox *empDept;
-    QLabel *id_12;
-    QPushButton *pushButton_5;
+    QPushButton *newUserSubmitButton;
     QLabel *label_18;
-    QPushButton *userCancelButton;
-    QLabel *label_19;
+    QPushButton *newUserCancelButton;
     QPushButton *pushButton_2;
     QLabel *id_4;
     QLabel *id_2;
@@ -130,17 +124,6 @@ public:
     QLineEdit *empName;
     QLabel *id_7;
     QLineEdit *empPhone_2;
-    QLineEdit *empID_2;
-    QLabel *id_10;
-    QLabel *label_20;
-    QLineEdit *empID_3;
-    QLabel *id_11;
-    QLineEdit *empID_4;
-    QLabel *id_13;
-    QPushButton *ProfilePictureButton;
-    QLabel *userprofilepctureview;
-    QLabel *id_14;
-    QComboBox *empDept_2;
     QWidget *iFoods;
     QLabel *label_21;
     QPushButton *foodItemPicture;
@@ -618,140 +601,6 @@ public:
         views->addWidget(duserpage);
         eloanpage = new QWidget();
         eloanpage->setObjectName(QString::fromUtf8("eloanpage"));
-        loantable2 = new QTableWidget(eloanpage);
-        if (loantable2->columnCount() < 4)
-            loantable2->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem39 = new QTableWidgetItem();
-        loantable2->setHorizontalHeaderItem(0, __qtablewidgetitem39);
-        QTableWidgetItem *__qtablewidgetitem40 = new QTableWidgetItem();
-        loantable2->setHorizontalHeaderItem(1, __qtablewidgetitem40);
-        QTableWidgetItem *__qtablewidgetitem41 = new QTableWidgetItem();
-        loantable2->setHorizontalHeaderItem(2, __qtablewidgetitem41);
-        QTableWidgetItem *__qtablewidgetitem42 = new QTableWidgetItem();
-        loantable2->setHorizontalHeaderItem(3, __qtablewidgetitem42);
-        if (loantable2->rowCount() < 15)
-            loantable2->setRowCount(15);
-        QTableWidgetItem *__qtablewidgetitem43 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(0, __qtablewidgetitem43);
-        QTableWidgetItem *__qtablewidgetitem44 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(1, __qtablewidgetitem44);
-        QTableWidgetItem *__qtablewidgetitem45 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(2, __qtablewidgetitem45);
-        QTableWidgetItem *__qtablewidgetitem46 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(3, __qtablewidgetitem46);
-        QTableWidgetItem *__qtablewidgetitem47 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(4, __qtablewidgetitem47);
-        QTableWidgetItem *__qtablewidgetitem48 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(5, __qtablewidgetitem48);
-        QTableWidgetItem *__qtablewidgetitem49 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(6, __qtablewidgetitem49);
-        QTableWidgetItem *__qtablewidgetitem50 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(7, __qtablewidgetitem50);
-        QTableWidgetItem *__qtablewidgetitem51 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(8, __qtablewidgetitem51);
-        QTableWidgetItem *__qtablewidgetitem52 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(9, __qtablewidgetitem52);
-        QTableWidgetItem *__qtablewidgetitem53 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(10, __qtablewidgetitem53);
-        QTableWidgetItem *__qtablewidgetitem54 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(11, __qtablewidgetitem54);
-        QTableWidgetItem *__qtablewidgetitem55 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(12, __qtablewidgetitem55);
-        QTableWidgetItem *__qtablewidgetitem56 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(13, __qtablewidgetitem56);
-        QTableWidgetItem *__qtablewidgetitem57 = new QTableWidgetItem();
-        loantable2->setVerticalHeaderItem(14, __qtablewidgetitem57);
-        loantable2->setObjectName(QString::fromUtf8("loantable2"));
-        loantable2->setGeometry(QRect(410, 20, 371, 491));
-        loantable2->setStyleSheet(QString::fromUtf8("#loantable2{\n"
-"  background-color: #C6F3E0;\n"
-"border-radius: 15px;\n"
-"color: rgb(0, 0, 0);\n"
-"}"));
-        loantable2->setProperty("showDropIndicator", QVariant(true));
-        loantable2->setGridStyle(Qt::SolidLine);
-        loantable2->horizontalHeader()->setDefaultSectionSize(91);
-        loantable1 = new QTableWidget(eloanpage);
-        if (loantable1->columnCount() < 4)
-            loantable1->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem58 = new QTableWidgetItem();
-        loantable1->setHorizontalHeaderItem(0, __qtablewidgetitem58);
-        QTableWidgetItem *__qtablewidgetitem59 = new QTableWidgetItem();
-        loantable1->setHorizontalHeaderItem(1, __qtablewidgetitem59);
-        QTableWidgetItem *__qtablewidgetitem60 = new QTableWidgetItem();
-        loantable1->setHorizontalHeaderItem(2, __qtablewidgetitem60);
-        QTableWidgetItem *__qtablewidgetitem61 = new QTableWidgetItem();
-        loantable1->setHorizontalHeaderItem(3, __qtablewidgetitem61);
-        if (loantable1->rowCount() < 23)
-            loantable1->setRowCount(23);
-        QTableWidgetItem *__qtablewidgetitem62 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(0, __qtablewidgetitem62);
-        QTableWidgetItem *__qtablewidgetitem63 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(1, __qtablewidgetitem63);
-        QTableWidgetItem *__qtablewidgetitem64 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(2, __qtablewidgetitem64);
-        QTableWidgetItem *__qtablewidgetitem65 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(3, __qtablewidgetitem65);
-        QTableWidgetItem *__qtablewidgetitem66 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(4, __qtablewidgetitem66);
-        QTableWidgetItem *__qtablewidgetitem67 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(5, __qtablewidgetitem67);
-        QTableWidgetItem *__qtablewidgetitem68 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(6, __qtablewidgetitem68);
-        QTableWidgetItem *__qtablewidgetitem69 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(7, __qtablewidgetitem69);
-        QTableWidgetItem *__qtablewidgetitem70 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(8, __qtablewidgetitem70);
-        QTableWidgetItem *__qtablewidgetitem71 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(9, __qtablewidgetitem71);
-        QTableWidgetItem *__qtablewidgetitem72 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(10, __qtablewidgetitem72);
-        QTableWidgetItem *__qtablewidgetitem73 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(11, __qtablewidgetitem73);
-        QTableWidgetItem *__qtablewidgetitem74 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(12, __qtablewidgetitem74);
-        QTableWidgetItem *__qtablewidgetitem75 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(13, __qtablewidgetitem75);
-        QTableWidgetItem *__qtablewidgetitem76 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(14, __qtablewidgetitem76);
-        QTableWidgetItem *__qtablewidgetitem77 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(15, __qtablewidgetitem77);
-        QTableWidgetItem *__qtablewidgetitem78 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(16, __qtablewidgetitem78);
-        QTableWidgetItem *__qtablewidgetitem79 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(17, __qtablewidgetitem79);
-        QTableWidgetItem *__qtablewidgetitem80 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(18, __qtablewidgetitem80);
-        QTableWidgetItem *__qtablewidgetitem81 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(19, __qtablewidgetitem81);
-        QTableWidgetItem *__qtablewidgetitem82 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(20, __qtablewidgetitem82);
-        QTableWidgetItem *__qtablewidgetitem83 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(21, __qtablewidgetitem83);
-        QTableWidgetItem *__qtablewidgetitem84 = new QTableWidgetItem();
-        loantable1->setVerticalHeaderItem(22, __qtablewidgetitem84);
-        loantable1->setObjectName(QString::fromUtf8("loantable1"));
-        loantable1->setGeometry(QRect(40, 20, 351, 661));
-        loantable1->setMouseTracking(true);
-        loantable1->setTabletTracking(true);
-        loantable1->setToolTipDuration(-65);
-        loantable1->setStyleSheet(QString::fromUtf8("#loantable1{\n"
-"  background-color: #F2E3D8;\n"
-"border-radius: 19px;\n"
-"color: rgb(0, 0, 0);\n"
-"}"));
-        loantable1->setLineWidth(2);
-        loantable1->horizontalHeader()->setDefaultSectionSize(79);
-        loantable1->horizontalHeader()->setStretchLastSection(true);
-        label_17 = new QLabel(eloanpage);
-        label_17->setObjectName(QString::fromUtf8("label_17"));
-        label_17->setGeometry(QRect(580, 550, 121, 121));
-        label_17->setStyleSheet(QString::fromUtf8("background-color: rgb(87, 227, 137);\n"
-"border-radius:20px;\n"
-"padding:30px"));
-        label_17->setPixmap(QPixmap(QString::fromUtf8(":/Images/Plus.svg")));
-        label_17->setScaledContents(true);
-        label_17->setWordWrap(false);
         views->addWidget(eloanpage);
         fsettingpage = new QWidget();
         fsettingpage->setObjectName(QString::fromUtf8("fsettingpage"));
@@ -1045,37 +894,15 @@ public:
         views->addWidget(gaboutpage);
         huser = new QWidget();
         huser->setObjectName(QString::fromUtf8("huser"));
-        empDept = new QComboBox(huser);
-        empDept->addItem(QString());
-        empDept->addItem(QString());
-        empDept->setObjectName(QString::fromUtf8("empDept"));
-        empDept->setGeometry(QRect(40, 570, 141, 32));
+        newUserSubmitButton = new QPushButton(huser);
+        newUserSubmitButton->setObjectName(QString::fromUtf8("newUserSubmitButton"));
+        newUserSubmitButton->setGeometry(QRect(620, 630, 121, 32));
         QFont font4;
-        font4.setFamilies({QString::fromUtf8("Arial")});
         font4.setPointSize(10);
-        empDept->setFont(font4);
-        empDept->setStyleSheet(QString::fromUtf8("background:white;\n"
-"color:black;\n"
-"border:none;\n"
-"padding-left:12px;\n"
-"border-radius: 10px;\n"
-""));
-        id_12 = new QLabel(huser);
-        id_12->setObjectName(QString::fromUtf8("id_12"));
-        id_12->setGeometry(QRect(50, 550, 141, 21));
-        QFont font5;
-        font5.setPointSize(10);
-        font5.setBold(true);
-        id_12->setFont(font5);
-        pushButton_5 = new QPushButton(huser);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(620, 630, 121, 32));
-        QFont font6;
-        font6.setPointSize(10);
-        pushButton_5->setFont(font6);
-        pushButton_5->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_5->setFocusPolicy(Qt::TabFocus);
-        pushButton_5->setStyleSheet(QString::fromUtf8("#pushButton_5\n"
+        newUserSubmitButton->setFont(font4);
+        newUserSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
+        newUserSubmitButton->setFocusPolicy(Qt::TabFocus);
+        newUserSubmitButton->setStyleSheet(QString::fromUtf8("#pushButton_5\n"
 "{\n"
 "	background:#00855C;\n"
 "	border:none;\n"
@@ -1092,19 +919,19 @@ public:
         label_18 = new QLabel(huser);
         label_18->setObjectName(QString::fromUtf8("label_18"));
         label_18->setGeometry(QRect(30, 50, 241, 31));
-        QFont font7;
-        font7.setFamilies({QString::fromUtf8("Arial")});
-        font7.setPointSize(12);
-        font7.setBold(true);
-        label_18->setFont(font7);
-        userCancelButton = new QPushButton(huser);
-        userCancelButton->setObjectName(QString::fromUtf8("userCancelButton"));
-        userCancelButton->setEnabled(true);
-        userCancelButton->setGeometry(QRect(480, 630, 121, 32));
-        userCancelButton->setFont(font6);
-        userCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
-        userCancelButton->setFocusPolicy(Qt::TabFocus);
-        userCancelButton->setStyleSheet(QString::fromUtf8("#userCancelButton\n"
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Arial")});
+        font5.setPointSize(12);
+        font5.setBold(true);
+        label_18->setFont(font5);
+        newUserCancelButton = new QPushButton(huser);
+        newUserCancelButton->setObjectName(QString::fromUtf8("newUserCancelButton"));
+        newUserCancelButton->setEnabled(true);
+        newUserCancelButton->setGeometry(QRect(480, 630, 121, 32));
+        newUserCancelButton->setFont(font4);
+        newUserCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
+        newUserCancelButton->setFocusPolicy(Qt::TabFocus);
+        newUserCancelButton->setStyleSheet(QString::fromUtf8("#userCancelButton\n"
 "{\n"
 "	background:#EC3245;\n"
 "	border:none;\n"
@@ -1118,10 +945,6 @@ public:
 "	border:2px solid #EC3245;\n"
 "	color:#EC3245;\n"
 "}"));
-        label_19 = new QLabel(huser);
-        label_19->setObjectName(QString::fromUtf8("label_19"));
-        label_19->setGeometry(QRect(40, 320, 241, 31));
-        label_19->setFont(font7);
         pushButton_2 = new QPushButton(huser);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(230, 130, 41, 32));
@@ -1136,27 +959,33 @@ public:
         pushButton_2->setIconSize(QSize(32, 32));
         id_4 = new QLabel(huser);
         id_4->setObjectName(QString::fromUtf8("id_4"));
-        id_4->setGeometry(QRect(40, 250, 141, 21));
-        id_4->setFont(font5);
+        id_4->setGeometry(QRect(40, 460, 141, 21));
+        QFont font6;
+        font6.setPointSize(10);
+        font6.setBold(true);
+        id_4->setFont(font6);
         id_2 = new QLabel(huser);
         id_2->setObjectName(QString::fromUtf8("id_2"));
         id_2->setGeometry(QRect(40, 110, 141, 21));
-        id_2->setFont(font5);
+        id_2->setFont(font6);
         id = new QLabel(huser);
         id->setObjectName(QString::fromUtf8("id"));
         id->setGeometry(QRect(40, 180, 141, 21));
-        id->setFont(font5);
+        id->setFont(font6);
         id_5 = new QLabel(huser);
         id_5->setObjectName(QString::fromUtf8("id_5"));
-        id_5->setGeometry(QRect(300, 110, 141, 21));
-        id_5->setFont(font5);
+        id_5->setGeometry(QRect(40, 320, 141, 21));
+        id_5->setFont(font6);
         empGender = new QComboBox(huser);
         empGender->addItem(QString());
         empGender->addItem(QString());
         empGender->addItem(QString());
         empGender->setObjectName(QString::fromUtf8("empGender"));
-        empGender->setGeometry(QRect(30, 270, 131, 32));
-        empGender->setFont(font4);
+        empGender->setGeometry(QRect(30, 480, 131, 32));
+        QFont font7;
+        font7.setFamilies({QString::fromUtf8("Arial")});
+        font7.setPointSize(10);
+        empGender->setFont(font7);
         empGender->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1165,12 +994,12 @@ public:
 ""));
         id_6 = new QLabel(huser);
         id_6->setObjectName(QString::fromUtf8("id_6"));
-        id_6->setGeometry(QRect(210, 250, 141, 21));
-        id_6->setFont(font5);
+        id_6->setGeometry(QRect(40, 390, 141, 21));
+        id_6->setFont(font6);
         empFather = new QLineEdit(huser);
         empFather->setObjectName(QString::fromUtf8("empFather"));
         empFather->setGeometry(QRect(30, 130, 241, 32));
-        empFather->setFont(font4);
+        empFather->setFont(font7);
         empFather->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1181,8 +1010,8 @@ public:
         empFather->setInputMethodHints(Qt::ImhPreferNumbers);
         empPhone = new QLineEdit(huser);
         empPhone->setObjectName(QString::fromUtf8("empPhone"));
-        empPhone->setGeometry(QRect(200, 270, 240, 32));
-        empPhone->setFont(font4);
+        empPhone->setGeometry(QRect(30, 410, 240, 32));
+        empPhone->setFont(font7);
         empPhone->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1192,8 +1021,8 @@ public:
         empPhone->setInputMethodHints(Qt::ImhPreferNumbers);
         empEmail = new QLineEdit(huser);
         empEmail->setObjectName(QString::fromUtf8("empEmail"));
-        empEmail->setGeometry(QRect(290, 130, 221, 32));
-        empEmail->setFont(font4);
+        empEmail->setGeometry(QRect(30, 340, 221, 32));
+        empEmail->setFont(font7);
         empEmail->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1203,7 +1032,7 @@ public:
         empName = new QLineEdit(huser);
         empName->setObjectName(QString::fromUtf8("empName"));
         empName->setGeometry(QRect(30, 200, 240, 32));
-        empName->setFont(font4);
+        empName->setFont(font7);
         empName->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1213,12 +1042,12 @@ public:
         empName->setInputMethodHints(Qt::ImhPreferLowercase);
         id_7 = new QLabel(huser);
         id_7->setObjectName(QString::fromUtf8("id_7"));
-        id_7->setGeometry(QRect(300, 180, 141, 21));
-        id_7->setFont(font5);
+        id_7->setGeometry(QRect(40, 250, 141, 21));
+        id_7->setFont(font6);
         empPhone_2 = new QLineEdit(huser);
         empPhone_2->setObjectName(QString::fromUtf8("empPhone_2"));
-        empPhone_2->setGeometry(QRect(290, 200, 221, 32));
-        empPhone_2->setFont(font4);
+        empPhone_2->setGeometry(QRect(30, 270, 221, 32));
+        empPhone_2->setFont(font7);
         empPhone_2->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1226,109 +1055,9 @@ public:
 "border-radius: 10px;\n"
 ""));
         empPhone_2->setInputMethodHints(Qt::ImhPreferNumbers);
-        empID_2 = new QLineEdit(huser);
-        empID_2->setObjectName(QString::fromUtf8("empID_2"));
-        empID_2->setEnabled(true);
-        empID_2->setGeometry(QRect(40, 380, 201, 32));
-        empID_2->setFont(font4);
-        empID_2->setStyleSheet(QString::fromUtf8("background:white;\n"
-"color:black;\n"
-"border:none;\n"
-"padding-left:12px;\n"
-"border-radius: 10px;\n"
-""));
-        id_10 = new QLabel(huser);
-        id_10->setObjectName(QString::fromUtf8("id_10"));
-        id_10->setGeometry(QRect(50, 360, 141, 21));
-        id_10->setFont(font5);
-        label_20 = new QLabel(huser);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setGeometry(QRect(40, 430, 241, 31));
-        label_20->setFont(font7);
-        empID_3 = new QLineEdit(huser);
-        empID_3->setObjectName(QString::fromUtf8("empID_3"));
-        empID_3->setEnabled(true);
-        empID_3->setGeometry(QRect(40, 490, 201, 32));
-        empID_3->setFont(font4);
-        empID_3->setStyleSheet(QString::fromUtf8("background:white;\n"
-"color:black;\n"
-"border:none;\n"
-"padding-left:12px;\n"
-"border-radius: 10px;\n"
-""));
-        id_11 = new QLabel(huser);
-        id_11->setObjectName(QString::fromUtf8("id_11"));
-        id_11->setGeometry(QRect(50, 470, 141, 21));
-        id_11->setFont(font5);
-        empID_4 = new QLineEdit(huser);
-        empID_4->setObjectName(QString::fromUtf8("empID_4"));
-        empID_4->setEnabled(true);
-        empID_4->setGeometry(QRect(270, 490, 201, 32));
-        empID_4->setFont(font4);
-        empID_4->setStyleSheet(QString::fromUtf8("background:white;\n"
-"color:black;\n"
-"border:none;\n"
-"padding-left:12px;\n"
-"border-radius: 10px;\n"
-""));
-        id_13 = new QLabel(huser);
-        id_13->setObjectName(QString::fromUtf8("id_13"));
-        id_13->setGeometry(QRect(280, 470, 141, 21));
-        id_13->setFont(font5);
-        ProfilePictureButton = new QPushButton(huser);
-        ProfilePictureButton->setObjectName(QString::fromUtf8("ProfilePictureButton"));
-        ProfilePictureButton->setGeometry(QRect(530, 260, 201, 32));
-        ProfilePictureButton->setFont(font6);
-        ProfilePictureButton->setCursor(QCursor(Qt::PointingHandCursor));
-        ProfilePictureButton->setFocusPolicy(Qt::TabFocus);
-        ProfilePictureButton->setStyleSheet(QString::fromUtf8("#ProfilePictureButton\n"
-"{\n"
-"	background:#00855C;\n"
-"	border:none;\n"
-"	color:white;\n"
-"    border-radius:14px;\n"
-"}\n"
-"\n"
-"#ProfilePictureButton:hover\n"
-"{\n"
-"	background:#2D2D2D;\n"
-"	border:2px solid #00855C;\n"
-"	color:#00855C;\n"
-"}"));
-        userprofilepctureview = new QLabel(huser);
-        userprofilepctureview->setObjectName(QString::fromUtf8("userprofilepctureview"));
-        userprofilepctureview->setGeometry(QRect(550, 90, 161, 161));
-        userprofilepctureview->setStyleSheet(QString::fromUtf8("border-radius: 77px;\n"
-"background-color: rgb(192, 97, 203);"));
-        userprofilepctureview->setPixmap(QPixmap(QString::fromUtf8(":/Images/user1.svg")));
-        userprofilepctureview->setScaledContents(false);
-        userprofilepctureview->setAlignment(Qt::AlignCenter);
-        userprofilepctureview->setWordWrap(true);
-        id_14 = new QLabel(huser);
-        id_14->setObjectName(QString::fromUtf8("id_14"));
-        id_14->setGeometry(QRect(210, 550, 141, 21));
-        id_14->setFont(font5);
-        empDept_2 = new QComboBox(huser);
-        empDept_2->addItem(QString());
-        empDept_2->addItem(QString());
-        empDept_2->setObjectName(QString::fromUtf8("empDept_2"));
-        empDept_2->setGeometry(QRect(200, 570, 141, 32));
-        empDept_2->setFont(font4);
-        empDept_2->setStyleSheet(QString::fromUtf8("background:white;\n"
-"color:black;\n"
-"border:none;\n"
-"padding-left:12px;\n"
-"border-radius: 10px;\n"
-""));
         views->addWidget(huser);
-        id_12->raise();
-        id_11->raise();
-        id_13->raise();
-        id_10->raise();
         id_4->raise();
-        empDept->raise();
         label_18->raise();
-        label_19->raise();
         id_2->raise();
         id->raise();
         id_5->raise();
@@ -1341,26 +1070,18 @@ public:
         pushButton_2->raise();
         id_7->raise();
         empPhone_2->raise();
-        empID_2->raise();
-        label_20->raise();
-        empID_3->raise();
-        empID_4->raise();
-        userprofilepctureview->raise();
-        ProfilePictureButton->raise();
-        pushButton_5->raise();
-        userCancelButton->raise();
-        id_14->raise();
-        empDept_2->raise();
+        newUserSubmitButton->raise();
+        newUserCancelButton->raise();
         iFoods = new QWidget();
         iFoods->setObjectName(QString::fromUtf8("iFoods"));
         label_21 = new QLabel(iFoods);
         label_21->setObjectName(QString::fromUtf8("label_21"));
         label_21->setGeometry(QRect(40, 50, 241, 31));
-        label_21->setFont(font7);
+        label_21->setFont(font5);
         foodItemPicture = new QPushButton(iFoods);
         foodItemPicture->setObjectName(QString::fromUtf8("foodItemPicture"));
         foodItemPicture->setGeometry(QRect(380, 260, 201, 32));
-        foodItemPicture->setFont(font6);
+        foodItemPicture->setFont(font4);
         foodItemPicture->setCursor(QCursor(Qt::PointingHandCursor));
         foodItemPicture->setFocusPolicy(Qt::TabFocus);
         foodItemPicture->setStyleSheet(QString::fromUtf8("#foodItemPicture\n"
@@ -1380,11 +1101,11 @@ public:
         id_8 = new QLabel(iFoods);
         id_8->setObjectName(QString::fromUtf8("id_8"));
         id_8->setGeometry(QRect(80, 150, 141, 21));
-        id_8->setFont(font5);
+        id_8->setFont(font6);
         id_9 = new QLabel(iFoods);
         id_9->setObjectName(QString::fromUtf8("id_9"));
         id_9->setGeometry(QRect(80, 330, 141, 21));
-        id_9->setFont(font5);
+        id_9->setFont(font6);
         userprofilepctureview_2 = new QLabel(iFoods);
         userprofilepctureview_2->setObjectName(QString::fromUtf8("userprofilepctureview_2"));
         userprofilepctureview_2->setGeometry(QRect(390, 80, 161, 161));
@@ -1397,7 +1118,7 @@ public:
         foodAddNewSubmitButton = new QPushButton(iFoods);
         foodAddNewSubmitButton->setObjectName(QString::fromUtf8("foodAddNewSubmitButton"));
         foodAddNewSubmitButton->setGeometry(QRect(630, 630, 121, 32));
-        foodAddNewSubmitButton->setFont(font6);
+        foodAddNewSubmitButton->setFont(font4);
         foodAddNewSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
         foodAddNewSubmitButton->setFocusPolicy(Qt::TabFocus);
         foodAddNewSubmitButton->setStyleSheet(QString::fromUtf8("#foodAddNewSubmitButton\n"
@@ -1417,7 +1138,7 @@ public:
         newFoodItemSize = new QLineEdit(iFoods);
         newFoodItemSize->setObjectName(QString::fromUtf8("newFoodItemSize"));
         newFoodItemSize->setGeometry(QRect(70, 350, 241, 32));
-        newFoodItemSize->setFont(font4);
+        newFoodItemSize->setFont(font7);
         newFoodItemSize->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1428,7 +1149,7 @@ public:
         foodAddNewCancelButton->setObjectName(QString::fromUtf8("foodAddNewCancelButton"));
         foodAddNewCancelButton->setEnabled(true);
         foodAddNewCancelButton->setGeometry(QRect(490, 630, 121, 32));
-        foodAddNewCancelButton->setFont(font6);
+        foodAddNewCancelButton->setFont(font4);
         foodAddNewCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
         foodAddNewCancelButton->setFocusPolicy(Qt::TabFocus);
         foodAddNewCancelButton->setStyleSheet(QString::fromUtf8("#foodAddNewCancelButton\n"
@@ -1448,7 +1169,7 @@ public:
         newFoodItemName = new QLineEdit(iFoods);
         newFoodItemName->setObjectName(QString::fromUtf8("newFoodItemName"));
         newFoodItemName->setGeometry(QRect(70, 170, 240, 32));
-        newFoodItemName->setFont(font4);
+        newFoodItemName->setFont(font7);
         newFoodItemName->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1459,11 +1180,11 @@ public:
         id_15 = new QLabel(iFoods);
         id_15->setObjectName(QString::fromUtf8("id_15"));
         id_15->setGeometry(QRect(80, 420, 141, 21));
-        id_15->setFont(font5);
+        id_15->setFont(font6);
         newFoodItemPrice = new QLineEdit(iFoods);
         newFoodItemPrice->setObjectName(QString::fromUtf8("newFoodItemPrice"));
         newFoodItemPrice->setGeometry(QRect(70, 440, 241, 32));
-        newFoodItemPrice->setFont(font4);
+        newFoodItemPrice->setFont(font7);
         newFoodItemPrice->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1473,11 +1194,11 @@ public:
         id_16 = new QLabel(iFoods);
         id_16->setObjectName(QString::fromUtf8("id_16"));
         id_16->setGeometry(QRect(80, 250, 141, 21));
-        id_16->setFont(font5);
+        id_16->setFont(font6);
         newFoodItemQuantity = new QLineEdit(iFoods);
         newFoodItemQuantity->setObjectName(QString::fromUtf8("newFoodItemQuantity"));
         newFoodItemQuantity->setGeometry(QRect(70, 270, 241, 32));
-        newFoodItemQuantity->setFont(font4);
+        newFoodItemQuantity->setFont(font7);
         newFoodItemQuantity->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
 "border:none;\n"
@@ -1490,11 +1211,11 @@ public:
         id_33 = new QLabel(jAddNewOrder);
         id_33->setObjectName(QString::fromUtf8("id_33"));
         id_33->setGeometry(QRect(50, 110, 141, 21));
-        id_33->setFont(font5);
+        id_33->setFont(font6);
         newOrderStudentCnic = new QLineEdit(jAddNewOrder);
         newOrderStudentCnic->setObjectName(QString::fromUtf8("newOrderStudentCnic"));
         newOrderStudentCnic->setGeometry(QRect(40, 131, 240, 35));
-        newOrderStudentCnic->setFont(font4);
+        newOrderStudentCnic->setFont(font7);
         newOrderStudentCnic->setStyleSheet(QString::fromUtf8("#newOrderStudentCnic{\n"
 "border:1px solid  rgb(255, 255, 255);\n"
 "border-radius: 8px; \n"
@@ -1505,7 +1226,7 @@ public:
         label_46 = new QLabel(jAddNewOrder);
         label_46->setObjectName(QString::fromUtf8("label_46"));
         label_46->setGeometry(QRect(40, 30, 241, 31));
-        label_46->setFont(font7);
+        label_46->setFont(font5);
         userprofilepctureview_5 = new QLabel(jAddNewOrder);
         userprofilepctureview_5->setObjectName(QString::fromUtf8("userprofilepctureview_5"));
         userprofilepctureview_5->setGeometry(QRect(590, 60, 121, 111));
@@ -1518,11 +1239,11 @@ public:
         id_34 = new QLabel(jAddNewOrder);
         id_34->setObjectName(QString::fromUtf8("id_34"));
         id_34->setGeometry(QRect(43, 179, 141, 21));
-        id_34->setFont(font5);
+        id_34->setFont(font6);
         newOrderItemName = new QLineEdit(jAddNewOrder);
         newOrderItemName->setObjectName(QString::fromUtf8("newOrderItemName"));
         newOrderItemName->setGeometry(QRect(43, 200, 171, 35));
-        newOrderItemName->setFont(font4);
+        newOrderItemName->setFont(font7);
         newOrderItemName->setStyleSheet(QString::fromUtf8(" \n"
 "border:1px solid  rgb(255, 255, 255);\n"
 "border-radius: 8px; \n"
@@ -1549,7 +1270,7 @@ public:
         newOrderCancel->setObjectName(QString::fromUtf8("newOrderCancel"));
         newOrderCancel->setEnabled(true);
         newOrderCancel->setGeometry(QRect(480, 640, 121, 32));
-        newOrderCancel->setFont(font6);
+        newOrderCancel->setFont(font4);
         newOrderCancel->setCursor(QCursor(Qt::PointingHandCursor));
         newOrderCancel->setFocusPolicy(Qt::TabFocus);
         newOrderCancel->setStyleSheet(QString::fromUtf8("#newOrderCancel\n"
@@ -1569,7 +1290,7 @@ public:
         newOrdersubmit = new QPushButton(jAddNewOrder);
         newOrdersubmit->setObjectName(QString::fromUtf8("newOrdersubmit"));
         newOrdersubmit->setGeometry(QRect(620, 640, 121, 32));
-        newOrdersubmit->setFont(font6);
+        newOrdersubmit->setFont(font4);
         newOrdersubmit->setCursor(QCursor(Qt::PointingHandCursor));
         newOrdersubmit->setFocusPolicy(Qt::TabFocus);
         newOrdersubmit->setStyleSheet(QString::fromUtf8("#newOrdersubmit\n"
@@ -1589,14 +1310,14 @@ public:
         newOrderFinalItemstableWidget = new QTableWidget(jAddNewOrder);
         if (newOrderFinalItemstableWidget->columnCount() < 4)
             newOrderFinalItemstableWidget->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem85 = new QTableWidgetItem();
-        newOrderFinalItemstableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem85);
-        QTableWidgetItem *__qtablewidgetitem86 = new QTableWidgetItem();
-        newOrderFinalItemstableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem86);
-        QTableWidgetItem *__qtablewidgetitem87 = new QTableWidgetItem();
-        newOrderFinalItemstableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem87);
-        QTableWidgetItem *__qtablewidgetitem88 = new QTableWidgetItem();
-        newOrderFinalItemstableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem88);
+        QTableWidgetItem *__qtablewidgetitem39 = new QTableWidgetItem();
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem39);
+        QTableWidgetItem *__qtablewidgetitem40 = new QTableWidgetItem();
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem40);
+        QTableWidgetItem *__qtablewidgetitem41 = new QTableWidgetItem();
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem41);
+        QTableWidgetItem *__qtablewidgetitem42 = new QTableWidgetItem();
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem42);
         newOrderFinalItemstableWidget->setObjectName(QString::fromUtf8("newOrderFinalItemstableWidget"));
         newOrderFinalItemstableWidget->setGeometry(QRect(240, 200, 501, 411));
         newOrderFinalItemstableWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(143, 240, 164);\n"
@@ -1609,7 +1330,7 @@ public:
         newOrderStudentName_2 = new QLabel(jAddNewOrder);
         newOrderStudentName_2->setObjectName(QString::fromUtf8("newOrderStudentName_2"));
         newOrderStudentName_2->setGeometry(QRect(70, 650, 82, 23));
-        newOrderStudentName_2->setFont(font5);
+        newOrderStudentName_2->setFont(font6);
         newOrderTotalPrice = new QLabel(jAddNewOrder);
         newOrderTotalPrice->setObjectName(QString::fromUtf8("newOrderTotalPrice"));
         newOrderTotalPrice->setGeometry(QRect(160, 644, 161, 35));
@@ -1744,8 +1465,7 @@ public:
 
         retranslateUi(Home);
 
-        views->setCurrentIndex(3);
-        ProfilePictureButton->setDefault(true);
+        views->setCurrentIndex(7);
         foodItemPicture->setDefault(true);
 
 
@@ -1811,23 +1531,6 @@ public:
         usersViewRemoveUserButton->setText(QCoreApplication::translate("Home", "Remove User", nullptr));
         updateUserButton->setText(QCoreApplication::translate("Home", "Update User", nullptr));
         label_23->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; color:#1c71d8;\">Users</span></p></body></html>", nullptr));
-        QTableWidgetItem *___qtablewidgetitem13 = loantable2->horizontalHeaderItem(0);
-        ___qtablewidgetitem13->setText(QCoreApplication::translate("Home", "#", nullptr));
-        QTableWidgetItem *___qtablewidgetitem14 = loantable2->horizontalHeaderItem(1);
-        ___qtablewidgetitem14->setText(QCoreApplication::translate("Home", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem15 = loantable2->horizontalHeaderItem(2);
-        ___qtablewidgetitem15->setText(QCoreApplication::translate("Home", "Roll No", nullptr));
-        QTableWidgetItem *___qtablewidgetitem16 = loantable2->horizontalHeaderItem(3);
-        ___qtablewidgetitem16->setText(QCoreApplication::translate("Home", "Free debtors", nullptr));
-        QTableWidgetItem *___qtablewidgetitem17 = loantable1->horizontalHeaderItem(0);
-        ___qtablewidgetitem17->setText(QCoreApplication::translate("Home", "#", nullptr));
-        QTableWidgetItem *___qtablewidgetitem18 = loantable1->horizontalHeaderItem(1);
-        ___qtablewidgetitem18->setText(QCoreApplication::translate("Home", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem19 = loantable1->horizontalHeaderItem(2);
-        ___qtablewidgetitem19->setText(QCoreApplication::translate("Home", "Roll No", nullptr));
-        QTableWidgetItem *___qtablewidgetitem20 = loantable1->horizontalHeaderItem(3);
-        ___qtablewidgetitem20->setText(QCoreApplication::translate("Home", "Loan recipients", nullptr));
-        label_17->setText(QString());
         homeLasUserName_2->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; font-weight:700; color:#ffffff;\">User Name</span></p></body></html>", nullptr));
         homeLasUserPicture_2->setText(QString());
         label_6->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
@@ -1875,14 +1578,9 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:700; color:#ffffff;\">V 1.0.0</span></p></body></html>", nullptr));
-        empDept->setItemText(0, QCoreApplication::translate("Home", "Enabled", nullptr));
-        empDept->setItemText(1, QCoreApplication::translate("Home", "Disabaled", nullptr));
-
-        id_12->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Account Status</span></p></body></html>", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("Home", "Submit", nullptr));
+        newUserSubmitButton->setText(QCoreApplication::translate("Home", "Submit", nullptr));
         label_18->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#e66100;\">New User</span></p></body></html>", nullptr));
-        userCancelButton->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
-        label_19->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#c01c28;\">Pin</span></p></body></html>", nullptr));
+        newUserCancelButton->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
         pushButton_2->setText(QString());
         id_4->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Gender</span></p></body></html>", nullptr));
         id_2->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Nic Number</span></p></body></html>", nullptr));
@@ -1895,16 +1593,6 @@ public:
         id_6->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Phone No</span></p></body></html>", nullptr));
         empFather->setText(QString());
         id_7->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Roll  No</span></p></body></html>", nullptr));
-        id_10->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Security Pin</span></p></body></html>", nullptr));
-        label_20->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#e66100;\">Limits</span></p></body></html>", nullptr));
-        id_11->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Daily Limit</span></p></body></html>", nullptr));
-        id_13->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Monthly Limit</span></p></body></html>", nullptr));
-        ProfilePictureButton->setText(QCoreApplication::translate("Home", "Profile Picture", nullptr));
-        userprofilepctureview->setText(QString());
-        id_14->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Loan  Status</span></p></body></html>", nullptr));
-        empDept_2->setItemText(0, QCoreApplication::translate("Home", "Enabled", nullptr));
-        empDept_2->setItemText(1, QCoreApplication::translate("Home", "Disabaled", nullptr));
-
         label_21->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#e66100;\">New Food Item</span></p></body></html>", nullptr));
         foodItemPicture->setText(QCoreApplication::translate("Home", "Picture", nullptr));
         id_8->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>", nullptr));
@@ -1921,14 +1609,14 @@ public:
         newOrderStudentName->setText(QCoreApplication::translate("Home", "Student Name", nullptr));
         newOrderCancel->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
         newOrdersubmit->setText(QCoreApplication::translate("Home", "Submit", nullptr));
-        QTableWidgetItem *___qtablewidgetitem21 = newOrderFinalItemstableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem21->setText(QCoreApplication::translate("Home", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem22 = newOrderFinalItemstableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem22->setText(QCoreApplication::translate("Home", "Qty", nullptr));
-        QTableWidgetItem *___qtablewidgetitem23 = newOrderFinalItemstableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem23->setText(QCoreApplication::translate("Home", "Price", nullptr));
-        QTableWidgetItem *___qtablewidgetitem24 = newOrderFinalItemstableWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem24->setText(QCoreApplication::translate("Home", "Remove", nullptr));
+        QTableWidgetItem *___qtablewidgetitem13 = newOrderFinalItemstableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem13->setText(QCoreApplication::translate("Home", "Name", nullptr));
+        QTableWidgetItem *___qtablewidgetitem14 = newOrderFinalItemstableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem14->setText(QCoreApplication::translate("Home", "Qty", nullptr));
+        QTableWidgetItem *___qtablewidgetitem15 = newOrderFinalItemstableWidget->horizontalHeaderItem(2);
+        ___qtablewidgetitem15->setText(QCoreApplication::translate("Home", "Price", nullptr));
+        QTableWidgetItem *___qtablewidgetitem16 = newOrderFinalItemstableWidget->horizontalHeaderItem(3);
+        ___qtablewidgetitem16->setText(QCoreApplication::translate("Home", "Remove", nullptr));
         newOrderStudentName_2->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:14pt; color:#ffffff;\">Total  R.s:</span></p></body></html>", nullptr));
         newOrderTotalPrice->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; color:#ffffff;\">00</span></p></body></html>", nullptr));
         HomeButton->setText(QCoreApplication::translate("Home", "Home", nullptr));

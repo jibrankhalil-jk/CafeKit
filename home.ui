@@ -88,7 +88,7 @@ background-color: rgb(61, 56, 70);
      <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="ahomepage">
      <widget class="QWidget" name="userstoday" native="true">
@@ -1099,326 +1099,7 @@ alternate-background-color: lightgray;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="eloanpage">
-     <widget class="QTableWidget" name="loantable2">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>20</y>
-        <width>371</width>
-        <height>491</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#loantable2{
-  background-color: #C6F3E0;
-border-radius: 15px;
-color: rgb(0, 0, 0);
-}</string>
-      </property>
-      <property name="showDropIndicator" stdset="0">
-       <bool>true</bool>
-      </property>
-      <property name="gridStyle">
-       <enum>Qt::SolidLine</enum>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>91</number>
-      </attribute>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>#</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Name</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Roll No</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Free debtors</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QTableWidget" name="loantable1">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>20</y>
-        <width>351</width>
-        <height>661</height>
-       </rect>
-      </property>
-      <property name="mouseTracking">
-       <bool>true</bool>
-      </property>
-      <property name="tabletTracking">
-       <bool>true</bool>
-      </property>
-      <property name="toolTipDuration">
-       <number>-65</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#loantable1{
-  background-color: #F2E3D8;
-border-radius: 19px;
-color: rgb(0, 0, 0);
-}</string>
-      </property>
-      <property name="lineWidth">
-       <number>2</number>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>79</number>
-      </attribute>
-      <attribute name="horizontalHeaderStretchLastSection">
-       <bool>true</bool>
-      </attribute>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string/>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>#</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Name</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Roll No</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Loan recipients</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QLabel" name="label_17">
-      <property name="geometry">
-       <rect>
-        <x>580</x>
-        <y>550</y>
-        <width>121</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(87, 227, 137);
-border-radius:20px;
-padding:30px</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap resource="Resources/resources.qrc">:/Images/Plus.svg</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-      <property name="wordWrap">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </widget>
+    <widget class="QWidget" name="eloanpage"/>
     <widget class="QWidget" name="fsettingpage">
      <widget class="QWidget" name="settingsUserEditButton" native="true">
       <property name="geometry">
@@ -2312,60 +1993,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </widget>
     </widget>
     <widget class="QWidget" name="huser">
-     <widget class="QComboBox" name="empDept">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>570</y>
-        <width>141</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background:white;
-color:black;
-border:none;
-padding-left:12px;
-border-radius: 10px;
-</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Enabled</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Disabaled</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="id_12">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>550</y>
-        <width>141</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Account Status&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="newUserSubmitButton">
       <property name="geometry">
        <rect>
         <x>620</x>
@@ -2425,7 +2053,7 @@ border-radius:14px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#e66100;&quot;&gt;New User&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="userCancelButton">
+     <widget class="QPushButton" name="newUserCancelButton">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -2468,26 +2096,6 @@ border-radius:14px;
        <string>Cancel</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_19">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>320</y>
-        <width>241</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>12</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#c01c28;&quot;&gt;Pin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
@@ -2524,7 +2132,7 @@ border-radius: 10px;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>250</y>
+        <y>460</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2580,8 +2188,8 @@ border-radius: 10px;</string>
      <widget class="QLabel" name="id_5">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>110</y>
+        <x>40</x>
+        <y>320</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2600,7 +2208,7 @@ border-radius: 10px;</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>270</y>
+        <y>480</y>
         <width>131</width>
         <height>32</height>
        </rect>
@@ -2638,8 +2246,8 @@ border-radius: 10px;
      <widget class="QLabel" name="id_6">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>250</y>
+        <x>40</x>
+        <y>390</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2688,8 +2296,8 @@ border-radius: 10px;
      <widget class="QLineEdit" name="empPhone">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>270</y>
+        <x>30</x>
+        <y>410</y>
         <width>240</width>
         <height>32</height>
        </rect>
@@ -2715,8 +2323,8 @@ border-radius: 10px;
      <widget class="QLineEdit" name="empEmail">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>130</y>
+        <x>30</x>
+        <y>340</y>
         <width>221</width>
         <height>32</height>
        </rect>
@@ -2766,8 +2374,8 @@ border-radius: 10px;
      <widget class="QLabel" name="id_7">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>180</y>
+        <x>40</x>
+        <y>250</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -2785,8 +2393,8 @@ border-radius: 10px;
      <widget class="QLineEdit" name="empPhone_2">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>200</y>
+        <x>30</x>
+        <y>270</y>
         <width>221</width>
         <height>32</height>
        </rect>
@@ -2809,297 +2417,8 @@ border-radius: 10px;
        <set>Qt::ImhPreferNumbers</set>
       </property>
      </widget>
-     <widget class="QLineEdit" name="empID_2">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>380</y>
-        <width>201</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background:white;
-color:black;
-border:none;
-padding-left:12px;
-border-radius: 10px;
-</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="id_10">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>360</y>
-        <width>141</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Security Pin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_20">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>430</y>
-        <width>241</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>12</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#e66100;&quot;&gt;Limits&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="empID_3">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>490</y>
-        <width>201</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background:white;
-color:black;
-border:none;
-padding-left:12px;
-border-radius: 10px;
-</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="id_11">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>470</y>
-        <width>141</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Daily Limit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="empID_4">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>490</y>
-        <width>201</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background:white;
-color:black;
-border:none;
-padding-left:12px;
-border-radius: 10px;
-</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="id_13">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>470</y>
-        <width>141</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Monthly Limit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="ProfilePictureButton">
-      <property name="geometry">
-       <rect>
-        <x>530</x>
-        <y>260</y>
-        <width>201</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::TabFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#ProfilePictureButton
-{
-	background:#00855C;
-	border:none;
-	color:white;
-    border-radius:14px;
-}
-
-#ProfilePictureButton:hover
-{
-	background:#2D2D2D;
-	border:2px solid #00855C;
-	color:#00855C;
-}</string>
-      </property>
-      <property name="text">
-       <string>Profile Picture</string>
-      </property>
-      <property name="default">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="userprofilepctureview">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>90</y>
-        <width>161</width>
-        <height>161</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius: 77px;
-background-color: rgb(192, 97, 203);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap resource="Resources/resources.qrc">:/Images/user1.svg</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>false</bool>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="id_14">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>550</y>
-        <width>141</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Loan  Status&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="empDept_2">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>570</y>
-        <width>141</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background:white;
-color:black;
-border:none;
-padding-left:12px;
-border-radius: 10px;
-</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Enabled</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Disabaled</string>
-       </property>
-      </item>
-     </widget>
-     <zorder>id_12</zorder>
-     <zorder>id_11</zorder>
-     <zorder>id_13</zorder>
-     <zorder>id_10</zorder>
      <zorder>id_4</zorder>
-     <zorder>empDept</zorder>
      <zorder>label_18</zorder>
-     <zorder>label_19</zorder>
      <zorder>id_2</zorder>
      <zorder>id</zorder>
      <zorder>id_5</zorder>
@@ -3112,16 +2431,8 @@ border-radius: 10px;
      <zorder>pushButton_2</zorder>
      <zorder>id_7</zorder>
      <zorder>empPhone_2</zorder>
-     <zorder>empID_2</zorder>
-     <zorder>label_20</zorder>
-     <zorder>empID_3</zorder>
-     <zorder>empID_4</zorder>
-     <zorder>userprofilepctureview</zorder>
-     <zorder>ProfilePictureButton</zorder>
-     <zorder>pushButton_5</zorder>
-     <zorder>userCancelButton</zorder>
-     <zorder>id_14</zorder>
-     <zorder>empDept_2</zorder>
+     <zorder>newUserSubmitButton</zorder>
+     <zorder>newUserCancelButton</zorder>
     </widget>
     <widget class="QWidget" name="iFoods">
      <widget class="QLabel" name="label_21">

@@ -226,27 +226,23 @@ void Home::on_usersViewRemoveUserButton_clicked()
     }
 }
 
-// ************************************* User View **************************************************************
+// ************************************* Add New User Sub View **************************************************************
 
-void Home::on_userCancelButton_clicked()
+void Home::on_newUserCancelButton_clicked()
 {
     ui->views->setCurrentIndex(3);
 }
 
-void Home::on_ProfilePictureButton_clicked()
-{
-    QString imagePath = QFileDialog::getOpenFileName(nullptr, "Select Profile Picture", QDir::homePath(), "Images (*.png *.jpg *.jpeg)");
+// ************************************* Add New Food Sub View **************************************************************
 
-    if (!imagePath.isEmpty())
-    {
 
-        QPixmap image(imagePath);
+// ************************************* Add New Order Sub View **************************************************************
 
-        ui->userprofilepctureview->setPixmap(image);
-        ui->userprofilepctureview->setScaledContents(true);
-        ui->userprofilepctureview->setStyleSheet("border-radius: 77px;");
-    }
-}
+
+// ************************************* other **************************************************************
+
+
+
 
 void Home::on_foodAddNewCancelButton_clicked()
 {
@@ -452,3 +448,12 @@ void Home::on_newOrdersubmit_clicked()
         ui->views->setCurrentIndex(1);
     }
 }
+
+
+
+
+void Home::on_newUserSubmitButton_clicked()
+{
+
+}
+
