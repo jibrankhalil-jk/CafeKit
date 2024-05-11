@@ -3,6 +3,7 @@
         "*.css": "tailwindcss",
         "*.html": "html",
         "optional": "cpp",
-        "system_error": "cpp"
+        "system_error": "cpp",
+        "string_view": "cpp"
     }
 }

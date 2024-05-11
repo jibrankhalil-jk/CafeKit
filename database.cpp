@@ -26,7 +26,19 @@ void Database::init() {
     dbConnected = db.isOpen() == false ? false: true;
 }
 
+bool Database::login(QString id ,QString pass){
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QSqlQuery query = QSqlQuery(db);
 
+    query.prepare("SELECT * FROM `admins` WHERE `id` = '"+id+"' AND `password` = '"+pass+"'");
+    query.exec();
+    model->setQuery(std::move(query));
+    if(model->rowCount() > 0){
+        return 1;
+    }else{
+        return 0;
+    }
+};
 
 
 void Database::getusers(QTableWidget* tableWidget){
@@ -197,6 +209,48 @@ bool Database::addnewUser(QString data,QTableView *table){
 }
 
 
+bool Database::updateUser(QString phone_number,QString name,QString email,QString nic,QTableView *table){
+    QSqlQuery query =  QSqlQuery(db);
+    if(db.isOpen())
+    {
+         query.prepare("UPDATE `users` SET user_name = '"+name+"' phone_number = '"+phone_number+"' , email = '"+email+"' WHERE `users`.`nic` = '"+nic+"'  ;");
+        if(query.exec())
+        {
+            getUsers(table);
+            return 1;
+        }
+        else
+        {
+            return 0;
+            qDebug() << "Error : "<<query.lastError().text() << query.isValid();
+        }
+    }
+    return 0;
+}
+
+
+
+
+bool Database::removeUser(QString id, QTableView *table){
+
+    QSqlQuery query =  QSqlQuery(db);
+    if(db.isOpen())
+    {
+        query.prepare("DELETE FROM users WHERE `users`.`nic` = "+id+";");
+        if(query.exec())
+        {
+            getUsers(table);
+            return true;
+
+        }
+        else
+        {
+            qDebug() << "Error : "<<query.lastError().text() << query.isValid();
+        }
+    }
+    return false;
+};
+
 //
 void Database::getFoods(QTableView *table){
 
@@ -229,9 +283,6 @@ void Database::addNewFood(QString name,QString qnt,QString size,QString price,QT
         if(query.exec())
         {
             getFoods(table);
-
-            //QMessageBox::information(this, "Success", "Data inserted successfully",QMessageBox::Ok);
-
         }
         else
         {

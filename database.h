@@ -19,6 +19,9 @@ private:
     static bool dbConnected;
 
 public:
+
+    bool login(QString,QString);
+
     void getHomeOrdersTableData(QTableView *table);
     static bool isConnected() { return dbConnected; }
     void readvalues(QString sqlquery);
@@ -36,17 +39,14 @@ public:
     void getItemsWithName(QString name, QListView *list);
 
     void removeOrder(QString oid, QTableWidget *table);
-    void acceptOrder();
     void addNewOrder(QString cnic, QString total, QString items, QTableWidget *table);
     void addNewFood(QString, QString, QString, QString, QTableView *table);
     void addnewCategorie();
     bool addnewUser(QString data, QTableView *table);
 
-    void updateOrder();
-    void updateFoodDetails();
-    void updateCAtegorieDetails();
-    void updateUser();
+    bool removeUser(QString id, QTableView *table);
 
+    bool updateUser(QString phone_number,QString name,QString email,QString nic,QTableView *table);
     // home view  *******************************************
 
     void getorders(QTableWidget *table);

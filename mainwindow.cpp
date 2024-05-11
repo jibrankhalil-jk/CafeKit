@@ -33,24 +33,24 @@ MainWindow::~MainWindow()
 void MainWindow::on_loginButton_clicked()
 {
 
-    // if(db.isConnected()){
-    //     QString id = "admin";
-    //     QString password = "admin";
+    if(db.isConnected()){
 
-    //     if(ui->idTextField->text() == id && ui->passwordTextField->text() == password){
-    //         MainWindow::close();
-    //         Home* home = new Home();
-    //         home->show();
-    //     }else{
-    //         QMessageBox::critical(this, "Error", "Wrong Password or id try again.");
-    //     }
-    // }else{
-    //      QMessageBox::critical(this, "Error", "Failed to connect to database try again.Restart the app.");
-    // }
+        // if(ui->idTextField->text() == id && ui->passwordTextField->text() == password){
+
+        if(db.login(ui->idTextField->text(),ui->passwordTextField->text())){
+            MainWindow::close();
+            Home* home = new Home();
+            home->show();
+        }else{
+            QMessageBox::critical(this, "Error", "Wrong Password or id try again.");
+        }
+    }else{
+         QMessageBox::critical(this, "Error", "Failed to connect to database try again.Restart the app.");
+    }
 
 
-    MainWindow::close();
-    Home* home = new Home(this);
-    home->show();
+    // MainWindow::close();
+    // Home* home = new Home(this);
+    // home->show();
 }
 

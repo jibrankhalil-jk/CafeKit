@@ -211,26 +211,48 @@ void Home::on_usersViewAddNewUserButton_clicked()
 {
     ui->views->setCurrentIndex(7);
 }
+void Home::on_updateUserButton_clicked()
+
+{
+    int itemRow = ui->usersViewUsersTable->currentIndex().row();
+    QString userName = ui->usersViewUsersTable->model()->itemData(ui->usersViewUsersTable->model()->index(itemRow, 0)).value(0).toString();
+    if (itemRow >= 0)
+    {
+        QMessageBox msgBox(this);
+        msgBox.setWindowTitle("Delete Item");
+        msgBox.setText("Are you sure you want to update " + userName + " ? ");
+        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        msgBox.setDefaultButton(QMessageBox::Yes);
+        if (msgBox.exec() == QMessageBox::Yes)
+        {
+            ui->updateUserNic->setText(ui->usersViewUsersTable->model()->itemData(ui->usersViewUsersTable->model()->index(ui->usersViewUsersTable->currentIndex().row(),2)).value(0).toString());
+
+            ui->updateUserName->setText(ui->usersViewUsersTable->model()->itemData(ui->usersViewUsersTable->model()->index(ui->usersViewUsersTable->currentIndex().row(),0)).value(0).toString());
+
+
+            ui->views->setCurrentIndex(10);
+        }
+    }
+}
+
+
 
 void Home::on_usersViewRemoveUserButton_clicked()
 {
     int itemRow = ui->usersViewUsersTable->currentIndex().row();
-
     QString userName = ui->usersViewUsersTable->model()->itemData(ui->usersViewUsersTable->model()->index(itemRow, 0)).value(0).toString();
-
     if (itemRow >= 0)
     {
-
-        QMessageBox msgBox;
+        QMessageBox msgBox(this);
         msgBox.setWindowTitle("Delete Item");
         msgBox.setText("Are you sure you want to delete " + userName + " ? ");
         msgBox.setInformativeText("This action cannot be undone.");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
         msgBox.setDefaultButton(QMessageBox::Yes);
-
         if (msgBox.exec() == QMessageBox::Yes)
         {
-            // Delete the item here
+           QModelIndex currentIndex = ui->usersViewUsersTable->currentIndex();
+            db.removeUser(ui->usersViewUsersTable->model()->itemData(ui->usersViewUsersTable->model()->index(currentIndex.row(),2)).value(0).toString(),ui->usersViewUsersTable);
         }
     }
 }
@@ -376,7 +398,6 @@ void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
 
     QMap<QString, QString> tempItem;
     tempItem["id"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 0).data().toString();
-    // tempItem["itemid"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString();
     tempItem["Name"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 1).data().toString();
     tempItem["Quantity"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 2).data().toString();
     tempItem["Price"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 4).data().toString();
@@ -387,7 +408,6 @@ void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
 
     int i = ui->newOrderFinalItemstableWidget->rowCount();
     ui->newOrderFinalItemstableWidget->setRowCount(ui->newOrderFinalItemstableWidget->rowCount() + 1);
-    // ui->newOrderFinalItemstableWidget->setItem(i,0,new QTableWidgetItem(finItems.back()["id"]));
     ui->newOrderFinalItemstableWidget->setItem(i, 0, new QTableWidgetItem(finItems.back()["Name"]));
     ui->newOrderFinalItemstableWidget->setItem(i, 1, new QTableWidgetItem(finItems.back()["Quantity"]));
     ui->newOrderFinalItemstableWidget->setItem(i, 2, new QTableWidgetItem(finItems.back()["Price"]));
@@ -477,8 +497,6 @@ void Home::on_newOrdersubmit_clicked()
         ui->views->setCurrentIndex(1);
     }
 }
-// ************************************* other **************************************************************
-
 void Home::on_ordersViewAllOrdersTable_cellClicked(int row, int column)
 {
 
@@ -506,4 +524,53 @@ void Home::on_ordersViewAllOrdersTable_cellClicked(int row, int column)
 
     }
 }
+
+// ************************************* Add New Order Sub View **************************************************************
+
+
+void Home::on_updateUserCancelButton_clicked()
+{
+ui->views->setCurrentIndex(3);
+}
+
+void Home::on_updateUserSubmitButton_clicked()
+{
+    QString name, email, phoneNumber;
+  
+    name = ui->updateUserName->text().toLower();
+    email = ui->updateUserEmail->text();
+    phoneNumber = ui->updateUserPhoneNumber->text();
+   
+
+     if (name.isEmpty() || name.length() > 50)
+    {
+        QMessageBox::warning(this, "Error", "Please enter a valid name.");
+    }
+    else if (email.length() < 1 || email.length() >= 50)
+    {
+        QMessageBox::warning(this, "Error", "Please enter a valid email id");
+    }
+    else if (phoneNumber.length() != 11 )
+    {
+        QMessageBox::warning(this, "Error", "Please enter a valid number e.g (03...).");
+    }
+    else{
+
+        if(db.updateUser(phoneNumber,name,email,ui->updateUserNic->text(),ui->usersViewUsersTable)){
+
+            ui->views->setCurrentIndex(3);
+            ui->updateUserName->clear();
+            ui->updateUserEmail->clear();
+            ui->updateUserPhoneNumber->clear();
+        }
+        else{
+            QMessageBox::warning(this, "Error", "Failed to update user.");
+        }
+
+
+    }
+}
+
+// ************************************* other **************************************************************
+
 

@@ -78,6 +78,12 @@ private slots:
 
     void on_ordersViewAllOrdersTable_cellClicked(int row, int column);
 
+    void on_updateUserCancelButton_clicked();
+
+    void on_updateUserSubmitButton_clicked();
+
+    void on_updateUserButton_clicked();
+
 private:
     Ui::Home *ui;
 };

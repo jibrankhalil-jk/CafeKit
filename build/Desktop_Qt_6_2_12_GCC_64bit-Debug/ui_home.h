@@ -145,6 +145,17 @@ public:
     QTableWidget *newOrderFinalItemstableWidget;
     QLabel *newOrderStudentName_2;
     QLabel *newOrderTotalPrice;
+    QWidget *kUpdateUser;
+    QLabel *id_10;
+    QLabel *label_19;
+    QLineEdit *updateUserEmail;
+    QLineEdit *updateUserPhoneNumber;
+    QPushButton *updateUserSubmitButton;
+    QLabel *id_3;
+    QLabel *id_11;
+    QPushButton *updateUserCancelButton;
+    QLineEdit *updateUserName;
+    QLabel *updateUserNic;
     QWidget *widget;
     QPushButton *HomeButton;
     QPushButton *OrdersButton;
@@ -1276,6 +1287,120 @@ public:
 "font: 700 22pt \"Cantarell\";"));
         newOrderTotalPrice->setScaledContents(false);
         views->addWidget(jAddNewOrder);
+        kUpdateUser = new QWidget();
+        kUpdateUser->setObjectName(QString::fromUtf8("kUpdateUser"));
+        id_10 = new QLabel(kUpdateUser);
+        id_10->setObjectName(QString::fromUtf8("id_10"));
+        id_10->setGeometry(QRect(70, 240, 141, 21));
+        id_10->setFont(font6);
+        label_19 = new QLabel(kUpdateUser);
+        label_19->setObjectName(QString::fromUtf8("label_19"));
+        label_19->setGeometry(QRect(70, 50, 189, 36));
+        label_19->setFont(font5);
+        updateUserEmail = new QLineEdit(kUpdateUser);
+        updateUserEmail->setObjectName(QString::fromUtf8("updateUserEmail"));
+        updateUserEmail->setGeometry(QRect(60, 260, 421, 41));
+        updateUserEmail->setFont(font7);
+        updateUserEmail->setStyleSheet(QString::fromUtf8("background:white;\n"
+"color:black;\n"
+"border:none;\n"
+"padding-left:12px;\n"
+"border-radius: 10px;\n"
+""));
+        updateUserPhoneNumber = new QLineEdit(kUpdateUser);
+        updateUserPhoneNumber->setObjectName(QString::fromUtf8("updateUserPhoneNumber"));
+        updateUserPhoneNumber->setGeometry(QRect(60, 350, 301, 41));
+        updateUserPhoneNumber->setFont(font7);
+        updateUserPhoneNumber->setStyleSheet(QString::fromUtf8("background:white;\n"
+"color:black;\n"
+"border:none;\n"
+"padding-left:12px;\n"
+"border-radius: 10px;\n"
+""));
+        updateUserPhoneNumber->setInputMethodHints(Qt::ImhPreferNumbers);
+        updateUserSubmitButton = new QPushButton(kUpdateUser);
+        updateUserSubmitButton->setObjectName(QString::fromUtf8("updateUserSubmitButton"));
+        updateUserSubmitButton->setGeometry(QRect(550, 580, 151, 41));
+        updateUserSubmitButton->setFont(font4);
+        updateUserSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
+        updateUserSubmitButton->setFocusPolicy(Qt::TabFocus);
+        updateUserSubmitButton->setStyleSheet(QString::fromUtf8("#updateUserSubmitButton\n"
+"{\n"
+"	background:#00855C;\n"
+"	border:none;\n"
+"	color:white;\n"
+"border-radius:14px;\n"
+"}\n"
+"\n"
+"#updateUserSubmitButton:hover\n"
+"{\n"
+"	background:#2D2D2D;\n"
+"	border:2px solid #00855C;\n"
+"	color:#00855C;\n"
+"}"));
+        id_3 = new QLabel(kUpdateUser);
+        id_3->setObjectName(QString::fromUtf8("id_3"));
+        id_3->setGeometry(QRect(70, 160, 141, 21));
+        id_3->setFont(font6);
+        id_11 = new QLabel(kUpdateUser);
+        id_11->setObjectName(QString::fromUtf8("id_11"));
+        id_11->setGeometry(QRect(70, 330, 141, 21));
+        id_11->setFont(font6);
+        updateUserCancelButton = new QPushButton(kUpdateUser);
+        updateUserCancelButton->setObjectName(QString::fromUtf8("updateUserCancelButton"));
+        updateUserCancelButton->setEnabled(true);
+        updateUserCancelButton->setGeometry(QRect(370, 580, 161, 41));
+        updateUserCancelButton->setFont(font4);
+        updateUserCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
+        updateUserCancelButton->setFocusPolicy(Qt::TabFocus);
+        updateUserCancelButton->setStyleSheet(QString::fromUtf8("#updateUserCancelButton\n"
+"{\n"
+"	background:#EC3245;\n"
+"	border:none;\n"
+"	color:white;\n"
+"border-radius:14px;\n"
+"}\n"
+"\n"
+"#updateUserCancelButton:hover\n"
+"{\n"
+"	background:#2d2d2d;\n"
+"	border:2px solid #EC3245;\n"
+"	color:#EC3245;\n"
+"}"));
+        updateUserName = new QLineEdit(kUpdateUser);
+        updateUserName->setObjectName(QString::fromUtf8("updateUserName"));
+        updateUserName->setGeometry(QRect(60, 180, 421, 41));
+        updateUserName->setFont(font7);
+        updateUserName->setStyleSheet(QString::fromUtf8("background:white;\n"
+"color:black;\n"
+"border:none;\n"
+"padding-left:12px;\n"
+"border-radius: 10px;\n"
+""));
+        updateUserName->setInputMethodHints(Qt::ImhPreferLowercase);
+        updateUserNic = new QLabel(kUpdateUser);
+        updateUserNic->setObjectName(QString::fromUtf8("updateUserNic"));
+        updateUserNic->setGeometry(QRect(280, 50, 361, 39));
+        QFont font10;
+        font10.setFamilies({QString::fromUtf8("Cantarell")});
+        font10.setPointSize(23);
+        font10.setBold(true);
+        font10.setItalic(false);
+        updateUserNic->setFont(font10);
+        updateUserNic->setStyleSheet(QString::fromUtf8(" \n"
+"font: 700 23pt \"Cantarell\";\n"
+"color: rgb(53, 132, 228);"));
+        views->addWidget(kUpdateUser);
+        id_3->raise();
+        id_10->raise();
+        id_11->raise();
+        label_19->raise();
+        updateUserEmail->raise();
+        updateUserPhoneNumber->raise();
+        updateUserSubmitButton->raise();
+        updateUserCancelButton->raise();
+        updateUserName->raise();
+        updateUserNic->raise();
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(0, 0, 231, 741));
@@ -1397,7 +1522,7 @@ public:
 
         retranslateUi(Home);
 
-        views->setCurrentIndex(3);
+        views->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(Home);
@@ -1540,6 +1665,13 @@ public:
         ___qtablewidgetitem14->setText(QCoreApplication::translate("Home", "Remove", nullptr));
         newOrderStudentName_2->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:14pt; color:#ffffff;\">Total  R.s:</span></p></body></html>", nullptr));
         newOrderTotalPrice->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; color:#ffffff;\">00</span></p></body></html>", nullptr));
+        id_10->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Email</span></p></body></html>", nullptr));
+        label_19->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#e66100;\">Update User</span></p></body></html>", nullptr));
+        updateUserSubmitButton->setText(QCoreApplication::translate("Home", "Submit", nullptr));
+        id_3->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>", nullptr));
+        id_11->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Phone No</span></p></body></html>", nullptr));
+        updateUserCancelButton->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
+        updateUserNic->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#3584e4;\">Update User</span></p></body></html>", nullptr));
         HomeButton->setText(QCoreApplication::translate("Home", "Home", nullptr));
         OrdersButton->setText(QCoreApplication::translate("Home", "Orders", nullptr));
         FoodButton->setText(QCoreApplication::translate("Home", "Food Settings", nullptr));
