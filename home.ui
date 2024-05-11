@@ -88,7 +88,7 @@ background-color: rgb(61, 56, 70);
      <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
-     <number>9</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="ahomepage">
      <widget class="QWidget" name="userstoday" native="true">
@@ -625,7 +625,7 @@ font: 700 11pt &quot;Ubuntu Mono&quot;;
         <x>20</x>
         <y>74</y>
         <width>721</width>
-        <height>571</height>
+        <height>551</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -639,7 +639,7 @@ color: rgb(0, 0, 0);
        <enum>QAbstractScrollArea::AdjustToContents</enum>
       </property>
       <property name="editTriggers">
-       <set>QAbstractItemView::SelectedClicked</set>
+       <set>QAbstractItemView::NoEditTriggers</set>
       </property>
       <property name="tabKeyNavigation">
        <bool>false</bool>
@@ -810,7 +810,7 @@ color: rgb(0, 0, 0);
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; color:#ffffff;&quot;&gt;Total Orders Today : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="orderPageTotalOrders">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -818,6 +818,10 @@ color: rgb(0, 0, 0);
         <width>91</width>
         <height>29</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 21pt &quot;Cantarell&quot;; 
+ color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; color:#ffffff;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -842,24 +846,28 @@ font:bold;</string>
        <string>Add New</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_12">
+     <widget class="QLabel" name="orderPageTotalSales">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>659</y>
-        <width>81</width>
-        <height>29</height>
+        <x>650</x>
+        <y>650</y>
+        <width>91</width>
+        <height>33</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 22pt &quot;Cantarell&quot;;</string>
+      </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; color:#ffffff;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-weight:700; color:#ffffff;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>429</x>
-        <y>658</y>
+        <x>419</x>
+        <y>649</y>
         <width>212</width>
         <height>29</height>
        </rect>
@@ -880,11 +888,11 @@ font:bold;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#updateFoodButton{
+       <string notr="true">#FoodViewUpdateFoodButton{
 background-color: rgb(192, 97, 203);
 border-radius: 20%;
 }
-#updateFoodButton::hover{
+#FoodViewUpdateFoodButton::hover{
 background-color: rgb(220, 138, 221);
 }</string>
       </property>
@@ -902,11 +910,11 @@ background-color: rgb(220, 138, 221);
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#addNewFoodButton{
+       <string notr="true">#FoodViewAddNewFoodButton{
 background-color: rgb(46, 194, 126);
 border-radius: 20%;
 }
-#addNewFoodButton::hover{
+#FoodViewAddNewFoodButton::hover{
 background-color: rgb(143, 240, 164)
 }</string>
       </property>
@@ -924,11 +932,11 @@ background-color: rgb(143, 240, 164)
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#removeFoodButton{
+       <string notr="true">#FoodViewRemoveFoodButton{
 background-color: rgb(224, 27, 36);
 border-radius: 20%;
 }
-#removeFoodButton::hover{
+#FoodViewRemoveFoodButton::hover{
 background-color: rgb(246, 97, 81);
 }</string>
       </property>
@@ -976,18 +984,18 @@ alternate-background-color: lightgray;</string>
      <widget class="QPushButton" name="usersViewAddNewUserButton">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>290</x>
         <y>20</y>
         <width>151</width>
         <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#addNewUserButton{
+       <string notr="true">#usersViewAddNewUserButton{
 background-color: rgb(46, 194, 126);
 border-radius: 20%;
 }
-#addNewUserButton::hover{
+#usersViewAddNewUserButton::hover{
 background-color: rgb(143, 240, 164)
 }</string>
       </property>
@@ -998,18 +1006,18 @@ background-color: rgb(143, 240, 164)
      <widget class="QPushButton" name="usersViewRemoveUserButton">
       <property name="geometry">
        <rect>
-        <x>510</x>
+        <x>450</x>
         <y>20</y>
-        <width>101</width>
+        <width>131</width>
         <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#removeUserButton{
+       <string notr="true">#usersViewRemoveUserButton{
 background-color: rgb(224, 27, 36);
 border-radius: 20%;
 }
-#removeUserButton::hover{
+#usersViewRemoveUserButton::hover{
 background-color: rgb(246, 97, 81);
 }</string>
       </property>
@@ -1020,9 +1028,9 @@ background-color: rgb(246, 97, 81);
      <widget class="QPushButton" name="updateUserButton">
       <property name="geometry">
        <rect>
-        <x>630</x>
+        <x>590</x>
         <y>20</y>
-        <width>101</width>
+        <width>131</width>
         <height>51</height>
        </rect>
       </property>
@@ -1075,7 +1083,7 @@ alternate-background-color: lightgray;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="eloanpage"/>
+    <widget class="QWidget" name="blankview"/>
     <widget class="QWidget" name="fsettingpage">
      <widget class="QWidget" name="settingsUserEditButton" native="true">
       <property name="geometry">

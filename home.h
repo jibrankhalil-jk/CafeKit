@@ -76,6 +76,8 @@ private slots:
 
     void on_newUserSubmitButton_clicked();
 
+    void on_ordersViewAllOrdersTable_cellClicked(int row, int column);
+
 private:
     Ui::Home *ui;
 };

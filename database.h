@@ -35,7 +35,7 @@ public:
     void getUserWithCnic(QString cnic, QLabel *label);
     void getItemsWithName(QString name, QListView *list);
 
-    void removeOrder();
+    void removeOrder(QString oid, QTableWidget *table);
     void acceptOrder();
     void addNewOrder(QString cnic, QString total, QString items, QTableWidget *table);
     void addNewFood(QString, QString, QString, QString, QTableView *table);

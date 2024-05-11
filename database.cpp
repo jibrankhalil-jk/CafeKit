@@ -225,7 +225,7 @@ void Database::addNewFood(QString name,QString qnt,QString size,QString price,QT
     QSqlQuery query =  QSqlQuery(db);
     if(db.isOpen())
     {
-        query.prepare("INSERT INTO `food_items` (`fid`, `food_name`, `quantity`, `size`, `category`, `price`) VALUES (NULL, '"+ name +"', '"+ qnt +"', '"+ size +"', '1', '"+ price +"');");
+        query.prepare("INSERT INTO `food_items` (`fid`, `food_name`, `quantity`, `size`, `price`) VALUES (NULL, '"+ name +"', '"+ qnt +"', '"+ size +"', '"+ price +"');");
         if(query.exec())
         {
             getFoods(table);
@@ -250,7 +250,7 @@ bool Database::removeFoodItem(QString id,QTableView *table){
         {
             getFoods(table);
             return true;
-            //QMessageBox::information(this, "Success", "Data inserted successfully",QMessageBox::Ok);
+
         }
         else
         {
@@ -311,4 +311,18 @@ void Database::getAllOrders(QTableWidget *table ){
     }
 };
 
-
+void Database::removeOrder(QString oid, QTableWidget *table){
+    QSqlQuery query =  QSqlQuery(db);
+    if(db.isOpen())
+    {
+        query.prepare("DELETE FROM orders WHERE `orders`.`oid` = "+oid+";");
+        if(query.exec())
+        {
+            getAllOrders(table);
+        }
+        else
+        {
+            qDebug() << "Error : "<<query.lastError().text() << query.isValid();
+        }
+    }
+};

@@ -52,9 +52,9 @@ public:
     QWidget *borderspage;
     QTableWidget *ordersViewAllOrdersTable;
     QLabel *label;
-    QLabel *label_5;
+    QLabel *orderPageTotalOrders;
     QPushButton *ordersViewAddNewButton;
-    QLabel *label_12;
+    QLabel *orderPageTotalSales;
     QLabel *label_15;
     QWidget *cfoodpage;
     QPushButton *FoodViewUpdateFoodButton;
@@ -68,7 +68,7 @@ public:
     QPushButton *updateUserButton;
     QTableView *usersViewUsersTable;
     QLabel *label_23;
-    QWidget *eloanpage;
+    QWidget *blankview;
     QWidget *fsettingpage;
     QWidget *settingsUserEditButton;
     QLabel *homeLasUserName_2;
@@ -449,14 +449,14 @@ public:
         QTableWidgetItem *__qtablewidgetitem36 = new QTableWidgetItem();
         ordersViewAllOrdersTable->setVerticalHeaderItem(14, __qtablewidgetitem36);
         ordersViewAllOrdersTable->setObjectName(QString::fromUtf8("ordersViewAllOrdersTable"));
-        ordersViewAllOrdersTable->setGeometry(QRect(20, 74, 721, 571));
+        ordersViewAllOrdersTable->setGeometry(QRect(20, 74, 721, 551));
         ordersViewAllOrdersTable->setStyleSheet(QString::fromUtf8("\n"
 "  background-color: #C6F3E0;\n"
 "border-radius: 15px;\n"
 "color: rgb(0, 0, 0);\n"
 ""));
         ordersViewAllOrdersTable->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
-        ordersViewAllOrdersTable->setEditTriggers(QAbstractItemView::SelectedClicked);
+        ordersViewAllOrdersTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
         ordersViewAllOrdersTable->setTabKeyNavigation(false);
         ordersViewAllOrdersTable->setProperty("showDropIndicator", QVariant(false));
         ordersViewAllOrdersTable->setDragDropOverwriteMode(false);
@@ -475,9 +475,11 @@ public:
         label = new QLabel(borderspage);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 20, 212, 29));
-        label_5 = new QLabel(borderspage);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(250, 20, 91, 29));
+        orderPageTotalOrders = new QLabel(borderspage);
+        orderPageTotalOrders->setObjectName(QString::fromUtf8("orderPageTotalOrders"));
+        orderPageTotalOrders->setGeometry(QRect(250, 20, 91, 29));
+        orderPageTotalOrders->setStyleSheet(QString::fromUtf8("font: 21pt \"Cantarell\"; \n"
+" color: rgb(255, 255, 255);"));
         ordersViewAddNewButton = new QPushButton(borderspage);
         ordersViewAddNewButton->setObjectName(QString::fromUtf8("ordersViewAddNewButton"));
         ordersViewAddNewButton->setGeometry(QRect(505, 15, 231, 41));
@@ -485,43 +487,45 @@ public:
 "background-color: rgb(53, 132, 228);\n"
 "color:white;\n"
 "font:bold;"));
-        label_12 = new QLabel(borderspage);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(660, 659, 81, 29));
+        orderPageTotalSales = new QLabel(borderspage);
+        orderPageTotalSales->setObjectName(QString::fromUtf8("orderPageTotalSales"));
+        orderPageTotalSales->setGeometry(QRect(650, 650, 91, 33));
+        orderPageTotalSales->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"font: 22pt \"Cantarell\";"));
         label_15 = new QLabel(borderspage);
         label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setGeometry(QRect(429, 658, 212, 29));
+        label_15->setGeometry(QRect(419, 649, 212, 29));
         views->addWidget(borderspage);
         cfoodpage = new QWidget();
         cfoodpage->setObjectName(QString::fromUtf8("cfoodpage"));
         FoodViewUpdateFoodButton = new QPushButton(cfoodpage);
         FoodViewUpdateFoodButton->setObjectName(QString::fromUtf8("FoodViewUpdateFoodButton"));
         FoodViewUpdateFoodButton->setGeometry(QRect(480, 20, 121, 41));
-        FoodViewUpdateFoodButton->setStyleSheet(QString::fromUtf8("#updateFoodButton{\n"
+        FoodViewUpdateFoodButton->setStyleSheet(QString::fromUtf8("#FoodViewUpdateFoodButton{\n"
 "background-color: rgb(192, 97, 203);\n"
 "border-radius: 20%;\n"
 "}\n"
-"#updateFoodButton::hover{\n"
+"#FoodViewUpdateFoodButton::hover{\n"
 "background-color: rgb(220, 138, 221);\n"
 "}"));
         FoodViewAddNewFoodButton = new QPushButton(cfoodpage);
         FoodViewAddNewFoodButton->setObjectName(QString::fromUtf8("FoodViewAddNewFoodButton"));
         FoodViewAddNewFoodButton->setGeometry(QRect(340, 20, 121, 41));
-        FoodViewAddNewFoodButton->setStyleSheet(QString::fromUtf8("#addNewFoodButton{\n"
+        FoodViewAddNewFoodButton->setStyleSheet(QString::fromUtf8("#FoodViewAddNewFoodButton{\n"
 "background-color: rgb(46, 194, 126);\n"
 "border-radius: 20%;\n"
 "}\n"
-"#addNewFoodButton::hover{\n"
+"#FoodViewAddNewFoodButton::hover{\n"
 "background-color: rgb(143, 240, 164)\n"
 "}"));
         FoodViewRemoveFoodButton = new QPushButton(cfoodpage);
         FoodViewRemoveFoodButton->setObjectName(QString::fromUtf8("FoodViewRemoveFoodButton"));
         FoodViewRemoveFoodButton->setGeometry(QRect(610, 20, 121, 41));
-        FoodViewRemoveFoodButton->setStyleSheet(QString::fromUtf8("#removeFoodButton{\n"
+        FoodViewRemoveFoodButton->setStyleSheet(QString::fromUtf8("#FoodViewRemoveFoodButton{\n"
 "background-color: rgb(224, 27, 36);\n"
 "border-radius: 20%;\n"
 "}\n"
-"#removeFoodButton::hover{\n"
+"#FoodViewRemoveFoodButton::hover{\n"
 "background-color: rgb(246, 97, 81);\n"
 "}"));
         foodViewFoodItemsTable = new QTableView(cfoodpage);
@@ -541,27 +545,27 @@ public:
         duserpage->setObjectName(QString::fromUtf8("duserpage"));
         usersViewAddNewUserButton = new QPushButton(duserpage);
         usersViewAddNewUserButton->setObjectName(QString::fromUtf8("usersViewAddNewUserButton"));
-        usersViewAddNewUserButton->setGeometry(QRect(340, 20, 151, 51));
-        usersViewAddNewUserButton->setStyleSheet(QString::fromUtf8("#addNewUserButton{\n"
+        usersViewAddNewUserButton->setGeometry(QRect(290, 20, 151, 51));
+        usersViewAddNewUserButton->setStyleSheet(QString::fromUtf8("#usersViewAddNewUserButton{\n"
 "background-color: rgb(46, 194, 126);\n"
 "border-radius: 20%;\n"
 "}\n"
-"#addNewUserButton::hover{\n"
+"#usersViewAddNewUserButton::hover{\n"
 "background-color: rgb(143, 240, 164)\n"
 "}"));
         usersViewRemoveUserButton = new QPushButton(duserpage);
         usersViewRemoveUserButton->setObjectName(QString::fromUtf8("usersViewRemoveUserButton"));
-        usersViewRemoveUserButton->setGeometry(QRect(510, 20, 101, 51));
-        usersViewRemoveUserButton->setStyleSheet(QString::fromUtf8("#removeUserButton{\n"
+        usersViewRemoveUserButton->setGeometry(QRect(450, 20, 131, 51));
+        usersViewRemoveUserButton->setStyleSheet(QString::fromUtf8("#usersViewRemoveUserButton{\n"
 "background-color: rgb(224, 27, 36);\n"
 "border-radius: 20%;\n"
 "}\n"
-"#removeUserButton::hover{\n"
+"#usersViewRemoveUserButton::hover{\n"
 "background-color: rgb(246, 97, 81);\n"
 "}"));
         updateUserButton = new QPushButton(duserpage);
         updateUserButton->setObjectName(QString::fromUtf8("updateUserButton"));
-        updateUserButton->setGeometry(QRect(630, 20, 101, 51));
+        updateUserButton->setGeometry(QRect(590, 20, 131, 51));
         updateUserButton->setStyleSheet(QString::fromUtf8("#updateUserButton{\n"
 "background-color: rgb(192, 97, 203);\n"
 "border-radius: 20%;\n"
@@ -582,9 +586,9 @@ public:
         label_23->setObjectName(QString::fromUtf8("label_23"));
         label_23->setGeometry(QRect(50, 30, 73, 35));
         views->addWidget(duserpage);
-        eloanpage = new QWidget();
-        eloanpage->setObjectName(QString::fromUtf8("eloanpage"));
-        views->addWidget(eloanpage);
+        blankview = new QWidget();
+        blankview->setObjectName(QString::fromUtf8("blankview"));
+        views->addWidget(blankview);
         fsettingpage = new QWidget();
         fsettingpage->setObjectName(QString::fromUtf8("fsettingpage"));
         settingsUserEditButton = new QWidget(fsettingpage);
@@ -1393,7 +1397,7 @@ public:
 
         retranslateUi(Home);
 
-        views->setCurrentIndex(9);
+        views->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(Home);
@@ -1441,9 +1445,9 @@ public:
         QTableWidgetItem *___qtablewidgetitem10 = ordersViewAllOrdersTable->horizontalHeaderItem(6);
         ___qtablewidgetitem10->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
         label->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">Total Orders Today : </span></p></body></html>", nullptr));
-        label_5->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">0</span></p></body></html>", nullptr));
+        orderPageTotalOrders->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">0</span></p></body></html>", nullptr));
         ordersViewAddNewButton->setText(QCoreApplication::translate("Home", "Add New", nullptr));
-        label_12->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">0</span></p></body></html>", nullptr));
+        orderPageTotalSales->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; font-weight:700; color:#ffffff;\">0</span></p></body></html>", nullptr));
         label_15->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">Total Sales Today : </span></p></body></html>", nullptr));
         FoodViewUpdateFoodButton->setText(QCoreApplication::translate("Home", "Update Item", nullptr));
         FoodViewAddNewFoodButton->setText(QCoreApplication::translate("Home", "Add new Item", nullptr));

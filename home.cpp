@@ -46,6 +46,8 @@ void Home::loadHomeViewData()
 void Home::loadOrdersViewData()
 {
     db.getAllOrders(ui->ordersViewAllOrdersTable);
+    ui->orderPageTotalSales->setText(db.getTotalSalesToday());
+    ui->orderPageTotalOrders->setText(db.getTotalOrdersTodays());
 }
 
 void Home::getFoodViewData()
@@ -188,7 +190,7 @@ void Home::on_FoodViewRemoveFoodButton_clicked()
     if (itemRow >= 0)
     {
 
-        QMessageBox msgBox;
+        QMessageBox msgBox(this);
         msgBox.setWindowTitle("Delete Item");
         msgBox.setText("Are you sure you want to delete " + userName + " ? ");
         msgBox.setInformativeText("This action cannot be undone.");
@@ -476,3 +478,32 @@ void Home::on_newOrdersubmit_clicked()
     }
 }
 // ************************************* other **************************************************************
+
+void Home::on_ordersViewAllOrdersTable_cellClicked(int row, int column)
+{
+
+    if(column == 6){
+        QString oid = ui->ordersViewAllOrdersTable->model()->itemData(ui->ordersViewAllOrdersTable->model()->index(row,0)).first().toString();
+
+
+        QMessageBox msgBox(this);
+        msgBox.setWindowTitle("Delete Order");
+        msgBox.setText("Are you sure you want to delete "+ ui->ordersViewAllOrdersTable->model()->itemData(ui->ordersViewAllOrdersTable->model()->index(row,0)).first().toString() +" order ? ");
+        msgBox.setInformativeText("This action cannot be undone.");
+        msgBox.setStandardButtons(QMessageBox::No | QMessageBox::Yes);
+        msgBox.setDefaultButton(QMessageBox::No);
+        int btn = msgBox.exec();
+        if (btn == QMessageBox::Yes)
+        {
+             db.removeOrder(oid,ui->ordersViewAllOrdersTable);
+        }
+
+        if (btn == QMessageBox::No)
+        {
+            msgBox.close();
+        }
+
+
+    }
+}
+
