@@ -1,6 +1,7 @@
 #include "home.h"
 #include "ui_home.h"
 #include "database.h"
+#include "mainwindow.h"
 
 #include <QApplication>
 #include <QFileDialog>
@@ -62,6 +63,7 @@ void Home::getUsersViewData()
 
 void Home::getSettingViewData()
 {
+    ui->settingsAdminName->setText(db.admin);
 }
 
 Home::~Home()
@@ -395,7 +397,6 @@ void Home::on_newOrderItemName_textChanged(const QString &arg1)
 
 void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
 {
-
     QMap<QString, QString> tempItem;
     tempItem["id"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 0).data().toString();
     tempItem["Name"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 1).data().toString();
@@ -573,4 +574,18 @@ void Home::on_updateUserSubmitButton_clicked()
 
 // ************************************* other **************************************************************
 
+
+
+void Home::on_settingsLogoutButton_clicked()
+{
+    Home::close();
+    MainWindow *w = new MainWindow(this);
+    w->show();
+}
+
+
+void Home::on_FoodViewUpdateFoodButton_clicked()
+{
+
+}
 

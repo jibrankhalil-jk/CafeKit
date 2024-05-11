@@ -11,7 +11,7 @@
 
 QSqlDatabase Database::db = QSqlDatabase::addDatabase("QMYSQL", "CafeKit_db_connection");
 bool Database::dbConnected = false;
-
+QString Database::admin = "";
 void Database::init() {
 
     db.setHostName("127.0.0.1");
@@ -34,12 +34,12 @@ bool Database::login(QString id ,QString pass){
     query.exec();
     model->setQuery(std::move(query));
     if(model->rowCount() > 0){
+         admin = id;
         return 1;
     }else{
         return 0;
     }
 };
-
 
 void Database::getusers(QTableWidget* tableWidget){
     QSqlQuery* query = new QSqlQuery(db);

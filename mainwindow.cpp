@@ -15,10 +15,10 @@ MainWindow::MainWindow(QWidget *parent)
             ui->dbstatus->setStyleSheet("background-color: rgb(106, 183, 79); border-radius:7px;");
         }
 
-        // if (!db.isConnected()){
-        //     // if failed to connect then show the warning dialoge
-        //      QMessageBox::critical(this, "Error", "Failed to connect to database try again.Restart the app.");
-        // }
+        if (!db.isConnected()){
+            // if failed to connect then show the warning dialoge
+             QMessageBox::critical(this, "Error", "Failed to connect to database try again.Restart the app.");
+        }
 
 
 
@@ -35,22 +35,16 @@ void MainWindow::on_loginButton_clicked()
 
     if(db.isConnected()){
 
-        // if(ui->idTextField->text() == id && ui->passwordTextField->text() == password){
-
         if(db.login(ui->idTextField->text(),ui->passwordTextField->text())){
             MainWindow::close();
-            Home* home = new Home();
+            Home* home = new Home(this);
             home->show();
         }else{
             QMessageBox::critical(this, "Error", "Wrong Password or id try again.");
         }
+
     }else{
          QMessageBox::critical(this, "Error", "Failed to connect to database try again.Restart the app.");
     }
 
-
-    // MainWindow::close();
-    // Home* home = new Home(this);
-    // home->show();
 }
-

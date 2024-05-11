@@ -84,6 +84,8 @@ private slots:
 
     void on_updateUserButton_clicked();
 
+    void on_settingsLogoutButton_clicked();
+
 private:
     Ui::Home *ui;
 };

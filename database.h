@@ -18,10 +18,11 @@ private:
     static QSqlDatabase db;
     static bool dbConnected;
 
+
 public:
-
-    bool login(QString,QString);
-
+    static QString admin;
+    bool login(QString id ,QString pass);
+    QString getAdminDetail();
     void getHomeOrdersTableData(QTableView *table);
     static bool isConnected() { return dbConnected; }
     void readvalues(QString sqlquery);

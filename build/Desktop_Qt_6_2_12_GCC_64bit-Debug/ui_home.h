@@ -71,13 +71,9 @@ public:
     QWidget *blankview;
     QWidget *fsettingpage;
     QWidget *settingsUserEditButton;
-    QLabel *homeLasUserName_2;
+    QLabel *settingsAdminName;
     QLabel *homeLasUserPicture_2;
     QLabel *label_6;
-    QWidget *settingsLogoutButton;
-    QLabel *homeLasUserName_4;
-    QLabel *homeLasUserPicture_4;
-    QLabel *label_10;
     QWidget *settingsButton1;
     QLabel *homeLasUserName_6;
     QLabel *homeLasUserPicture_6;
@@ -86,11 +82,11 @@ public:
     QLabel *homeLasUserName_7;
     QLabel *homeLasUserPicture_7;
     QLabel *label_14;
-    QWidget *settingsButton2;
-    QLabel *homeLasUserName_8;
-    QLabel *homeLasUserPicture_8;
-    QLabel *label_16;
     QLabel *label_8;
+    QPushButton *settingsLogoutButton;
+    QLabel *homeLasUserName_4;
+    QLabel *homeLasUserPicture_4;
+    QLabel *label_10;
     QWidget *gaboutpage;
     QLabel *logo_2;
     QWidget *settingsButton1_2;
@@ -614,11 +610,11 @@ public:
 "	background-color: #9FFB7E;\n"
 "}\n"
 " "));
-        homeLasUserName_2 = new QLabel(settingsUserEditButton);
-        homeLasUserName_2->setObjectName(QString::fromUtf8("homeLasUserName_2"));
-        homeLasUserName_2->setGeometry(QRect(80, 18, 371, 26));
-        homeLasUserName_2->setFont(font2);
-        homeLasUserName_2->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+        settingsAdminName = new QLabel(settingsUserEditButton);
+        settingsAdminName->setObjectName(QString::fromUtf8("settingsAdminName"));
+        settingsAdminName->setGeometry(QRect(80, 18, 371, 26));
+        settingsAdminName->setFont(font2);
+        settingsAdminName->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "font: 18pt \"Segoe UI\";\n"
 "color: rgb(0, 0, 0);"));
         homeLasUserPicture_2 = new QLabel(settingsUserEditButton);
@@ -640,47 +636,9 @@ public:
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(590, 10, 19, 39));
         label_6->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
-        settingsLogoutButton = new QWidget(fsettingpage);
-        settingsLogoutButton->setObjectName(QString::fromUtf8("settingsLogoutButton"));
-        settingsLogoutButton->setGeometry(QRect(60, 520, 631, 61));
-        settingsLogoutButton->setFont(font);
-        settingsLogoutButton->setStyleSheet(QString::fromUtf8("#settingsLogoutButton{\n"
-"	background-color: rgb(184, 53, 59);\n"
-"   border-radius: 12px;\n"
-"}\n"
-"#settingsLogoutButton:Hover{\n"
-"	background-color: rgb(169, 81, 85);\n"
-"}\n"
-" "));
-        homeLasUserName_4 = new QLabel(settingsLogoutButton);
-        homeLasUserName_4->setObjectName(QString::fromUtf8("homeLasUserName_4"));
-        homeLasUserName_4->setGeometry(QRect(80, 18, 371, 26));
-        homeLasUserName_4->setFont(font2);
-        homeLasUserName_4->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-"font: 18pt \"Segoe UI\";\n"
-"color: rgb(0, 0, 0);"));
-        homeLasUserPicture_4 = new QLabel(settingsLogoutButton);
-        homeLasUserPicture_4->setObjectName(QString::fromUtf8("homeLasUserPicture_4"));
-        homeLasUserPicture_4->setGeometry(QRect(30, 16, 31, 31));
-        homeLasUserPicture_4->setStyleSheet(QString::fromUtf8("\n"
-"background-color: rgb(246, 97, 81);\n"
-"border-radius: 15px;\n"
-"color: rgb(0, 0, 0);\n"
-"padding:10px;\n"
-""));
-        homeLasUserPicture_4->setPixmap(QPixmap(QString::fromUtf8(":/Images/Logout.svg")));
-        homeLasUserPicture_4->setScaledContents(true);
-        homeLasUserPicture_4->setAlignment(Qt::AlignCenter);
-        homeLasUserPicture_4->setWordWrap(true);
-        homeLasUserPicture_4->setMargin(0);
-        homeLasUserPicture_4->setIndent(0);
-        label_10 = new QLabel(settingsLogoutButton);
-        label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setGeometry(QRect(590, 10, 19, 39));
-        label_10->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         settingsButton1 = new QWidget(fsettingpage);
         settingsButton1->setObjectName(QString::fromUtf8("settingsButton1"));
-        settingsButton1->setGeometry(QRect(50, 210, 631, 61));
+        settingsButton1->setGeometry(QRect(50, 230, 631, 61));
         settingsButton1->setFont(font);
         settingsButton1->setStyleSheet(QString::fromUtf8("#settingsButton1{\n"
 "	background-color: rgb(36, 31, 49);\n"
@@ -706,7 +664,7 @@ public:
 "color: rgb(0, 0, 0);\n"
 "padding:10px;\n"
 ""));
-        homeLasUserPicture_6->setPixmap(QPixmap(QString::fromUtf8(":/Images/Logout.svg")));
+        homeLasUserPicture_6->setPixmap(QPixmap(QString::fromUtf8(":/Images/warning.svg")));
         homeLasUserPicture_6->setScaledContents(true);
         homeLasUserPicture_6->setAlignment(Qt::AlignCenter);
         homeLasUserPicture_6->setWordWrap(true);
@@ -718,7 +676,7 @@ public:
         label_13->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         settingsButton3 = new QWidget(fsettingpage);
         settingsButton3->setObjectName(QString::fromUtf8("settingsButton3"));
-        settingsButton3->setGeometry(QRect(50, 334, 631, 61));
+        settingsButton3->setGeometry(QRect(50, 300, 631, 61));
         settingsButton3->setFont(font);
         settingsButton3->setStyleSheet(QString::fromUtf8("#settingsButton3{\n"
 "	background-color: rgb(36, 31, 49);\n"
@@ -744,7 +702,7 @@ public:
 "color: rgb(0, 0, 0);\n"
 "padding:10px;\n"
 ""));
-        homeLasUserPicture_7->setPixmap(QPixmap(QString::fromUtf8(":/Images/Logout.svg")));
+        homeLasUserPicture_7->setPixmap(QPixmap(QString::fromUtf8(":/Images/warning.svg")));
         homeLasUserPicture_7->setScaledContents(true);
         homeLasUserPicture_7->setAlignment(Qt::AlignCenter);
         homeLasUserPicture_7->setWordWrap(true);
@@ -754,45 +712,49 @@ public:
         label_14->setObjectName(QString::fromUtf8("label_14"));
         label_14->setGeometry(QRect(590, 10, 19, 39));
         label_14->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
-        settingsButton2 = new QWidget(fsettingpage);
-        settingsButton2->setObjectName(QString::fromUtf8("settingsButton2"));
-        settingsButton2->setGeometry(QRect(50, 272, 631, 61));
-        settingsButton2->setFont(font);
-        settingsButton2->setStyleSheet(QString::fromUtf8("#settingsButton2{\n"
-"	background-color: rgb(36, 31, 49);\n"
+        label_8 = new QLabel(fsettingpage);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setGeometry(QRect(60, 200, 129, 18));
+        settingsLogoutButton = new QPushButton(fsettingpage);
+        settingsLogoutButton->setObjectName(QString::fromUtf8("settingsLogoutButton"));
+        settingsLogoutButton->setGeometry(QRect(50, 540, 631, 61));
+        settingsLogoutButton->setStyleSheet(QString::fromUtf8("#settingsLogoutButton{\n"
+"	background-color: rgb(184, 53, 59);\n"
+"   border-radius: 12px;\n"
 "}\n"
-"#settingsButton2:Hover{\n"
-"	background-color: rgb(87, 78, 108);\n"
-"}"));
-        homeLasUserName_8 = new QLabel(settingsButton2);
-        homeLasUserName_8->setObjectName(QString::fromUtf8("homeLasUserName_8"));
-        homeLasUserName_8->setGeometry(QRect(80, 18, 371, 26));
-        homeLasUserName_8->setFont(font2);
-        homeLasUserName_8->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"#settingsLogoutButton:Hover{\n"
+"	background-color: rgb(169, 81, 85);\n"
+"}\n"
+" "));
+        homeLasUserName_4 = new QLabel(fsettingpage);
+        homeLasUserName_4->setObjectName(QString::fromUtf8("homeLasUserName_4"));
+        homeLasUserName_4->setEnabled(false);
+        homeLasUserName_4->setGeometry(QRect(130, 557, 66, 26));
+        homeLasUserName_4->setFont(font2);
+        homeLasUserName_4->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "font: 18pt \"Segoe UI\";\n"
 "color: rgb(0, 0, 0);"));
-        homeLasUserPicture_8 = new QLabel(settingsButton2);
-        homeLasUserPicture_8->setObjectName(QString::fromUtf8("homeLasUserPicture_8"));
-        homeLasUserPicture_8->setGeometry(QRect(30, 16, 31, 31));
-        homeLasUserPicture_8->setStyleSheet(QString::fromUtf8("\n"
+        homeLasUserPicture_4 = new QLabel(fsettingpage);
+        homeLasUserPicture_4->setObjectName(QString::fromUtf8("homeLasUserPicture_4"));
+        homeLasUserPicture_4->setEnabled(false);
+        homeLasUserPicture_4->setGeometry(QRect(70, 554, 31, 31));
+        homeLasUserPicture_4->setStyleSheet(QString::fromUtf8("\n"
 "background-color: rgb(246, 97, 81);\n"
 "border-radius: 15px;\n"
 "color: rgb(0, 0, 0);\n"
 "padding:10px;\n"
 ""));
-        homeLasUserPicture_8->setPixmap(QPixmap(QString::fromUtf8(":/Images/Logout.svg")));
-        homeLasUserPicture_8->setScaledContents(true);
-        homeLasUserPicture_8->setAlignment(Qt::AlignCenter);
-        homeLasUserPicture_8->setWordWrap(true);
-        homeLasUserPicture_8->setMargin(0);
-        homeLasUserPicture_8->setIndent(0);
-        label_16 = new QLabel(settingsButton2);
-        label_16->setObjectName(QString::fromUtf8("label_16"));
-        label_16->setGeometry(QRect(590, 10, 19, 39));
-        label_16->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
-        label_8 = new QLabel(fsettingpage);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(60, 170, 129, 18));
+        homeLasUserPicture_4->setPixmap(QPixmap(QString::fromUtf8(":/Images/Logout.svg")));
+        homeLasUserPicture_4->setScaledContents(true);
+        homeLasUserPicture_4->setAlignment(Qt::AlignCenter);
+        homeLasUserPicture_4->setWordWrap(true);
+        homeLasUserPicture_4->setMargin(0);
+        homeLasUserPicture_4->setIndent(0);
+        label_10 = new QLabel(fsettingpage);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setEnabled(false);
+        label_10->setGeometry(QRect(650, 550, 19, 39));
+        label_10->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         views->addWidget(fsettingpage);
         gaboutpage = new QWidget();
         gaboutpage->setObjectName(QString::fromUtf8("gaboutpage"));
@@ -1582,22 +1544,20 @@ public:
         usersViewRemoveUserButton->setText(QCoreApplication::translate("Home", "Remove User", nullptr));
         updateUserButton->setText(QCoreApplication::translate("Home", "Update User", nullptr));
         label_23->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; color:#1c71d8;\">Users</span></p></body></html>", nullptr));
-        homeLasUserName_2->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; font-weight:700; color:#ffffff;\">User Name</span></p></body></html>", nullptr));
+        settingsAdminName->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; font-weight:700; color:#ffffff;\">User Name</span></p></body></html>", nullptr));
         homeLasUserPicture_2->setText(QString());
         label_6->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
+        homeLasUserName_6->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">Server Ip :  Localhost</span></p></body></html>", nullptr));
+        homeLasUserPicture_6->setText(QString());
+        label_13->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
+        homeLasUserName_7->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">App Version : 1.0</span></p></body></html>", nullptr));
+        homeLasUserPicture_7->setText(QString());
+        label_14->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
+        label_8->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">App Info</span></p></body></html>", nullptr));
+        settingsLogoutButton->setText(QString());
         homeLasUserName_4->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">Logout</span></p></body></html>", nullptr));
         homeLasUserPicture_4->setText(QString());
         label_10->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
-        homeLasUserName_6->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">Logout</span></p></body></html>", nullptr));
-        homeLasUserPicture_6->setText(QString());
-        label_13->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
-        homeLasUserName_7->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">Logout</span></p></body></html>", nullptr));
-        homeLasUserPicture_7->setText(QString());
-        label_14->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
-        homeLasUserName_8->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">Logout</span></p></body></html>", nullptr));
-        homeLasUserPicture_8->setText(QString());
-        label_16->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:20pt; color:#ffffff;\">&gt;</span></p></body></html>", nullptr));
-        label_8->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">App Configurations</span></p></body></html>", nullptr));
         logo_2->setText(QString());
         homeLasUserName_11->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Email us</span></p></body></html>", nullptr));
         label_17->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">p230030@pwr.nu.edu.pk</span></p></body></html>", nullptr));

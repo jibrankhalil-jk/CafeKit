@@ -1111,7 +1111,7 @@ border-radius: 12px;
 }
  </string>
       </property>
-      <widget class="QLabel" name="homeLasUserName_2">
+      <widget class="QLabel" name="settingsAdminName">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -1193,119 +1193,11 @@ padding:10px;
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="settingsLogoutButton" native="true">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>520</y>
-        <width>631</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>36</pointsize>
-        <italic>true</italic>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#settingsLogoutButton{
-	background-color: rgb(184, 53, 59);
-   border-radius: 12px;
-}
-#settingsLogoutButton:Hover{
-	background-color: rgb(169, 81, 85);
-}
- </string>
-      </property>
-      <widget class="QLabel" name="homeLasUserName_4">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>18</y>
-         <width>371</width>
-         <height>26</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Segoe UI</family>
-         <pointsize>18</pointsize>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: transparent;
-font: 18pt &quot;Segoe UI&quot;;
-color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#ffffff;&quot;&gt;Logout&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="homeLasUserPicture_4">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>16</y>
-         <width>31</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
-background-color: rgb(246, 97, 81);
-border-radius: 15px;
-color: rgb(0, 0, 0);
-padding:10px;
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="Resources/resources.qrc">:/Images/Logout.svg</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <property name="indent">
-        <number>0</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_10">
-       <property name="geometry">
-        <rect>
-         <x>590</x>
-         <y>10</y>
-         <width>19</width>
-         <height>39</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: transparent;</string>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; color:#ffffff;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </widget>
      <widget class="QWidget" name="settingsButton1" native="true">
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>210</y>
+        <y>230</y>
         <width>631</width>
         <height>61</height>
        </rect>
@@ -1350,7 +1242,7 @@ font: 18pt &quot;Segoe UI&quot;;
 color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#ffffff;&quot;&gt;Logout&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#ffffff;&quot;&gt;Server Ip :  Localhost&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="homeLasUserPicture_6">
@@ -1374,7 +1266,7 @@ padding:10px;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="Resources/resources.qrc">:/Images/Logout.svg</pixmap>
+        <pixmap resource="Resources/resources.qrc">:/Images/warning.svg</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -1413,7 +1305,7 @@ padding:10px;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>334</y>
+        <y>300</y>
         <width>631</width>
         <height>61</height>
        </rect>
@@ -1458,7 +1350,7 @@ font: 18pt &quot;Segoe UI&quot;;
 color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#ffffff;&quot;&gt;Logout&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#ffffff;&quot;&gt;App Version : 1.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="homeLasUserPicture_7">
@@ -1482,7 +1374,7 @@ padding:10px;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="Resources/resources.qrc">:/Images/Logout.svg</pixmap>
+        <pixmap resource="Resources/resources.qrc">:/Images/warning.svg</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -1517,123 +1409,130 @@ padding:10px;
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="settingsButton2" native="true">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>272</y>
-        <width>631</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>36</pointsize>
-        <italic>true</italic>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#settingsButton2{
-	background-color: rgb(36, 31, 49);
-}
-#settingsButton2:Hover{
-	background-color: rgb(87, 78, 108);
-}</string>
-      </property>
-      <widget class="QLabel" name="homeLasUserName_8">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>18</y>
-         <width>371</width>
-         <height>26</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Segoe UI</family>
-         <pointsize>18</pointsize>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: transparent;
-font: 18pt &quot;Segoe UI&quot;;
-color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#ffffff;&quot;&gt;Logout&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="homeLasUserPicture_8">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>16</y>
-         <width>31</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
-background-color: rgb(246, 97, 81);
-border-radius: 15px;
-color: rgb(0, 0, 0);
-padding:10px;
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="Resources/resources.qrc">:/Images/Logout.svg</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <property name="indent">
-        <number>0</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_16">
-       <property name="geometry">
-        <rect>
-         <x>590</x>
-         <y>10</y>
-         <width>19</width>
-         <height>39</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: transparent;</string>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; color:#ffffff;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </widget>
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>170</y>
+        <y>200</y>
         <width>129</width>
         <height>18</height>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;App Configurations&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;App Info&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="settingsLogoutButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>540</y>
+        <width>631</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#settingsLogoutButton{
+	background-color: rgb(184, 53, 59);
+   border-radius: 12px;
+}
+#settingsLogoutButton:Hover{
+	background-color: rgb(169, 81, 85);
+}
+ </string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="homeLasUserName_4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>557</y>
+        <width>66</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>18</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+font: 18pt &quot;Segoe UI&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#ffffff;&quot;&gt;Logout&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="homeLasUserPicture_4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>554</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(246, 97, 81);
+border-radius: 15px;
+color: rgb(0, 0, 0);
+padding:10px;
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resources/resources.qrc">:/Images/Logout.svg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>550</y>
+        <width>19</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; color:#ffffff;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
