@@ -52,10 +52,6 @@ private slots:
 
     void on_aboutbutton_clicked();
 
-    void on_foodItemPicture_clicked();
-
-    void on_newOrderStudentCnic_editingFinished();
-
     void on_newOrderStudentCnic_textChanged(const QString &arg1);
 
     void on_newOrderItemName_textChanged(const QString &arg1);

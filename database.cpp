@@ -1,5 +1,6 @@
+
+
 #include "database.h"
-#include<iostream>
 #include <QHeaderView>
 #include <QtSql/QSqlDatabase>
 #include<QtSql>
@@ -25,52 +26,8 @@ void Database::init() {
     dbConnected = db.isOpen() == false ? false: true;
 }
 
-void Database::readvalues(QString sqlquery){
-    QSqlQuery query(db);
-    // query.prepare("SELECT * FROM `users`");
-    query.prepare(sqlquery);
-    query.exec();
 
-   // const int rows = query.size();
-    //const int column = query.record().count();
 
-    // QList<User> users;
-
-    // if(query.record().indexOf("cnic") == -1){
-    //     qDebug() << "Db is empty";
-    // }else{
-    //     int i = 0;
-    //     while(query.next()){
-    //         users.append(User(
-    //             query.value("Cnic").toInt(),
-    //             query.value("name").toString(),
-    //             query.value("rollno").toString(),
-    //             query.value("pin").toString(),
-    //             query.value("daily limit").toInt(),
-    //             query.value("monthly limit").toInt(),
-    //             query.value("Status").toInt(),
-    //             query.value("Phone no").toString(),
-    //             query.value("Loan").toInt(),
-    //             query.value("ProfilePic").toString()
-    //             )
-    //            );
-    //         i++;
-    //     }
-
-    //     for(auto user : users){
-    //         std::cout<<"Name :" << user.Name.toStdString() << std::endl;
-    //     }
-    // }
-
-}
-
-void Database::writevalues(){
-    QSqlQuery query(db);
-    query.prepare("INSERT INTO `users` (`id`, `name`, `age`) VALUES (NULL, 'jk', '11');");
-    if(query.exec()){
-        std::cout<<"Done value added "<<std::endl;
-    }
-}
 
 void Database::getusers(QTableWidget* tableWidget){
     QSqlQuery* query = new QSqlQuery(db);
@@ -91,98 +48,12 @@ void Database::getusers(QTableWidget* tableWidget){
     }
 }
 
-void TableView(QTableWidget *table) {
-
-    QSqlQueryModel *model = new QSqlQueryModel();
-
-    QSqlQuery query = QSqlQuery();
-    query.prepare("SELECT * FROM `users`");
-    query.exec();
-
-    model->setQuery(std::move(query));
-    table->clearContents();
-    int i = 1;
-    for (int row = 0; row < model->rowCount(); ++row,++i) {
-        for (int col = 0; col < 4  ; ++col) {
-            QModelIndex index = model->index(row, col);
-            if(col == 0){// at # we are adding 1,2,3
-                table->setItem(row, col, new QTableWidgetItem(QString("%1").arg(i)));
-            }else{
-              table->setItem(row, col, new QTableWidgetItem(model->index(index.row(), index.column()).data().toString()));
-            }
-
-        }
-    }
-
-}
-
-void Database::getHomeOrdersTableData(QTableView *table) {
-
-
-    QSqlQueryModel model =  QSqlQueryModel();
-
-    QSqlQuery query = QSqlQuery(db);
-    query.prepare("SELECT users.user_name , users.roll_no ,orders.items FROM `orders` LEFT JOIN users ON users.nic = orders.order_by LIMIT 10;");
-    query.exec();
-
-
-    model.setQuery(std::move(query));
-
-    model.setHeaderData(0, Qt::Horizontal, QObject::tr("Name"));
-    model.setHeaderData(1, Qt::Horizontal, QObject::tr("Roll No"));
-    model.setHeaderData(2, Qt::Horizontal, QObject::tr("Items"));
-    // table->setModel(model);
-
-    // QMap<int, QVariant> map;
-    // map[0] = model->index(0,0).data().toString();
-    // map[1] = model->index(0,1).data().toString();
-    // map[2] = 2;
-    // model->setItemData(model->index(0,2),map);
- table->setModel(&model);
-    model.setData(model.index(1,1),QObject::tr("Items"),Qt::EditRole);
-
-    // if (model.submit()) {
-        // qDebug() << "Error updating value:" << model.lastError().text();
-        // Handle the error appropriately
-    // }//
-    //qDebug() << "last error is : "<<model.data(model.index(1,1)).toString();
-  //  model->submit();
-
-    // for (auto item : model->data().toJsonArray()){
-
-    // }
-
-    // for (int row = 0; row < model->rowCount(); ++row) {
-
-    //        QString rawitems = model->index(row,2).data().toString();
-    //        int items = rawitems.split(',').length();
-
-    //             QMap<int, QVariant> map;
-    //                 map[0] = model->index(row,0).data().toString();
-    //                 map[1] = model->index(row,1).data().toString();
-    //                 map[2] = items;
-
-    //                 // model->setData(model->index(row,1),"fas");
-    //                // model->setItemData(model->index(row,2),map);
-
-
-
-    //                 qDebug() << "model is "<<model->index(row,2).data().toString()<<",,,, "<<items<<" \n";
-
-
-    // }
-
-    // table->setModel(model);
-    table->horizontalHeader()->setStretchLastSection(true);
-    table->viewport()->update();
-}
-
 void Database::getorders(QTableWidget *table) {
 
     QSqlQueryModel *model = new QSqlQueryModel();
 
     QSqlQuery query = QSqlQuery(db);
-    query.prepare("SELECT users.user_name , users.roll_no ,orders.items FROM `orders` LEFT JOIN users ON users.nic = orders.order_by LIMIT 10;");
+    query.prepare("SELECT users.user_name , users.roll_no ,orders.items  FROM `orders` LEFT JOIN users ON users.nic = orders.order_by LIMIT 10;");
     query.exec();
 
     model->setQuery(std::move(query));
@@ -200,17 +71,15 @@ void Database::getorders(QTableWidget *table) {
                     QString rawitems = model->index(index.row(), index.column()).data().toString();
                     int items = rawitems.split(',').length();
                     table->setItem(row, col, new QTableWidgetItem(QString("%1").arg(items)));
-                }else{// all other filed data implementation from database
+                }else{
                     table->setItem(row, col, new QTableWidgetItem(model->index(index.row(), index.column()).data().toString()));
                 }
              }
         }
     }
 
-    table->setColumnWidth(0,20);
-    table->setColumnWidth(1,120);
+    table->setColumnWidth(0,44);
 }
-
 
 QString Database::getTotalUsers(){
     QSqlQuery query = QSqlQuery(db);
@@ -312,8 +181,7 @@ bool Database::addnewUser(QString data,QTableView *table){
     if(db.isOpen())
     {
 
-        qDebug() << "INSERT INTO `users` (`nic`, `email`, `user_name`, `roll_no`, `account_status`, `phone_number`, `datetime`) VALUES ("+data+");";
-        query.prepare("INSERT INTO `users` (`nic`, `email`, `user_name`, `roll_no`, `account_status`, `phone_number`, `datetime`) VALUES ("+data+");");
+         query.prepare("INSERT INTO `users` (`nic`, `email`, `user_name`, `roll_no`, `account_status`, `phone_number`, `datetime`) VALUES ("+data+");");
         if(query.exec())
         {
             getUsers(table);
@@ -335,37 +203,19 @@ void Database::getFoods(QTableView *table){
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery query = QSqlQuery(db);
 
-    query.prepare("SELECT food_items.food_name, food_items.fid, food_items.quantity, food_items.size,  food_category.name ,  food_items.price FROM `food_items` LEFT JOIN food_category ON food_category.id = food_items.category;");
+    query.prepare("SELECT food_items.food_name, food_items.fid, food_items.quantity, food_items.size, food_items.price FROM `food_items`  ;");
     query.exec();
     model->setQuery(std::move(query));
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("Name"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Id"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("Quantity"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("Size"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Category"));
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("Price"));
     table->setModel(model);
 
     table->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     table->horizontalHeader()->setStretchLastSection(true);
 
-
-};
-
-void Database::getCategories(QTableView *table){
-
-    QSqlQueryModel *model = new QSqlQueryModel();
-    QSqlQuery query = QSqlQuery(db);
-
-    query.prepare("SELECT food_category.name  , food_category.id FROM `food_category`;");
-    query.exec();
-    model->setQuery(std::move(query));
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Name"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Id"));
-    table->setModel(model);
-
-    table->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    table->horizontalHeader()->setStretchLastSection(true);
 
 };
 
@@ -410,7 +260,6 @@ bool Database::removeFoodItem(QString id,QTableView *table){
     return false;
 
 }
-
 
 void Database::addNewOrder( QString cnic,QString total,QString items,QTableWidget *table){
     QSqlQuery query =  QSqlQuery(db);
@@ -462,6 +311,4 @@ void Database::getAllOrders(QTableWidget *table ){
     }
 };
 
-// void Database::searchUserWithCnic(){
 
-// }

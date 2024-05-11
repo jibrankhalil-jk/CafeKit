@@ -46,7 +46,6 @@ public:
     QLabel *homeLasUserName;
     QLabel *homeLasUserRollno;
     QLabel *homeLasUserPayement;
-    QLabel *labelpic;
     QLabel *homeLasUserPicture;
     QLabel *homeLasUserOrderDateTime;
     QTableWidget *table1;
@@ -123,10 +122,8 @@ public:
     QLineEdit *newUserRollNo;
     QWidget *iFoods;
     QLabel *label_21;
-    QPushButton *foodItemPicture;
     QLabel *id_8;
     QLabel *id_9;
-    QLabel *userprofilepctureview_2;
     QPushButton *foodAddNewSubmitButton;
     QLineEdit *newFoodItemSize;
     QPushButton *foodAddNewCancelButton;
@@ -139,7 +136,6 @@ public:
     QLabel *id_33;
     QLineEdit *newOrderStudentCnic;
     QLabel *label_46;
-    QLabel *userprofilepctureview_5;
     QLabel *id_34;
     QLineEdit *newOrderItemName;
     QLabel *newOrderStudentName;
@@ -281,7 +277,7 @@ public:
 "}"));
         homeLasUserName = new QLabel(namerollno);
         homeLasUserName->setObjectName(QString::fromUtf8("homeLasUserName"));
-        homeLasUserName->setGeometry(QRect(100, 20, 191, 41));
+        homeLasUserName->setGeometry(QRect(85, 24, 191, 41));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Segoe UI")});
         font2.setPointSize(18);
@@ -293,7 +289,7 @@ public:
 "color: rgb(0, 0, 0);"));
         homeLasUserRollno = new QLabel(namerollno);
         homeLasUserRollno->setObjectName(QString::fromUtf8("homeLasUserRollno"));
-        homeLasUserRollno->setGeometry(QRect(100, 50, 101, 31));
+        homeLasUserRollno->setGeometry(QRect(83, 58, 101, 31));
         QFont font3;
         font3.setPointSize(11);
         homeLasUserRollno->setFont(font3);
@@ -302,26 +298,17 @@ public:
 ""));
         homeLasUserPayement = new QLabel(namerollno);
         homeLasUserPayement->setObjectName(QString::fromUtf8("homeLasUserPayement"));
-        homeLasUserPayement->setGeometry(QRect(250, 10, 101, 20));
+        homeLasUserPayement->setGeometry(QRect(251, 10, 101, 31));
         homeLasUserPayement->setStyleSheet(QString::fromUtf8("\n"
 "background-color: #37C43C;\n"
 "border-radius: 10px;\n"
 "color: rgb(0, 0, 0);\n"
 "padding-left:10px;"));
-        labelpic = new QLabel(namerollno);
-        labelpic->setObjectName(QString::fromUtf8("labelpic"));
-        labelpic->setGeometry(QRect(30, 30, 61, 51));
-        labelpic->setStyleSheet(QString::fromUtf8("#labelpic{\n"
-"  background-color: #F2E3D8;\n"
-"border-radius: 15px;\n"
-"color: rgb(0, 0, 0);\n"
-"}"));
-        labelpic->setWordWrap(true);
         homeLasUserPicture = new QLabel(namerollno);
         homeLasUserPicture->setObjectName(QString::fromUtf8("homeLasUserPicture"));
-        homeLasUserPicture->setGeometry(QRect(50, 40, 21, 31));
+        homeLasUserPicture->setGeometry(QRect(28, 30, 41, 51));
         homeLasUserPicture->setStyleSheet(QString::fromUtf8("\n"
-"  background-color: #F2E3D8;\n"
+"background-color: transparent; \n"
 "border-radius: 15px;\n"
 "color: rgb(0, 0, 0);\n"
 ""));
@@ -331,14 +318,14 @@ public:
         homeLasUserPicture->setIndent(0);
         homeLasUserOrderDateTime = new QLabel(namerollno);
         homeLasUserOrderDateTime->setObjectName(QString::fromUtf8("homeLasUserOrderDateTime"));
-        homeLasUserOrderDateTime->setGeometry(QRect(290, 80, 61, 31));
+        homeLasUserOrderDateTime->setGeometry(QRect(290, 78, 61, 31));
         homeLasUserOrderDateTime->setFont(font3);
         homeLasUserOrderDateTime->setStyleSheet(QString::fromUtf8("background-color: #9FFB7E;\n"
 "color: rgb(0, 0, 0);\n"
 ""));
         table1 = new QTableWidget(ahomepage);
-        if (table1->columnCount() < 6)
-            table1->setColumnCount(6);
+        if (table1->columnCount() < 4)
+            table1->setColumnCount(4);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         table1->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
@@ -347,52 +334,51 @@ public:
         table1->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         table1->setHorizontalHeaderItem(3, __qtablewidgetitem3);
-        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
-        table1->setHorizontalHeaderItem(4, __qtablewidgetitem4);
-        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
-        table1->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         if (table1->rowCount() < 10)
             table1->setRowCount(10);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        table1->setVerticalHeaderItem(0, __qtablewidgetitem4);
+        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
+        table1->setVerticalHeaderItem(1, __qtablewidgetitem5);
         QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(0, __qtablewidgetitem6);
+        table1->setVerticalHeaderItem(2, __qtablewidgetitem6);
         QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(1, __qtablewidgetitem7);
+        table1->setVerticalHeaderItem(3, __qtablewidgetitem7);
         QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(2, __qtablewidgetitem8);
+        table1->setVerticalHeaderItem(4, __qtablewidgetitem8);
         QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(3, __qtablewidgetitem9);
+        table1->setVerticalHeaderItem(5, __qtablewidgetitem9);
         QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(4, __qtablewidgetitem10);
+        table1->setVerticalHeaderItem(6, __qtablewidgetitem10);
         QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(5, __qtablewidgetitem11);
+        table1->setVerticalHeaderItem(7, __qtablewidgetitem11);
         QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(6, __qtablewidgetitem12);
+        table1->setVerticalHeaderItem(8, __qtablewidgetitem12);
         QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(7, __qtablewidgetitem13);
+        table1->setVerticalHeaderItem(9, __qtablewidgetitem13);
         QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(8, __qtablewidgetitem14);
-        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
-        table1->setVerticalHeaderItem(9, __qtablewidgetitem15);
-        QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
-        table1->setItem(0, 0, __qtablewidgetitem16);
+        table1->setItem(0, 0, __qtablewidgetitem14);
         table1->setObjectName(QString::fromUtf8("table1"));
         table1->setEnabled(true);
         table1->setGeometry(QRect(40, 180, 701, 361));
         table1->setMouseTracking(true);
         table1->setTabletTracking(true);
-        table1->setStyleSheet(QString::fromUtf8("#table1{\n"
+        table1->setStyleSheet(QString::fromUtf8(" \n"
 "background-color: #F2E3D8;\n"
 "border-radius: 19px;\n"
 "font: 700 11pt \"Ubuntu Mono\";\n"
 "	color: rgb(0, 0, 0);\n"
-"}"));
+" "));
         table1->setFrameShape(QFrame::StyledPanel);
         table1->setFrameShadow(QFrame::Sunken);
         table1->setLineWidth(2);
         table1->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-        table1->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContentsOnFirstShow);
+        table1->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
         table1->setAutoScrollMargin(15);
         table1->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        table1->setTabKeyNavigation(false);
+        table1->setDragDropOverwriteMode(false);
+        table1->setSelectionMode(QAbstractItemView::SingleSelection);
         table1->setShowGrid(true);
         table1->setGridStyle(Qt::SolidLine);
         table1->setSortingEnabled(false);
@@ -402,7 +388,7 @@ public:
         table1->horizontalHeader()->setVisible(true);
         table1->horizontalHeader()->setCascadingSectionResizes(false);
         table1->horizontalHeader()->setMinimumSectionSize(10);
-        table1->horizontalHeader()->setDefaultSectionSize(80);
+        table1->horizontalHeader()->setDefaultSectionSize(145);
         table1->horizontalHeader()->setHighlightSections(true);
         table1->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
         table1->horizontalHeader()->setStretchLastSection(true);
@@ -416,52 +402,52 @@ public:
         ordersViewAllOrdersTable = new QTableWidget(borderspage);
         if (ordersViewAllOrdersTable->columnCount() < 7)
             ordersViewAllOrdersTable->setColumnCount(7);
+        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
+        ordersViewAllOrdersTable->setHorizontalHeaderItem(0, __qtablewidgetitem15);
+        QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
+        ordersViewAllOrdersTable->setHorizontalHeaderItem(1, __qtablewidgetitem16);
         QTableWidgetItem *__qtablewidgetitem17 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setHorizontalHeaderItem(0, __qtablewidgetitem17);
+        ordersViewAllOrdersTable->setHorizontalHeaderItem(2, __qtablewidgetitem17);
         QTableWidgetItem *__qtablewidgetitem18 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setHorizontalHeaderItem(1, __qtablewidgetitem18);
+        ordersViewAllOrdersTable->setHorizontalHeaderItem(3, __qtablewidgetitem18);
         QTableWidgetItem *__qtablewidgetitem19 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setHorizontalHeaderItem(2, __qtablewidgetitem19);
+        ordersViewAllOrdersTable->setHorizontalHeaderItem(4, __qtablewidgetitem19);
         QTableWidgetItem *__qtablewidgetitem20 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setHorizontalHeaderItem(3, __qtablewidgetitem20);
+        ordersViewAllOrdersTable->setHorizontalHeaderItem(5, __qtablewidgetitem20);
         QTableWidgetItem *__qtablewidgetitem21 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setHorizontalHeaderItem(4, __qtablewidgetitem21);
-        QTableWidgetItem *__qtablewidgetitem22 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setHorizontalHeaderItem(5, __qtablewidgetitem22);
-        QTableWidgetItem *__qtablewidgetitem23 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setHorizontalHeaderItem(6, __qtablewidgetitem23);
+        ordersViewAllOrdersTable->setHorizontalHeaderItem(6, __qtablewidgetitem21);
         if (ordersViewAllOrdersTable->rowCount() < 15)
             ordersViewAllOrdersTable->setRowCount(15);
+        QTableWidgetItem *__qtablewidgetitem22 = new QTableWidgetItem();
+        ordersViewAllOrdersTable->setVerticalHeaderItem(0, __qtablewidgetitem22);
+        QTableWidgetItem *__qtablewidgetitem23 = new QTableWidgetItem();
+        ordersViewAllOrdersTable->setVerticalHeaderItem(1, __qtablewidgetitem23);
         QTableWidgetItem *__qtablewidgetitem24 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(0, __qtablewidgetitem24);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(2, __qtablewidgetitem24);
         QTableWidgetItem *__qtablewidgetitem25 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(1, __qtablewidgetitem25);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(3, __qtablewidgetitem25);
         QTableWidgetItem *__qtablewidgetitem26 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(2, __qtablewidgetitem26);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(4, __qtablewidgetitem26);
         QTableWidgetItem *__qtablewidgetitem27 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(3, __qtablewidgetitem27);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(5, __qtablewidgetitem27);
         QTableWidgetItem *__qtablewidgetitem28 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(4, __qtablewidgetitem28);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(6, __qtablewidgetitem28);
         QTableWidgetItem *__qtablewidgetitem29 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(5, __qtablewidgetitem29);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(7, __qtablewidgetitem29);
         QTableWidgetItem *__qtablewidgetitem30 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(6, __qtablewidgetitem30);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(8, __qtablewidgetitem30);
         QTableWidgetItem *__qtablewidgetitem31 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(7, __qtablewidgetitem31);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(9, __qtablewidgetitem31);
         QTableWidgetItem *__qtablewidgetitem32 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(8, __qtablewidgetitem32);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(10, __qtablewidgetitem32);
         QTableWidgetItem *__qtablewidgetitem33 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(9, __qtablewidgetitem33);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(11, __qtablewidgetitem33);
         QTableWidgetItem *__qtablewidgetitem34 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(10, __qtablewidgetitem34);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(12, __qtablewidgetitem34);
         QTableWidgetItem *__qtablewidgetitem35 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(11, __qtablewidgetitem35);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(13, __qtablewidgetitem35);
         QTableWidgetItem *__qtablewidgetitem36 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(12, __qtablewidgetitem36);
-        QTableWidgetItem *__qtablewidgetitem37 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(13, __qtablewidgetitem37);
-        QTableWidgetItem *__qtablewidgetitem38 = new QTableWidgetItem();
-        ordersViewAllOrdersTable->setVerticalHeaderItem(14, __qtablewidgetitem38);
+        ordersViewAllOrdersTable->setVerticalHeaderItem(14, __qtablewidgetitem36);
         ordersViewAllOrdersTable->setObjectName(QString::fromUtf8("ordersViewAllOrdersTable"));
         ordersViewAllOrdersTable->setGeometry(QRect(20, 74, 721, 571));
         ordersViewAllOrdersTable->setStyleSheet(QString::fromUtf8("\n"
@@ -1056,48 +1042,19 @@ public:
         iFoods->setObjectName(QString::fromUtf8("iFoods"));
         label_21 = new QLabel(iFoods);
         label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setGeometry(QRect(40, 50, 241, 31));
+        label_21->setGeometry(QRect(60, 70, 228, 36));
         label_21->setFont(font5);
-        foodItemPicture = new QPushButton(iFoods);
-        foodItemPicture->setObjectName(QString::fromUtf8("foodItemPicture"));
-        foodItemPicture->setGeometry(QRect(380, 260, 201, 32));
-        foodItemPicture->setFont(font4);
-        foodItemPicture->setCursor(QCursor(Qt::PointingHandCursor));
-        foodItemPicture->setFocusPolicy(Qt::TabFocus);
-        foodItemPicture->setStyleSheet(QString::fromUtf8("#foodItemPicture\n"
-"{\n"
-"	background:#00855C;\n"
-"	border:none;\n"
-"	color:white;\n"
-"    border-radius:14px;\n"
-"}\n"
-"\n"
-"#foodItemPicture:hover\n"
-"{\n"
-"	background:#2D2D2D;\n"
-"	border:2px solid #00855C;\n"
-"	color:#00855C;\n"
-"}"));
         id_8 = new QLabel(iFoods);
         id_8->setObjectName(QString::fromUtf8("id_8"));
-        id_8->setGeometry(QRect(80, 150, 141, 21));
+        id_8->setGeometry(QRect(80, 160, 141, 21));
         id_8->setFont(font6);
         id_9 = new QLabel(iFoods);
         id_9->setObjectName(QString::fromUtf8("id_9"));
-        id_9->setGeometry(QRect(80, 330, 141, 21));
+        id_9->setGeometry(QRect(80, 340, 141, 21));
         id_9->setFont(font6);
-        userprofilepctureview_2 = new QLabel(iFoods);
-        userprofilepctureview_2->setObjectName(QString::fromUtf8("userprofilepctureview_2"));
-        userprofilepctureview_2->setGeometry(QRect(390, 80, 161, 161));
-        userprofilepctureview_2->setStyleSheet(QString::fromUtf8("border-radius: 77px;\n"
-"background-color: rgb(192, 97, 203);"));
-        userprofilepctureview_2->setPixmap(QPixmap(QString::fromUtf8(":/Images/user1.svg")));
-        userprofilepctureview_2->setScaledContents(false);
-        userprofilepctureview_2->setAlignment(Qt::AlignCenter);
-        userprofilepctureview_2->setWordWrap(true);
         foodAddNewSubmitButton = new QPushButton(iFoods);
         foodAddNewSubmitButton->setObjectName(QString::fromUtf8("foodAddNewSubmitButton"));
-        foodAddNewSubmitButton->setGeometry(QRect(630, 630, 121, 32));
+        foodAddNewSubmitButton->setGeometry(QRect(590, 620, 141, 41));
         foodAddNewSubmitButton->setFont(font4);
         foodAddNewSubmitButton->setCursor(QCursor(Qt::PointingHandCursor));
         foodAddNewSubmitButton->setFocusPolicy(Qt::TabFocus);
@@ -1117,7 +1074,7 @@ public:
 "}"));
         newFoodItemSize = new QLineEdit(iFoods);
         newFoodItemSize->setObjectName(QString::fromUtf8("newFoodItemSize"));
-        newFoodItemSize->setGeometry(QRect(70, 350, 241, 32));
+        newFoodItemSize->setGeometry(QRect(70, 360, 391, 41));
         newFoodItemSize->setFont(font7);
         newFoodItemSize->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
@@ -1128,7 +1085,7 @@ public:
         foodAddNewCancelButton = new QPushButton(iFoods);
         foodAddNewCancelButton->setObjectName(QString::fromUtf8("foodAddNewCancelButton"));
         foodAddNewCancelButton->setEnabled(true);
-        foodAddNewCancelButton->setGeometry(QRect(490, 630, 121, 32));
+        foodAddNewCancelButton->setGeometry(QRect(430, 620, 151, 41));
         foodAddNewCancelButton->setFont(font4);
         foodAddNewCancelButton->setCursor(QCursor(Qt::PointingHandCursor));
         foodAddNewCancelButton->setFocusPolicy(Qt::TabFocus);
@@ -1148,7 +1105,7 @@ public:
 "}"));
         newFoodItemName = new QLineEdit(iFoods);
         newFoodItemName->setObjectName(QString::fromUtf8("newFoodItemName"));
-        newFoodItemName->setGeometry(QRect(70, 170, 240, 32));
+        newFoodItemName->setGeometry(QRect(70, 180, 391, 41));
         newFoodItemName->setFont(font7);
         newFoodItemName->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
@@ -1159,11 +1116,11 @@ public:
         newFoodItemName->setInputMethodHints(Qt::ImhPreferLowercase);
         id_15 = new QLabel(iFoods);
         id_15->setObjectName(QString::fromUtf8("id_15"));
-        id_15->setGeometry(QRect(80, 420, 141, 21));
+        id_15->setGeometry(QRect(80, 430, 141, 21));
         id_15->setFont(font6);
         newFoodItemPrice = new QLineEdit(iFoods);
         newFoodItemPrice->setObjectName(QString::fromUtf8("newFoodItemPrice"));
-        newFoodItemPrice->setGeometry(QRect(70, 440, 241, 32));
+        newFoodItemPrice->setGeometry(QRect(70, 450, 391, 41));
         newFoodItemPrice->setFont(font7);
         newFoodItemPrice->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
@@ -1177,7 +1134,7 @@ public:
         id_16->setFont(font6);
         newFoodItemQuantity = new QLineEdit(iFoods);
         newFoodItemQuantity->setObjectName(QString::fromUtf8("newFoodItemQuantity"));
-        newFoodItemQuantity->setGeometry(QRect(70, 270, 241, 32));
+        newFoodItemQuantity->setGeometry(QRect(70, 270, 391, 41));
         newFoodItemQuantity->setFont(font7);
         newFoodItemQuantity->setStyleSheet(QString::fromUtf8("background:white;\n"
 "color:black;\n"
@@ -1190,11 +1147,11 @@ public:
         jAddNewOrder->setObjectName(QString::fromUtf8("jAddNewOrder"));
         id_33 = new QLabel(jAddNewOrder);
         id_33->setObjectName(QString::fromUtf8("id_33"));
-        id_33->setGeometry(QRect(50, 110, 141, 21));
+        id_33->setGeometry(QRect(70, 80, 141, 21));
         id_33->setFont(font6);
         newOrderStudentCnic = new QLineEdit(jAddNewOrder);
         newOrderStudentCnic->setObjectName(QString::fromUtf8("newOrderStudentCnic"));
-        newOrderStudentCnic->setGeometry(QRect(40, 131, 240, 35));
+        newOrderStudentCnic->setGeometry(QRect(40, 100, 351, 41));
         newOrderStudentCnic->setFont(font7);
         newOrderStudentCnic->setStyleSheet(QString::fromUtf8("#newOrderStudentCnic{\n"
 "border:1px solid  rgb(255, 255, 255);\n"
@@ -1207,22 +1164,13 @@ public:
         label_46->setObjectName(QString::fromUtf8("label_46"));
         label_46->setGeometry(QRect(40, 30, 241, 31));
         label_46->setFont(font5);
-        userprofilepctureview_5 = new QLabel(jAddNewOrder);
-        userprofilepctureview_5->setObjectName(QString::fromUtf8("userprofilepctureview_5"));
-        userprofilepctureview_5->setGeometry(QRect(590, 60, 121, 111));
-        userprofilepctureview_5->setStyleSheet(QString::fromUtf8("border-radius: 77px;\n"
-"background-color: rgb(192, 97, 203);"));
-        userprofilepctureview_5->setPixmap(QPixmap(QString::fromUtf8(":/Images/user1.svg")));
-        userprofilepctureview_5->setScaledContents(false);
-        userprofilepctureview_5->setAlignment(Qt::AlignCenter);
-        userprofilepctureview_5->setWordWrap(true);
         id_34 = new QLabel(jAddNewOrder);
         id_34->setObjectName(QString::fromUtf8("id_34"));
-        id_34->setGeometry(QRect(43, 179, 141, 21));
+        id_34->setGeometry(QRect(40, 160, 141, 21));
         id_34->setFont(font6);
         newOrderItemName = new QLineEdit(jAddNewOrder);
         newOrderItemName->setObjectName(QString::fromUtf8("newOrderItemName"));
-        newOrderItemName->setGeometry(QRect(43, 200, 171, 35));
+        newOrderItemName->setGeometry(QRect(40, 181, 171, 41));
         newOrderItemName->setFont(font7);
         newOrderItemName->setStyleSheet(QString::fromUtf8(" \n"
 "border:1px solid  rgb(255, 255, 255);\n"
@@ -1233,7 +1181,7 @@ public:
         newOrderItemName->setInputMethodHints(Qt::ImhPreferLowercase);
         newOrderStudentName = new QLabel(jAddNewOrder);
         newOrderStudentName->setObjectName(QString::fromUtf8("newOrderStudentName"));
-        newOrderStudentName->setGeometry(QRect(300, 132, 241, 23));
+        newOrderStudentName->setGeometry(QRect(440, 100, 241, 41));
         QFont font8;
         font8.setFamilies({QString::fromUtf8("Cantarell")});
         font8.setPointSize(20);
@@ -1244,12 +1192,12 @@ public:
 "color: rgb(255, 255, 255);"));
         newOrderItemsListView = new QListView(jAddNewOrder);
         newOrderItemsListView->setObjectName(QString::fromUtf8("newOrderItemsListView"));
-        newOrderItemsListView->setGeometry(QRect(50, 240, 151, 341));
+        newOrderItemsListView->setGeometry(QRect(40, 240, 171, 111));
         newOrderItemsListView->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         newOrderCancel = new QPushButton(jAddNewOrder);
         newOrderCancel->setObjectName(QString::fromUtf8("newOrderCancel"));
         newOrderCancel->setEnabled(true);
-        newOrderCancel->setGeometry(QRect(480, 640, 121, 32));
+        newOrderCancel->setGeometry(QRect(410, 630, 161, 41));
         newOrderCancel->setFont(font4);
         newOrderCancel->setCursor(QCursor(Qt::PointingHandCursor));
         newOrderCancel->setFocusPolicy(Qt::TabFocus);
@@ -1269,7 +1217,7 @@ public:
 "}"));
         newOrdersubmit = new QPushButton(jAddNewOrder);
         newOrdersubmit->setObjectName(QString::fromUtf8("newOrdersubmit"));
-        newOrdersubmit->setGeometry(QRect(620, 640, 121, 32));
+        newOrdersubmit->setGeometry(QRect(580, 631, 161, 41));
         newOrdersubmit->setFont(font4);
         newOrdersubmit->setCursor(QCursor(Qt::PointingHandCursor));
         newOrdersubmit->setFocusPolicy(Qt::TabFocus);
@@ -1290,16 +1238,16 @@ public:
         newOrderFinalItemstableWidget = new QTableWidget(jAddNewOrder);
         if (newOrderFinalItemstableWidget->columnCount() < 4)
             newOrderFinalItemstableWidget->setColumnCount(4);
+        QTableWidgetItem *__qtablewidgetitem37 = new QTableWidgetItem();
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem37);
+        QTableWidgetItem *__qtablewidgetitem38 = new QTableWidgetItem();
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem38);
         QTableWidgetItem *__qtablewidgetitem39 = new QTableWidgetItem();
-        newOrderFinalItemstableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem39);
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem39);
         QTableWidgetItem *__qtablewidgetitem40 = new QTableWidgetItem();
-        newOrderFinalItemstableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem40);
-        QTableWidgetItem *__qtablewidgetitem41 = new QTableWidgetItem();
-        newOrderFinalItemstableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem41);
-        QTableWidgetItem *__qtablewidgetitem42 = new QTableWidgetItem();
-        newOrderFinalItemstableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem42);
+        newOrderFinalItemstableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem40);
         newOrderFinalItemstableWidget->setObjectName(QString::fromUtf8("newOrderFinalItemstableWidget"));
-        newOrderFinalItemstableWidget->setGeometry(QRect(240, 200, 501, 411));
+        newOrderFinalItemstableWidget->setGeometry(QRect(240, 170, 501, 401));
         newOrderFinalItemstableWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(143, 240, 164);\n"
 "border-radius: 12px;\n"
 "color: rgb(0, 0, 0);"));
@@ -1309,11 +1257,11 @@ public:
         newOrderFinalItemstableWidget->horizontalHeader()->setStretchLastSection(true);
         newOrderStudentName_2 = new QLabel(jAddNewOrder);
         newOrderStudentName_2->setObjectName(QString::fromUtf8("newOrderStudentName_2"));
-        newOrderStudentName_2->setGeometry(QRect(70, 650, 82, 23));
+        newOrderStudentName_2->setGeometry(QRect(60, 436, 82, 23));
         newOrderStudentName_2->setFont(font6);
         newOrderTotalPrice = new QLabel(jAddNewOrder);
         newOrderTotalPrice->setObjectName(QString::fromUtf8("newOrderTotalPrice"));
-        newOrderTotalPrice->setGeometry(QRect(160, 644, 161, 35));
+        newOrderTotalPrice->setGeometry(QRect(80, 470, 111, 41));
         QFont font9;
         font9.setFamilies({QString::fromUtf8("Cantarell")});
         font9.setPointSize(22);
@@ -1445,8 +1393,7 @@ public:
 
         retranslateUi(Home);
 
-        views->setCurrentIndex(7);
-        foodItemPicture->setDefault(true);
+        views->setCurrentIndex(9);
 
 
         QMetaObject::connectSlotsByName(Home);
@@ -1464,7 +1411,6 @@ public:
         homeLasUserName->setText(QCoreApplication::translate("Home", "User Name", nullptr));
         homeLasUserRollno->setText(QCoreApplication::translate("Home", "  23p-0000", nullptr));
         homeLasUserPayement->setText(QCoreApplication::translate("Home", "Rs. 200 ", nullptr));
-        labelpic->setText(QString());
         homeLasUserPicture->setText(QString());
         homeLasUserOrderDateTime->setText(QCoreApplication::translate("Home", "3:12 am", nullptr));
         QTableWidgetItem *___qtablewidgetitem = table1->horizontalHeaderItem(0);
@@ -1475,29 +1421,25 @@ public:
         ___qtablewidgetitem2->setText(QCoreApplication::translate("Home", "Roll No", nullptr));
         QTableWidgetItem *___qtablewidgetitem3 = table1->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QCoreApplication::translate("Home", "Item", nullptr));
-        QTableWidgetItem *___qtablewidgetitem4 = table1->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QCoreApplication::translate("Home", "Payment", nullptr));
-        QTableWidgetItem *___qtablewidgetitem5 = table1->horizontalHeaderItem(5);
-        ___qtablewidgetitem5->setText(QCoreApplication::translate("Home", "Status", nullptr));
 
         const bool __sortingEnabled = table1->isSortingEnabled();
         table1->setSortingEnabled(false);
         table1->setSortingEnabled(__sortingEnabled);
 
-        QTableWidgetItem *___qtablewidgetitem6 = ordersViewAllOrdersTable->horizontalHeaderItem(0);
-        ___qtablewidgetitem6->setText(QCoreApplication::translate("Home", "Order Id", nullptr));
-        QTableWidgetItem *___qtablewidgetitem7 = ordersViewAllOrdersTable->horizontalHeaderItem(1);
-        ___qtablewidgetitem7->setText(QCoreApplication::translate("Home", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem8 = ordersViewAllOrdersTable->horizontalHeaderItem(2);
-        ___qtablewidgetitem8->setText(QCoreApplication::translate("Home", "Roll No", nullptr));
-        QTableWidgetItem *___qtablewidgetitem9 = ordersViewAllOrdersTable->horizontalHeaderItem(3);
-        ___qtablewidgetitem9->setText(QCoreApplication::translate("Home", "Items", nullptr));
-        QTableWidgetItem *___qtablewidgetitem10 = ordersViewAllOrdersTable->horizontalHeaderItem(4);
-        ___qtablewidgetitem10->setText(QCoreApplication::translate("Home", "Paid", nullptr));
-        QTableWidgetItem *___qtablewidgetitem11 = ordersViewAllOrdersTable->horizontalHeaderItem(5);
-        ___qtablewidgetitem11->setText(QCoreApplication::translate("Home", "Total", nullptr));
-        QTableWidgetItem *___qtablewidgetitem12 = ordersViewAllOrdersTable->horizontalHeaderItem(6);
-        ___qtablewidgetitem12->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
+        QTableWidgetItem *___qtablewidgetitem4 = ordersViewAllOrdersTable->horizontalHeaderItem(0);
+        ___qtablewidgetitem4->setText(QCoreApplication::translate("Home", "Order Id", nullptr));
+        QTableWidgetItem *___qtablewidgetitem5 = ordersViewAllOrdersTable->horizontalHeaderItem(1);
+        ___qtablewidgetitem5->setText(QCoreApplication::translate("Home", "Name", nullptr));
+        QTableWidgetItem *___qtablewidgetitem6 = ordersViewAllOrdersTable->horizontalHeaderItem(2);
+        ___qtablewidgetitem6->setText(QCoreApplication::translate("Home", "Roll No", nullptr));
+        QTableWidgetItem *___qtablewidgetitem7 = ordersViewAllOrdersTable->horizontalHeaderItem(3);
+        ___qtablewidgetitem7->setText(QCoreApplication::translate("Home", "Items", nullptr));
+        QTableWidgetItem *___qtablewidgetitem8 = ordersViewAllOrdersTable->horizontalHeaderItem(4);
+        ___qtablewidgetitem8->setText(QCoreApplication::translate("Home", "Paid", nullptr));
+        QTableWidgetItem *___qtablewidgetitem9 = ordersViewAllOrdersTable->horizontalHeaderItem(5);
+        ___qtablewidgetitem9->setText(QCoreApplication::translate("Home", "Total", nullptr));
+        QTableWidgetItem *___qtablewidgetitem10 = ordersViewAllOrdersTable->horizontalHeaderItem(6);
+        ___qtablewidgetitem10->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
         label->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">Total Orders Today : </span></p></body></html>", nullptr));
         label_5->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:700; color:#ffffff;\">0</span></p></body></html>", nullptr));
         ordersViewAddNewButton->setText(QCoreApplication::translate("Home", "Add New", nullptr));
@@ -1572,29 +1514,26 @@ public:
         newUserNicNumber->setText(QString());
         id_7->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Roll  No</span></p></body></html>", nullptr));
         label_21->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:24pt; color:#e66100;\">New Food Item</span></p></body></html>", nullptr));
-        foodItemPicture->setText(QCoreApplication::translate("Home", "Picture", nullptr));
         id_8->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>", nullptr));
         id_9->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Size</span></p></body></html>", nullptr));
-        userprofilepctureview_2->setText(QString());
         foodAddNewSubmitButton->setText(QCoreApplication::translate("Home", "Submit", nullptr));
         foodAddNewCancelButton->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
         id_15->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Price</span></p></body></html>", nullptr));
         id_16->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Quantity</span></p></body></html>", nullptr));
         id_33->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Student Cnic</span></p></body></html>", nullptr));
         label_46->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; color:#1c71d8;\">New Food Item</span></p></body></html>", nullptr));
-        userprofilepctureview_5->setText(QString());
         id_34->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" color:#ffffff;\">Item Name</span></p></body></html>", nullptr));
         newOrderStudentName->setText(QCoreApplication::translate("Home", "Student Name", nullptr));
         newOrderCancel->setText(QCoreApplication::translate("Home", "Cancel", nullptr));
         newOrdersubmit->setText(QCoreApplication::translate("Home", "Submit", nullptr));
-        QTableWidgetItem *___qtablewidgetitem13 = newOrderFinalItemstableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem13->setText(QCoreApplication::translate("Home", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem14 = newOrderFinalItemstableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem14->setText(QCoreApplication::translate("Home", "Qty", nullptr));
-        QTableWidgetItem *___qtablewidgetitem15 = newOrderFinalItemstableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem15->setText(QCoreApplication::translate("Home", "Price", nullptr));
-        QTableWidgetItem *___qtablewidgetitem16 = newOrderFinalItemstableWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem16->setText(QCoreApplication::translate("Home", "Remove", nullptr));
+        QTableWidgetItem *___qtablewidgetitem11 = newOrderFinalItemstableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem11->setText(QCoreApplication::translate("Home", "Name", nullptr));
+        QTableWidgetItem *___qtablewidgetitem12 = newOrderFinalItemstableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem12->setText(QCoreApplication::translate("Home", "Qty", nullptr));
+        QTableWidgetItem *___qtablewidgetitem13 = newOrderFinalItemstableWidget->horizontalHeaderItem(2);
+        ___qtablewidgetitem13->setText(QCoreApplication::translate("Home", "Price", nullptr));
+        QTableWidgetItem *___qtablewidgetitem14 = newOrderFinalItemstableWidget->horizontalHeaderItem(3);
+        ___qtablewidgetitem14->setText(QCoreApplication::translate("Home", "Remove", nullptr));
         newOrderStudentName_2->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:14pt; color:#ffffff;\">Total  R.s:</span></p></body></html>", nullptr));
         newOrderTotalPrice->setText(QCoreApplication::translate("Home", "<html><head/><body><p><span style=\" font-size:22pt; color:#ffffff;\">00</span></p></body></html>", nullptr));
         HomeButton->setText(QCoreApplication::translate("Home", "Home", nullptr));

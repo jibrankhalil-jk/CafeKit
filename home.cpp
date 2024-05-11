@@ -45,7 +45,6 @@ void Home::loadHomeViewData()
 
 void Home::loadOrdersViewData()
 {
-    // geting data of all orders today
     db.getAllOrders(ui->ordersViewAllOrdersTable);
 }
 
@@ -133,29 +132,37 @@ void Home::selectedPushButton(QPushButton *button)
 
 void Home::on_HomeButton_clicked()
 {
-    selectedPushButton(ui->HomeButton);
+    selectedPushButton(ui->HomeButton);    loadHomeViewData();
+
 }
 
 void Home::on_OrdersButton_clicked()
 {
-    selectedPushButton(ui->OrdersButton);
+    selectedPushButton(ui->OrdersButton);    loadOrdersViewData();
+
 }
 
 void Home::on_FoodButton_clicked()
 {
-    selectedPushButton(ui->FoodButton);
+    selectedPushButton(ui->FoodButton);    getFoodViewData();
+
 }
 
 void Home::on_UserButton_clicked()
 {
-    selectedPushButton(ui->UserButton);
+    selectedPushButton(ui->UserButton);    getUsersViewData();
+
 }
 
 void Home::on_SettingsButton_clicked()
 {
-    selectedPushButton(ui->SettingsButton);
+    selectedPushButton(ui->SettingsButton);  getSettingViewData();
 }
 
+void Home::on_aboutbutton_clicked()
+{
+    selectedPushButton(ui->aboutbutton);
+}
 // ************************************* Home View **************************************************************
 
 // ************************************* Orders View **************************************************************
@@ -236,8 +243,6 @@ void Home::on_newUserCancelButton_clicked()
 void Home::on_newUserSubmitButton_clicked()
 {
     QString nic, name, rollNo, email, phoneNumber, gender;
-
-
     nic = ui->newUserNicNumber->text();
     name = ui->newUserName->text().toLower();
     rollNo = ui->newUserRollNo->text();
@@ -282,21 +287,15 @@ void Home::on_newUserSubmitButton_clicked()
         QMessageBox::warning(this, "Error", "Please enter a valid number e.g (03...).");
     }
     else{
-
         QString data  = "'"+nic+"', '"+email+"','"+ name+"', '"+ rollNo +"', '0', '"+ phoneNumber+"',current_timestamp()";
         if(db.addnewUser(data,ui->usersViewUsersTable)){
-
-
-            ui->views->setCurrentIndex(3);
-
+           ui->views->setCurrentIndex(3);
            ui->newUserNicNumber->clear();
            ui->newUserName->clear();
            ui->newUserRollNo->clear();
            ui->newUserEmail->clear();
            ui->newUserPhoneNumber->clear();
            ui->newUserGender->setCurrentIndex(0);
-
-
         }
         else{
             QMessageBox::warning(this, "Error", "Failed to add new user.");
@@ -307,16 +306,10 @@ void Home::on_newUserSubmitButton_clicked()
 }
 
 // ************************************* Add New Food Sub View **************************************************************
-
-// ************************************* Add New Order Sub View **************************************************************
-
-// ************************************* other **************************************************************
-
 void Home::on_foodAddNewCancelButton_clicked()
 {
     ui->views->setCurrentIndex(2);
 }
-
 void Home::on_foodAddNewSubmitButton_clicked()
 {
 
@@ -360,54 +353,20 @@ void Home::on_foodAddNewSubmitButton_clicked()
     }
 }
 
-void Home::on_aboutbutton_clicked()
-{
-    selectedPushButton(ui->aboutbutton);
-}
-
-void Home::on_foodItemPicture_clicked()
-{
-
-    QString imagePath = QFileDialog::getOpenFileName(nullptr, "Select Profile Picture", QDir::homePath(), "Images (*.png *.jpg *.jpeg)");
-
-    if (!imagePath.isEmpty())
-    {
-
-        QPixmap image(imagePath);
-        ui->userprofilepctureview_2->setPixmap(image);
-        ui->userprofilepctureview_2->setScaledContents(true);
-
-        QFile *pic = new QFile(imagePath);
-        pic->open(QIODevice::ReadOnly);
-        QByteArray picture = pic->readAll();
-        int originalSize = picture.length();
-
-        QString encoded = QString(picture.toBase64());
-        int encodedSize = encoded.size();
-
-        db.addnewUser(encoded, ui->usersViewUsersTable);
-    }
-}
-
-void Home::on_newOrderStudentCnic_editingFinished()
-{
-    qDebug() << " end ";
-}
-
-void Home::on_newOrderStudentCnic_textChanged(const QString &arg1)
-{
-    db.getUserWithCnic(ui->newOrderStudentCnic->text(), ui->newOrderStudentName);
-}
-
-void Home::on_newOrderItemName_textChanged(const QString &arg1)
-{
-    ui->newOrderItemsListView->setVisible(true);
-    db.getItemsWithName(ui->newOrderItemName->text(), ui->newOrderItemsListView);
-}
+// ************************************* Add New Order Sub View **************************************************************
 
 void Home::on_newOrderCancel_clicked()
 {
     ui->views->setCurrentIndex(1);
+}
+void Home::on_newOrderStudentCnic_textChanged(const QString &arg1)
+{
+    db.getUserWithCnic(ui->newOrderStudentCnic->text(), ui->newOrderStudentName);
+}
+void Home::on_newOrderItemName_textChanged(const QString &arg1)
+{
+    ui->newOrderItemsListView->setVisible(true);
+    db.getItemsWithName(ui->newOrderItemName->text(), ui->newOrderItemsListView);
 }
 
 void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
@@ -418,9 +377,9 @@ void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
     // tempItem["itemid"] =ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(),0).data().toString();
     tempItem["Name"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 1).data().toString();
     tempItem["Quantity"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 2).data().toString();
-    tempItem["Price"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 5).data().toString();
+    tempItem["Price"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 4).data().toString();
 
-    qDebug() << tempItem["itemid"] << tempItem["Name"] << tempItem["Quantity"] << tempItem["Price"] << "\n";
+    qDebug() << tempItem["id"] << tempItem["Name"] << tempItem["Quantity"] << tempItem["Price"] << "\n";
 
     finItems.push_back(tempItem);
 
@@ -516,3 +475,4 @@ void Home::on_newOrdersubmit_clicked()
         ui->views->setCurrentIndex(1);
     }
 }
+// ************************************* other **************************************************************
