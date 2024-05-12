@@ -29,7 +29,7 @@ private:
     void loadOrdersViewData();
     void getSettingViewData();
 
-    std::pmr::vector<QMap<QString, QString>> finItems;
+    std::vector<QMap<QString, QString>> finItems;
 
 private slots:
     void selectedPushButton(QPushButton *button);
@@ -94,6 +94,8 @@ private slots:
     void on_updateNewCancelButton_clicked();
 
     void on_updateNewSubmitButton_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::Home *ui;

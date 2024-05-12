@@ -105,6 +105,23 @@ QString Database::getTotalUsers(){
     return QString::number(total);
 };
 
+
+ QString Database::fooItemPrice(QString id)
+{
+    QSqlQuery query = QSqlQuery(db);
+    query.prepare("SELECT price FROM `food_items` WHERE `fid` = '"+id+"';");
+    query.exec();
+    query.next();
+    return query.value(0).toString();
+};
+QString Database::fooItemName(QString id)
+{
+    QSqlQuery query = QSqlQuery(db);
+    query.prepare("SELECT food_name FROM `food_items` WHERE `fid` = '"+id+"';");
+    query.exec();
+    query.next();
+    return query.value(0).toString();
+};
 QString Database::getTotalSalesToday(){
     QSqlQuery query = QSqlQuery(db);
     query.prepare("SELECT SUM(orders.total_charges) FROM `orders` LEFT JOIN users ON users.nic = orders.order_by WHERE orders.date_time >= DATE_FORMAT(CURDATE(), '%Y-%m-%d 00:00:00') AND date_time <= DATE_FORMAT(CURDATE(), '%Y-%m-%d 23:59:59');    ");

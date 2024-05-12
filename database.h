@@ -38,7 +38,8 @@ public:
     void getOrderDetails();
 
     void getUser();
-
+    QString fooItemPrice(QString id);
+      QString fooItemName(QString id);
     bool removeFoodItem(QString id, QTableView *table);
     void getCategories(QTableView *table);
     void getUsers(QTableView *table);

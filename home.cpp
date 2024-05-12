@@ -311,7 +311,7 @@ void Home::on_newUserSubmitButton_clicked()
     }
     else if (tempGender < 0 || tempGender > 2 )
     {
-        QMessageBox::warning(this, "Error", "Please chose a gender from the options.");
+        QMessageBox::warning(this, "Error", "Please choose a gender from the options.");
     }
     else if (phoneNumber.length() != 11 )
     {
@@ -408,7 +408,7 @@ void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
     tempItem["Quantity"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 2).data().toString();
     tempItem["Price"] = ui->newOrderItemsListView->model()->index(ui->newOrderItemsListView->currentIndex().row(), 4).data().toString();
 
-    qDebug() << tempItem["id"] << tempItem["Name"] << tempItem["Quantity"] << tempItem["Price"] << "\n";
+    // qDebug() << tempItem["id"] << tempItem["Name"] << tempItem["Quantity"] << tempItem["Price"] << "\n";
 
     finItems.push_back(tempItem);
 
@@ -420,7 +420,7 @@ void Home::on_newOrderItemsListView_clicked(const QModelIndex &index)
     ui->newOrderFinalItemstableWidget->setItem(i, 3, new QTableWidgetItem("Remove"));
 
     int total = 0;
-    qDebug() << "size of veotr " << finItems.size() << "\n";
+    // /*qDebug*/() << "size of veotr " << finItems.size() << "\n";
     for (auto item : finItems)
     {
         total += item["Price"].toInt();
@@ -445,12 +445,12 @@ void Home::on_newOrderFinalItemstableWidget_cellClicked(int row, int column)
         {
             finItems.erase(finItems.begin() + row); // Erase the element at the specified index
                                                     // qDebug() << "ppppppp  " << row << " removed"<<  " "<<ui->newOrderFinalItemstableWidget->rowCount() <<" " <<finItems.size() <<".\n";
-            qDebug() << "..[[";
-            for (auto item : finItems)
-            {
-                qDebug() << item["Name"] << ", ";
-            }
-            qDebug() << "]]..";
+            // qDebug() << "..[[";
+            // for (auto item : finItems)
+            // {
+            //     qDebug() << item["Name"] << ", ";
+            // }
+            // qDebug() << "]]..";
 
             int i = 0;
             ui->newOrderFinalItemstableWidget->clear();
@@ -500,6 +500,18 @@ void Home::on_newOrdersubmit_clicked()
         }
 
         db.addNewOrder(ui->newOrderStudentCnic->text(), ui->newOrderTotalPrice->text(), itemsIds, ui->ordersViewAllOrdersTable);
+        loadOrdersViewData();
+
+        //clear old data in order view
+        finItems.clear();
+        ui->newOrderFinalItemstableWidget->clearContents();
+        ui->newOrderFinalItemstableWidget->setRowCount(0);
+        ui->newOrderTotalPrice->setText("0");
+        ui->newOrderItemName->setText("");
+        ui->newOrderStudentCnic->setText("");
+        ui->newOrderStudentName->setText("");
+        ui->newOrderItemsListView->clearSelection();
+
         ui->views->setCurrentIndex(1);
     }
 }
@@ -528,6 +540,37 @@ void Home::on_ordersViewAllOrdersTable_cellClicked(int row, int column)
         }
 
 
+    }else{
+        ui->views->setCurrentIndex(11);
+        ui->orderDetailName->setText( ui->ordersViewAllOrdersTable->model()->itemData(ui->ordersViewAllOrdersTable->model()->index(row,1)).first().toString() );
+        ui->orderDetailTotal->setText( ui->ordersViewAllOrdersTable->model()->itemData(ui->ordersViewAllOrdersTable->model()->index(row,5)).first().toString() );
+
+        QString rawitems = ui->ordersViewAllOrdersTable->model()->itemData(ui->ordersViewAllOrdersTable->model()->index(row,3)).first().toString();
+        int items = rawitems.split(',').length();
+        ui->orderDetailtableWidget->clearContents();
+        ui->orderDetailtableWidget->setRowCount(items);
+
+        for(int i = 0 ; i < items ; i++){
+            for (int col = 0; col < 2 ; ++col) {
+                 if(col == 0){
+                    QString tempcel;
+                    if(i == 0){
+                        tempcel =rawitems.split(',')[i].removeAt(0);
+                    }else
+                        if(i+1  == items){
+                         tempcel =rawitems.split(',')[i].removeAt(items -1);
+                    }else
+                    {
+                         tempcel =rawitems.split(',')[i];
+                    }
+                          ui->orderDetailtableWidget->setItem(i, 0, new QTableWidgetItem(db.fooItemName(tempcel)));
+                    ui->orderDetailtableWidget->setItem(i, 1, new QTableWidgetItem(db.fooItemPrice(tempcel)));
+
+                    //
+
+                }
+            }
+        }
     }
 }
 
@@ -653,5 +696,11 @@ void Home::on_updateNewSubmitButton_clicked()
 
         QMessageBox::information(this, "Success", "Food item added successfully!");
     }
+}
+
+
+void Home::on_pushButton_clicked()
+{
+    loadHomeViewData();
 }
 
